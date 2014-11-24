@@ -1,0 +1,140 @@
+<!doctype html> 
+<html lang=en> 
+	<head> 
+		<meta charset=utf-8> 
+		<title>XML y AJAX con JavaScript</title> 
+		<link href="03. estilo.css" rel="stylesheet" type="text/css" />
+		
+		<script language="javascript">
+		// Carga local de fichero XML
+		var xmlDoc;
+		function loadXML() {
+			var dname = 'books.xml';
+			if (window.ActiveXObject){ //IExplorer
+				xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+				xmlDoc.async="false"
+				xmlDoc.load(dname)
+				readXMLIE();
+			}
+			if (document.implementation &&
+			document.implementation.createDocument) {
+				xmlDoc = document.implementation.createDocument("","",null);
+				xmlDoc.async = "false";
+				try {
+					xmlDoc.load(dname);
+					xmlDoc.onload = readXML;
+				} catch (Exception) { //Chrome
+					// ejecutar chrome desde consola con opción --allow-file-access-from-files
+					// o ejecutar chrome desde consola con opción --disable-web-security
+					var xmlhttpchrome = new XMLHttpRequest();
+					xmlhttpchrome.open("GET", dname, false);
+					xmlhttpchrome.setRequestHeader('Content-Type', 'text/xml')
+					xmlhttpchrome.send("");
+					xmlDoc = xmlhttpchrome.responseXML;
+					readXML();
+					xmlloaded = true;
+				}
+			}
+		} 
+
+		function readXMLIE() {
+			// Este procesamiento sólo es válido para IE que no soporta la serialización
+			var xmlString = xmlDoc.xml;
+			xmlString = xmlString.replace(/</g,'&lt;');
+			xmlString = xmlString.replace(/>/g,'&gt;');
+			document.getElementById('c_local').innerHTML = '<pre>' + xmlString + '</pre>';
+		}
+		
+		function readXML() {
+			// Este procesamiento sólo es válido para Chrome y FF
+			// En IE no se soporta la serialización
+			var xmlString = (new XMLSerializer()).serializeToString(xmlDoc);
+			xmlString = xmlString.replace(/</g,'&lt;');
+			xmlString = xmlString.replace(/>/g,'&gt;');
+			document.getElementById('c_local').innerHTML = '<pre>' + xmlString + '</pre>';
+
+			// Probar que pasa si se ejecuta esto:
+			//document.getElementById('c_local').innerText = xmlString;
+
+			// Así se accede al XML DOM
+			// document.getElementById('c_local').innerHTML = xmlDoc.documentElement.tagName;
+		}
+
+		// Carga por AJAX de fichero XML
+		var xmlHttp;
+
+		function getXML() {
+			xmlHttp=GetXmlHttpObject();
+			if (xmlHttp==null) {
+				alert ("Browser does not support HTTP Request");
+				return;
+			} 
+			var url="http://www.uv.es/rvcirilo/books.xml";
+			xmlHttp.onreadystatechange=stateChanged;
+			xmlHttp.open("GET",url,true);
+			xmlHttp.send(null);
+		} 
+
+		function stateChanged()  { 
+			if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+				var xmlRemoteString = xmlHttp.responseText;
+				xmlRemoteString = xmlRemoteString.replace(/</g,'&lt;');
+				xmlRemoteString = xmlRemoteString.replace(/>/g,'&gt;');
+				document.getElementById('c_remota').innerHTML = '<pre>' + xmlRemoteString + '</pre>';
+			} 
+		} 
+		function GetXmlHttpObject() { 
+			var objXMLHttp=null;
+			if (window.XMLHttpRequest) {
+				objXMLHttp=new XMLHttpRequest();
+			}
+			else if (window.ActiveXObject) {
+				objXMLHttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			return objXMLHttp;
+		} 
+		
+		</script>
+		
+	</head> 
+	<body> 
+		<header> 
+			<h1 id="inicio">Ejemplo 3 - XML y AJAX</h1>
+			<h2>Acceso a documentos XML local y en remoto a través de AJAX</h2>
+		</header>
+		<aside class="menu">
+			<nav>
+				<h4>Ejemplos de XML y AJAX</h4>
+				<ul>
+					<li><a href="#local" title="#">Carga local</a></li>
+					<li><a href="#ajax" title="#">Carga remota (AJAX)</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<section class="principal">
+		<header>
+			<h3>Ejemplos de XML y AJAX</h3>
+			<h4>Esto es tan solo un ejemplo orientativo de como realizar carga local de ficheros XML y a través de AJAX.</h4>
+		</header>
+
+		<article>	
+			<a name="local"/>
+			<h3>Cargar documento local</h3>
+			<p>Al presionar el botón se cargará un fichero XML del sistema de archivos.</p>
+			<p align="center"><input type="button" value="Carga local" onclick="loadXML();"/></p>
+			<div id="c_local" style="border: 1px solid black;"><br/></div>
+		</article>
+
+		<article>	
+			<a name="ajax"/>
+			<h3>Cargar documento con AJAX</h3>
+			<p>Al presionar el botón se cargará un fichero XML en un servidor remoto.</p>
+			<p align="center"><input type="button" value="Carga remota" onclick="getXML();"/></p>
+			<div id="c_remota" style="border: 1px solid black;"><br/></div>
+		</article>
+
+		</section>
+		
+		<footer>MUISAW - DTWTC - Ramón Cirilo</footer>
+	</body> 
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<departamentos>
+
+	<departamento id="1">
+		<nombre>Direccion</nombre>
+		<manager>20</manager>
+	</departamento>
+
+	<departamento id="2">
+		<nombre>Planificacion</nombre>
+		<manager>11</manager>
+	</departamento>
+
+	<departamento id="3">
+		<nombre>Centro de informacion</nombre>
+		<manager>13</manager>
+	</departamento>
+
+	<departamento id="4">
+		<nombre>Sistemas de produccion</nombre>
+		<manager>3</manager>
+	</departamento>
+
+	<departamento id="5">
+		<nombre>Soporte de software</nombre>
+		<manager>18</manager>
+	</departamento>
+
+</departamentos>
+

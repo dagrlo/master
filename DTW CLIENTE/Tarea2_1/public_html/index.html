@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sudoku</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <LINK href="estilos.css" rel="stylesheet" type="text/css">
+        
+        <script src="codigo.js"></script>
+    </head>
+    <body onkeypress="manejaTeclado(event)" onkeydown="manejaCursores(event)">
+      
+        <h1>Usa los cursores y las teclas para crear un sudoku</h1>
+        <p>c para vaciar casilla actual, supr para limpiar todo</p>
+        <div id="contenedor">
+            <table class="numeros">
+                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+            </table>
+            <br>
+            <table class="letras">
+                <tr><td>A</td></tr>
+                <tr><td>B</td></tr>
+                <tr><td>C</td></tr>
+                <tr><td>D</td></tr>
+                <tr><td>E</td></tr>
+                <tr><td>F</td></tr>
+                <tr><td>G</td></tr>
+                <tr><td>H</td></tr>
+                <tr><td>I</td></tr>
+            </table>
+        
+            <div id="contenedor_tablero">
+                <table id="tabla">
+                <tr>
+                    <td class="zona1"><div class="casilla"></div></td><td class="zona1"><div class="casilla"></div></td><td class="zona1"><div class="casilla"></div></td>
+                    <td class="zona2"><div class="casilla"></div></td><td class="zona2"><div class="casilla"></div></td><td class="zona2"><div class="casilla"></div></td>
+                    <td class="zona3"><div class="casilla"></div></td><td class="zona3"><div class="casilla"></div></td><td class="zona3"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona1"><div class="casilla"></div></td><td class="zona1"><div class="casilla"></div></td><td class="zona1"><div class="casilla"></div></td>
+                    <td class="zona2"><div class="casilla"></div></td><td class="zona2"><div class="casilla"></div></td><td class="zona2"><div class="casilla"></div></td>
+                    <td class="zona3"><div class="casilla"></div></td><td class="zona3"><div class="casilla"></div></td><td class="zona3"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona1"><div class="casilla"></div></td><td class="zona1"><div class="casilla"></div></td><td class="zona1"><div class="casilla"></div></td>
+                    <td class="zona2"><div class="casilla"></div></td><td class="zona2"><div class="casilla"></div></td><td class="zona2"><div class="casilla"></div></td>
+                    <td class="zona3"><div class="casilla"></div></td><td class="zona3"><div class="casilla"></div></td><td class="zona3"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona4"><div class="casilla"></div></td><td class="zona4"><div class="casilla"></div></td><td class="zona4"><div class="casilla"></div></td>
+                    <td class="zona5"><div class="casilla"></div></td><td class="zona5"><div class="casilla"></div></td><td class="zona5"><div class="casilla"></div></td>
+                    <td class="zona6"><div class="casilla"></div></td><td class="zona6"><div class="casilla"></div></td><td class="zona6"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona4"><div class="casilla"></div></td><td class="zona4"><div class="casilla"></div></td><td class="zona4"><div class="casilla"></div></td>
+                    <td class="zona5"><div class="casilla"></div></td><td class="zona5"><div class="casilla"></div></td><td class="zona5"><div class="casilla"></div></td>
+                    <td class="zona6"><div class="casilla"></div></td><td class="zona6"><div class="casilla"></div></td><td class="zona6"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona4"><div class="casilla"></div></td><td class="zona4"><div class="casilla"></div></td><td class="zona4"><div class="casilla"></div></td>
+                    <td class="zona5"><div class="casilla"></div></td><td class="zona5"><div class="casilla"></div></td><td class="zona5"><div class="casilla"></div></td>
+                    <td class="zona6"><div class="casilla"></div></td><td class="zona6"><div class="casilla"></div></td><td class="zona6"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona7"><div class="casilla"></div></td><td class="zona7"><div class="casilla"></div></td><td class="zona7"><div class="casilla"></div></td>
+                    <td class="zona8"><div class="casilla"></div></td><td class="zona8"><div class="casilla"></div></td><td class="zona8"><div class="casilla"></div></td>
+                    <td class="zona9"><div class="casilla"></div></td><td class="zona9"><div class="casilla"></div></td><td class="zona9"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona7"><div class="casilla"></div></td><td class="zona7"><div class="casilla"></div></td><td class="zona7"><div class="casilla"></div></td>
+                    <td class="zona8"><div class="casilla"></div></td><td class="zona8"><div class="casilla"></div></td><td class="zona8"><div class="casilla"></div></td>
+                    <td class="zona9"><div class="casilla"></div></td><td class="zona9"><div class="casilla"></div></td><td class="zona9"><div class="casilla"></div></td>
+                </tr>
+                <tr>
+                    <td class="zona7"><div class="casilla"></div></td><td class="zona7"><div class="casilla"></div></td><td class="zona7"><div class="casilla"></div></td>
+                    <td class="zona8"><div class="casilla"></div></td><td class="zona8"><div class="casilla"></div></td><td class="zona8"><div class="casilla"></div></td>
+                    <td class="zona9"><div class="casilla"></div></td><td class="zona9"><div class="casilla"></div></td><td class="zona9"><div class="casilla"></div></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </body>
+</html>

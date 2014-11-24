@@ -1,0 +1,62 @@
+ies {
+    border: 2px solid #000;
+    display: block;
+    font-family: sans-serif;
+    padding: 8px;
+    padding-bottom: 64px;
+}
+
+nombreCentro {
+    display: block;
+    background-color: #c6c6c6;
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+web{
+    display: none;
+}
+
+ciclos {
+    border:2px solid #000;
+    display: block;
+    margin-top: 10px;
+    padding: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;    
+}
+
+ciclo {        
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;  
+    flex-wrap: nowrap;
+}
+
+nombre{
+    display: inline-block;
+    border: 1px solid #000;
+    width: 70%;
+    padding: 6px;
+    margin: 1%;
+}
+
+grado{
+    display: inline-block;
+    border: 1px solid #000;
+    width: 15%;
+    padding: 6px;
+    margin: 1%;        
+    text-align: center;
+}
+
+decretoTitulo{
+    display: inline-block;
+    border: 1px solid #000;
+    width: 10%;
+    padding: 6px;
+    margin: 1%;
+    text-align: center;
+}

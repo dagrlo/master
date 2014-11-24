@@ -1,0 +1,5 @@
+Para que se observe el funcionamiento completo de este ejemplo todos los ficheros deben estar alojados en un servidor web, y cargar la página html desde un navegador.
+
+A priori, se ha preparado para que funcione con IE, FF y Chrome, pero puede haber algún error si evolucionan las versiones de los navegadores.
+
+De forma adicional, se puede probar la primera parte (carga local) sin necesidad de subir los ficheros a un servidor, teniendo en cuenta que Chrome necesita privilegios especiales que se detallan dentro del código.

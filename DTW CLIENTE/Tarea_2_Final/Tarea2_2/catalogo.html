@@ -1,0 +1,79 @@
+﻿<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Catálogo de empleados. MiEmpre-SA.com</title>
+    <link rel="stylesheet" href="reset.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="main.css" type="text/css" charset="utf-8">
+    
+    <script src="catalogo.js"></script>
+</head>
+<body>
+
+<div class="layer1">
+	<h1>MiEmpre-SA.com</h1>
+	<h2>Catálogo de empleados</h2>
+	<hr/>
+	<p class="style2"><strong><em>Por favor, seleccione el departamento:</em></strong></p>
+	<form method="post" class="departamento">
+            Departamento:&nbsp;&nbsp; <select id="Select1" onchange="cargaEmpleados()">
+		
+		</select>
+	</form>
+	<hr/><br/>
+	<table align="center" class="cabecera">
+		<tr>
+                    <th class="style1 celda_izq"><strong>EMPLEADO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( <span id="pos">0</span> / <span id="total">0</span> )
+			</strong>&nbsp;</th>
+			<th class="style1 celda_dcha"><strong>
+			<input type="text" id="emp_id" value="" size="5">
+			<input type="button" name="emp_ad" onclick="btnIr()" value="IR">
+			</strong>&nbsp;</th>
+		</tr>
+	</table>
+	<table align="center" class="data">
+		<tr>
+			<td>Codigo:</td>
+			<td id="codigo"></td>
+			<td>Fotografía</td>
+		</tr>
+		<tr>
+			<td>Nombre:&nbsp;</td>
+			<td id="nombre"></td>
+                        <td rowspan="6"><span id="celdaFoto"></span></td>
+		</tr>
+		<tr>
+			<td>Departamento:&nbsp;</td>
+			<td id="departamento"></td>
+		</tr>
+		<tr>
+			<td>Puesto:&nbsp;</td>
+			<td id="puesto"></td>
+		</tr>
+		<tr>
+			<td>Nivel:&nbsp;</td>
+			<td id="nivel"></td>
+		</tr>
+		<tr>
+			<td>Sueldo base:&nbsp;</td>
+			<td id="base"></td>
+		</tr>
+		<tr>
+			<td>Complemento:&nbsp;</td>
+			<td id="complemento"></td>
+		</tr>
+	</table>
+	<br/>
+	<table class="navegacion">
+		<tr>
+                    <td class="style2"><span onclick="primero()">|&lt;&lt;&nbsp;</span></td>
+                    <td class="style2"><span onclick="anterior()">&lt;&lt;&nbsp;</span></td>
+                    <td class="style2"><span onclick="siguiente()">&gt;&gt;&nbsp;</span></td>
+                    <td class="style2"><span onclick="ultimo()">&gt;&gt;|&nbsp;</span></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

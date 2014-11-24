@@ -1,0 +1,26 @@
+TAREA 2
+=======
+
+Se desea desarrollar una herramienta para la visualización de un catálogo de empleados de una empresa.
+
+Los empleados están organizados por departamentos. El listado de departamentos se encuentra en el fichero departamentos.xml, y el listado de empleados se encuentra en el fichero empleados.xml.
+
+Cada empleado de cualquier departamento contiene la siguiente información:
+	- id: identificador único de empleado
+	- nombre: nombre del empleado
+	- apellidos: apellidos del empleado
+	- fechacontrato: fecha de contrato (codificada) del empleado
+	- puesto: puesto que ocupa en la empresa
+	- niveleducacion: nivel de estudios que posee el empleado
+	- sueldo-base: percepción económica del empleado
+	- complemento: incentivos económicos del empleado
+
+Se proporciona un archivo catalogo.html que contiene una estructura básica de la herramienta, y donde se puede apreciar la funcionalidad deseada. En todo caso, se desea que el visor funcione del siguiente modo:
+	- El cliente debe seleccionar el departamento a visualizar de un desplegable que se habrá rellenado con información contenida en departamentos.xml.
+	- Una vez seleccionado el departamento se cargará el fichero xml correspondiente a los empleados, y se mostrará el primer empleado del departamento en cuestión en la sección de la ficha.
+	- El usuario podrá navegar por los empleados del departamento, con opción de ir adelante, atrás, al primero o al último.
+	- Para cada empleado que se muestre, se accederá usando AJAX a su fichero de información gráfica (fotografía), que tiene un formato <id>.xml donde <id> es el identificador del empleado. En cada fichero se encuentra el dato correspondiente a la imagen del empleado que se debe cargar en la celda correspondiente (ajustando su tamaño).
+
+El alumno deberá implementar toda la funcionalidad requerida, así como aquella funcionalidad adicional que considere oportuna.
+
+

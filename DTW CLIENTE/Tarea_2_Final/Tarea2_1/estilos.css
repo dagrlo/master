@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.casilla{
+    border: 1px solid #000;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 32px
+}
+
+.zona1, .zona3, .zona5, .zona7,.zona9{
+    background-color: #cccccc;
+}
+
+.zona2, .zona4, .zona6, .zona8{
+    background-color: #999999;
+}
+
+.letras tr{
+    line-height: 34px;
+}
+
+.letras{
+    display: block;
+    float:left;    
+    color: #999999;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.numeros {
+    color: #999999;
+    display: block;
+    margin-left: 40px;    
+    letter-spacing: 25px;
+    margin-bottom: -50px;
+}
+
+#contenedor_tablero{
+    padding: 30px;
+}
+
+#contenedor{
+    display: block;
+    width:400px;
+    margin: auto;
+    border: 2px solid #000;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;    
+}
+
+p {
+    text-align: center;
+    margin-bottom: 50px;
+}

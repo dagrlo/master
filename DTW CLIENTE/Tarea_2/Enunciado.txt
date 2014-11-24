@@ -1,0 +1,7 @@
+Esta tarea consta de dos ejercicios que se describen de forma separada en sus correspondientes ficheros.
+
+El ejercicio 1 consiste en elaborar una herramienta para ayudar a resolver sudokus. Se proporciona video y explicativo para describir la tarea. El objetivo es trabajar sobre el DOM y gestionar estilos, además de manejar eventos con JavaScript.
+
+El ejercicio 2 consiste en elaborar una herramienta para consultar empleados pertenecientes a una serie de departamentos. El objetivo es perfeccionar el manejo del DOM y utilizar XML desde JavaScript y AJAX.
+
+

@@ -1,0 +1,98 @@
+body {
+    width: 1000px;
+    margin: 30px auto 30px auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+hr {
+	height: 1px;
+	background-color: #003399;
+}
+
+.style1 {
+	text-align: center;
+	border: 2px solid #808080;
+	background-color:#000080;
+	color: #FFFFFF;
+	padding: 10px;
+}
+
+.style2 {
+	text-align: center;
+	color: #000080;
+	font-weight: 600;
+	font-size:x-large;
+	cursor: pointer;
+}
+
+.layer1 {
+	padding: 10px; 
+	margin: auto; 
+	border: medium groove #C0C0C0; 
+	width: 80%;
+	height: auto; 
+	background-color: #DFDFDF; 
+}
+
+.departamento {
+	text-align: center
+}
+ 
+.departamento select {
+	width: 200px;
+}
+ 
+table.cabecera {
+	margin: auto; 
+	border: 2px solid #808080; 
+	width: 85%;
+}
+
+table.data {
+	margin: auto; 
+	border: 2px solid #808080; 
+	width: 85%;
+}
+
+table.data  td{
+	padding: 4px; 
+	border-width: 2px; 
+	border-color: #808080; 
+	vertical-align: top;
+	border-style: solid; 
+}
+
+table.data td:nth-of-type(1) {
+	width: 20%;
+}
+
+table.data td:nth-of-type(2) {
+	width: 50%;
+}
+
+table.data td:nth-of-type(3) {
+	width: 30%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.celda_izq {
+	width: 70%;
+}
+ 
+.celda_dcha {
+	width: 30%;
+}
+
+.navegacion {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}

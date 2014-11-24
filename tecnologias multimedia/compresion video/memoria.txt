@@ -1,0 +1,65 @@
+AKIYO_CIF
+
+MPEG1,2,4: se ve un poco de ruido alrededor de la presentadora
+h261: no encuentro el video
+h263: como los anteriores pero la barra de tiempo se ralla
+h263p:como el anterior tiempo rallao tambien
+h264: hasta ahora el de mejor calidad no se aprecia ruido y el tiempo va bien
+theora: algo de ruido alrededor de la tia
+vp8:tiene una gran calidad. no hay ruido alrededor pero a veces se ven unos bloques que parpadean
+
+AKIYO_QCIF
+
+es un video mas pequeño
+
+MPEG1,2,4: se aprecia ruido alrededor de la tipa
+h261: no encuentro el video
+h263: algo de ruido pero poco
+h263p: parecido
+h264: mucha q
+theoria: algo de ruido
+vp8: no se ven los bloques pero si que hay algunos pixels de ruido aleatorio o asi en las zonas mas oscuras
+
+BRIDGE
+
+MPEG1,2: Introduce mucho ruido en los bordes sobretodo. Lo mas afectado es la gente que se ve por el puente.  Se pueden distinguir los bloques
+MPEG4: parece que mejora el ruido en la gente del puente. el resto igual.
+H261: parecido a los anteriores
+H263: mejora un poco el ruido
+H263P: parecido
+H264: tiene una gran calidad pero da la sensacion de que no es tan fluido
+THEORA: Como mpeg pero con menos ruido en la gente
+VP8: muy poco ruido sobretodo en la gente pero pierde en las zonas con detalle, estan difuminadas
+
+OLDTOWN
+
+MPEG1,2:Ruido en las zonas con detalles. En el cielo se pueden distinguir los bloques
+MP4: mayor compresion pero lo malo de los otros esta mas acusado
+h263p: se ha mejorado el ruido. los bloques en el cielo no se notan tanto
+h264: la imagen es perfecta. perdida de fluidez
+THEORA: mucho ruido y faltan fotogramas
+Vp8:no hay ruido. los bloques casi no se notan en el cielo. los detalles estan difuminados. muy fluido
+
+MOBCAL
+
+MPEG1,2: en las zonas con mas detalle hay mucho ruido. las letras se leen pero tienen ruido alrededor
+mp4: as letras tienen menos ruido
+h263p: se notan mucho los bloques en las zonas con mucho detalle. las letras como mp4
+h264: se ve muy bien pero lento
+theora: faltan fotogramas, no hay tanto ruido pero si desenfoque
+vp8:menos ruido. se notan los bloques, desenfoque. muy fluido
+
+DINNER
+
+mp1:no hay ruido pero si bloques.
+mp2,4: los bloques parecen mas peques
+h263p: aqui tambien se ven epero peques
+h264: grean calidad pero lento
+theora: se ven bloques y faltan fotogramas
+vp8: fluido. bloques prques y algo de ruido
+
+
+
+
+
+
