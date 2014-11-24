@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<biblioteca  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="biblioteca.xsd" >
+
+
+     <bibliotecario>
+
+        <nombre>Pepe</nombre>
+      
+
+        <apellidos>Bibliotecas</apellidos>
+
+     </bibliotecario>
+
+     
+
+     <libros>
+
+        <numReg>l1</numReg>
+
+        <titulo>Blade Runner</titulo>
+
+        <autores>Philip K. dick</autores>
+
+     </libros>
+
+     
+
+     <libros>
+        <numReg>l2</numReg>
+        <titulo>La Maquina Diferencial</titulo>
+        <autores>Bruce Sterling</autores>
+        <autores>William Gibson</autores>
+     </libros>
+     
+     
+
+     <socios>
+
+         <nombre>Manolo</nombre>
+
+         <apellidos>el del bombo</apellidos>
+
+         <telefono>888</telefono>
+
+         <direccion>
+
+              <tipo>calle</tipo>
+
+              <nombreCalle>Amarilla</nombreCalle>
+
+              <numero>73</numero>
+
+              <cp>73882</cp>
+
+              <localidad>Valencia</localidad>
+
+              <provincia>Valencia</provincia>
+
+         </direccion>
+
+     </socios>
+
+     
+
+     <socios>
+         <nombre>socio 2</nombre>
+         <apellidos>apsocio 1</apellidos>
+         <telefono>888</telefono>
+         <direccion>
+              <tipo>calle</tipo>
+              <nombreCalle>de la kk</nombreCalle>
+              <numero>73</numero>
+              <cp>73882</cp>
+              <localidad>local</localidad>
+              <provincia>prov</provincia>
+         </direccion>
+     </socios>
+
+
+     <prestamos>
+
+          <fechaP>2014-02-02</fechaP>
+
+          <bibliotecario>Pepe</bibliotecario>
+
+          <libros>Blade Runner</libros>
+
+          <libros>La Maquina Diferencial</libros>
+
+     </prestamos>
+
+</biblioteca>
+
+

@@ -1,0 +1,20 @@
+<!ELEMENT videoclub (peliculas*,videojuegos*, socios*,prestamos*)>
+<!ELEMENT peliculas ( titulo, fecha, director, actores*)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT actores (#PCDATA)>
+<!ATTLIST peliculas codigo ID #REQUIRED>
+<!ELEMENT videojuegos ( nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tipo EMPTY>
+<!ATTLIST videojuegos codigo ID #REQUIRED>
+<!ATTLIST videojuegos tipo (play|wii) #REQUIRED>
+<!ELEMENT socios ( nombre, edad)>
+<!ELEMENT edad (#PCDATA)>
+<!ATTLIST socios codigo ID #REQUIRED>
+<!ELEMENT prestamos (fecha_alquiler, fecha_devolucion?)>
+<!ELEMENT fecha_alquiler (#PCDATA)>
+<!ELEMENT fecha_devolucion (#PCDATA)>
+<!ATTLIST prestamos ref IDREF #REQUIRED>
+<!ATTLIST prestamos ref_socio IDREF #REQUIRED>

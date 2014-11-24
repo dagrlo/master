@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE agenda SYSTEM "ejemplo-agenda.dtd">
+<agenda>
+<persona id="ricardo" sexo="masculino">
+<nombre>Ricardo Borriquero</nombre>
+<tlf>951345678</tlf>
+<email>kkk</email>
+<email>aaa</email>
+<relaciones nombre="eva"/>
+<relaciones nombre="lola"/>
+</persona>
+<persona id="eva" sexo="femenino">
+<nombre>Eva Risto</nombre>
+<tlf>955837659</tlf>
+<email>aaa</email>
+<relaciones nombre="lola"/>
+<relaciones nombre="ricardo"/>
+</persona>
+<persona id="lola" sexo="femenino">
+<nombre>Eva Risto</nombre>
+<tlf>955837659</tlf>
+<email>aaa</email>
+<relaciones nombre="ricardo"/>
+</persona>
+</agenda>

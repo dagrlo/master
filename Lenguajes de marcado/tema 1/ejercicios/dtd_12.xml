@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE letras [
+	<!ELEMENT letras (letra*)>
+	<!ELEMENT letra (#PCDATA)>
+]>
+<letras>
+	<letra>m</letra>
+	<letra>uve doble</letra>
+</letras>
+
+<!-- hay que marcar el elemento letra con * para poder insertar varios  -->
+
+

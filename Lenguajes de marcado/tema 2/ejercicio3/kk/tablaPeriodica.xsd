@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ >
+                  
+        <xsd:element name="tabla">
+          <xsd:complexType>
+         
+
+               <xsd:element name="atomos" type="xsd:atomos" minOccurs="1"/>
+                        
+          </xsd:complexType>
+     </xsd:element>
+
+
+     <xsd:complexType name="atomos">
+    
+          <xsd:sequence>             
+                         
+               <xsd:element name="nombre" type="xsd:string"/>
+               <xsd:element name="simbolo">
+                    <xsd:simpleType>
+                         <xsd:restriction base="xsd:string">
+                               <xsd:pattern value="[A-Z][a-z][a-z]"/>
+                         </xsd:restriction>
+                    </xsd:simpleType>
+               </xsd:element>
+               <xsd:element name="numAtomico" type="xsd:integer"/>
+               <xsd:element name="pEbullicion">
+                    <xsd:complexType>
+                         <xsd:simpleContent>
+                              <xsd:extension base="xsd:string">
+                                      <xsd:attribute name="unidades" default="centigrados">
+                                        <xsd:simpleType>
+                                          <xsd:restriction base="xsd:string">
+                                               <xsd:enumeration value="centigrados"/>
+                                               <xsd:enumeration value="kelvin"/>
+                                          </xsd:restriction>
+                                       </xsd:simpleType>
+                                      </xsd:attribute>
+                              </xsd:extension>
+                         </xsd:simpleContent>
+                    </xsd:complexType>                    
+               </xsd:element>
+             
+
+          </xsd:sequence>
+          
+           <xsd:attribute name="estado">
+               <xsd:simpleType>
+                   <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="solido"/>
+	         <xsd:enumeration value="liquido"/>
+	         <xsd:enumeration value="gaseoso"/>
+                   </xsd:restriction>
+                 </xsd:simpleType>
+               </xsd:attribute>  
+     </xsd:complexType>
+
+     
+
+</xsd:schema>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- $Id: simple_video.html 1220 2011-01-12 16:50:52Z bernd $ -->
+<html>
+<head>
+<title>Simple Video</title>
+</head>
+<body>
+ <!-- La nueva etiqueta video muestra un vídeo, si el navegador contiene el
+      decodificador correspondiente, o puede cargar un plugin adecuado. 
+      controls indica si se muestran y se pueden usar controles básicos
+      (avance/retroceso, volumen y pantalla completa). autoplay indica que
+      se inicia la reproducción en cuanto se cargue la página. Se puede
+      poner src="archivo_de_video" o usar <source ...> para poner varias
+      alternativas, quizá en distintos formatos. -->
+ <video controls autoplay>
+  <source src='videos/mvi_2170.webm' type='video/webm'>
+  <source src='videos/mvi_2170.ogv' type='video/ogg'>
+  Sorry, your browser is unable to play this video.
+ </video>
+</body>
+</html>

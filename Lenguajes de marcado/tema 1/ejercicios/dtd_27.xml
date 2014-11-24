@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE colores [
+<!ELEMENT colores (color*)>
+<!ELEMENT color (nombreSvg, codigo)>
+<!ELEMENT codigo (rgb?, cmyk?)>
+<!ELEMENT nombreSvg (#PCDATA)>
+<!ELEMENT rgb (#PCDATA)>
+<!ELEMENT cmyk (#PCDATA)>
+]>
+<colores>
+<color>
+<nombreSvg>Purple</nombreSvg>
+<codigo>
+<rgb>#800080</rgb>
+</codigo>
+</color>
+
+
+<color>
+<nombreSvg>Purple</nombreSvg>
+<codigo>
+<cmyk>#00FF007F</cmyk>
+</codigo>
+</color>
+
+
+</colores>
+
+<!--  color lleva nombre y codigo-->
+<!-- definir codigo que lleva dentro rgb y cmyk-->
+
+
+
+
+
+

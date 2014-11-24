@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:include schemaLocation="socioInclude.xsd"/>
+
+<xsd:complexType name="TBibliotecario">
+
+   <xsd:sequence>
+
+      <xsd:element name="nombre" type="xsd:string"/>
+
+      <xsd:element name="apellidos" type="xsd:string"/>
+
+   </xsd:sequence>
+
+</xsd:complexType>
+
+
+<xsd:complexType name="TLibro">
+
+   <xsd:sequence>
+
+       <xsd:element name="numReg" type="xsd:ID"/>
+
+       <xsd:element name="titulo" type="xsd:string"/>
+
+       <xsd:element name="autores" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+
+   </xsd:sequence>
+
+</xsd:complexType>
+
+
+<xsd:complexType name="TDireccion">
+
+   <xsd:sequence>
+
+      <xsd:element name="tipo" type="xsd:string"/>
+
+      <xsd:element name="nombreCalle" type="xsd:string"/>
+
+      <xsd:element name="numero" type="xsd:string"/>
+
+      <xsd:element name="cp" type="xsd:integer"/>
+
+      <xsd:element name="localidad" type="xsd:string"/>
+
+      <xsd:element name="provincia" type="xsd:string"/>
+
+   </xsd:sequence>
+
+</xsd:complexType>
+
+
+
+
+<xsd:complexType name="TPrestamos">
+
+    <xsd:sequence>
+
+        <xsd:element name="fechaP" type="xsd:date" minOccurs="1" maxOccurs="1"/>
+
+        <xsd:element name="fechaD" type="xsd:date" minOccurs="0" maxOccurs="1"/>
+
+        <xsd:element name="bibliotecario" type="xsd:string"/>
+
+        <xsd:element name="libros" type="xsd:string" minOccurs="1" maxOccurs="3"/>
+
+    </xsd:sequence>
+
+</xsd:complexType>
+
+
+<xsd:element name="biblioteca">
+
+   <xsd:complexType>
+
+      <xsd:sequence>
+
+         <xsd:element name="bibliotecario" type="TBibliotecario"/>
+
+         <xsd:element name="libros" type="TLibro" minOccurs="1" maxOccurs="unbounded"/>
+
+         <xsd:element name="socios" type="TSocio" minOccurs="1" maxOccurs="unbounded"/>
+
+         <xsd:element name="prestamos" type="TPrestamos"/>
+
+      </xsd:sequence>
+
+   </xsd:complexType>
+
+</xsd:element>
+
+</xsd:schema>

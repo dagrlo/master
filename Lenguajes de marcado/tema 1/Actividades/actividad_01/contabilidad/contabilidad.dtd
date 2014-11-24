@@ -1,0 +1,10 @@
+<!ELEMENT contabilidad (apunte*)>
+<!ELEMENT apunte (fecha, cantidad, concepto)>
+<!ELEMENT fecha EMPTY>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT concepto (#PCDATA)>
+<!ATTLIST apunte tipo (ingreso | gasto) #REQUIRED>
+<!ATTLIST fecha dia CDATA #IMPLIED>
+<!ATTLIST fecha mes CDATA #REQUIRED>
+<!ATTLIST fecha anyo CDATA #REQUIRED>
+<!ATTLIST cantidad moneda CDATA #REQUIRED>

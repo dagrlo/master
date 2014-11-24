@@ -1,0 +1,10 @@
+<!ELEMENT agenda (persona)+>
+<!ELEMENT persona (nombre, tlf,email+,(relaciones*)?)>
+<!ATTLIST persona id ID #REQUIRED>
+<!ATTLIST persona sexo (masculino|femenino) #REQUIRED>
+<!ATTLIST relaciones nombre IDREFS #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT tlf (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT relaciones EMPTY>
+

@@ -1,0 +1,72 @@
+<!doctype html> 
+<html lang=en> 
+	<head> 
+		<meta charset=utf-8> 
+		<title>Web Workers en HTML5</title> 
+		<link href="06. estilo.css" rel="stylesheet" type="text/css" />
+		
+		<script language="javascript">
+
+		function iniciar(){
+			cajadatos=document.getElementById('cajadatos');
+			var boton=document.getElementById('boton');
+			boton.addEventListener('click', enviar, false);
+			trabajador=new Worker('06. trabajador.js');
+			trabajador.addEventListener('message', recibido, false);
+		} 
+		
+		function enviar(){
+			var nombre=document.getElementById('nombre').value;
+			trabajador.postMessage(nombre);
+		} 
+		
+		function recibido(e){
+			cajadatos.innerHTML=e.data;
+		}
+
+		window.addEventListener('load', iniciar, false);
+		</script>
+		
+	</head> 
+	<body> 
+		<header> 
+			<hgroup>
+				<h1>Ejemplo 6 - Web Workers</h1>
+				<h2>Utilización de Web Workers en HTML5</h2>
+			</hgroup>
+		
+		</header>
+
+		<aside class="menu">
+			<nav>
+				<h4>Ejemplo de Web Worker</h3>
+				<a href="#webworker">Ejemplo</a>
+			</nav>
+		</aside>
+
+		<section class="principal">
+
+		<header>
+			<h3>Ejemplos de Web Workers</h3>
+		</header>
+
+
+		<article>
+			<a name="webworker"></a>
+			<h3>Web Worker</h3>
+			<h5>Nota: solo funciona si la página está ubicada en un servidor</h5>
+				<section id="cajaformulario"  class="cajaformulario">
+					<form name="formulario">
+						<p>Nombre:<br><input type="text" name="nombre" id="nombre"></p>
+						<p><input type="button" name="boton" id="boton" value="Enviar"></p>
+					</form>
+				</section>
+				<section id="cajadatos" class="cajadatos"></section>
+				<p class="texto"></p>
+		</article>
+
+		</section>
+		
+		<footer>MUISAW - DTWTC - Ramón Cirilo</footer>
+	</body> 
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<micasa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejemplo01.xsd" >
+
+    <habitacion num="h1">
+         <mueble>
+              silla
+         </mueble>
+         <puerta tipo="cristal"/>
+         <puerta tipo="madera"/>
+    </habitacion>
+    
+       <habitacion num="h2">
+         <mueble>
+              silla
+         </mueble>
+         <puerta tipo="cristal"/>
+         <puerta tipo="madera"/>
+    </habitacion>
+    
+</micasa>
+
+

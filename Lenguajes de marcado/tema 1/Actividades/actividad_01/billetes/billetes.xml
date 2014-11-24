@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE billetes SYSTEM "billetes.dtd">
+
+
+<billetes>
+
+	
+
+	<billete id="B001">
+		<pasajero nombre="Ivan" apellido="Snachez" sexo="v"/>
+
+		<origen>
+
+			<ciudad>Valencia</ciudad>
+		
+
+		</origen>
+		<destino>
+
+			<ciudad>Madrid</ciudad>
+
+		</destino>
+
+		<ida>
+
+			<fecha dia="13" mes="05" anyo="2008"/>
+
+			<hora h="10" m="55"/>
+
+		</ida>
+
+		<vuelta>
+
+			<fecha dia="20" mes="05" anyo="2008"/>
+
+			<hora h="18" m="00"/>
+
+		</vuelta>
+
+	</billete>
+
+
+	<billete id="B213">
+		<pasajero nombre="María" apellido="Ibañez" sexo="m"/>
+		<origen>
+			<ciudad>Madrid</ciudad>		
+			<pais>España</pais>
+		</origen>
+		<destino>
+			<ciudad>Paris</ciudad>
+			<pais>Francia</pais>
+		</destino>
+		<ida>
+			<fecha dia="20" mes="06" anyo="2009"/>
+			<hora h="21" m="55"/>
+		</ida>
+		<vuelta>
+			<fecha dia="25" mes="06" anyo="2008"/>
+			<hora h="22" m="00"/>
+		</vuelta>
+	</billete>
+	
+	<billete id="B457">
+		<pasajero nombre="Jean" apellido="Mechín" sexo="m"/>
+		<origen>
+			<ciudad>Burdeos</ciudad>		
+			<pais>Francia</pais>
+		</origen>
+		<destino>
+			<ciudad>Bucaramanga</ciudad>
+		</destino>
+		<ida>
+			<fecha dia="22" mes="03" anyo="2009"/>
+		</ida>
+		<vuelta>
+			<fecha dia="05" mes="09" anyo="2009"/>
+		</vuelta>
+	</billete>
+	
+	
+
+</billetes>
+
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE contabilidad SYSTEM "contabilidad.dtd">
+
+<contabilidad>
+	<apunte tipo="ingreso">
+		<fecha dia="24" mes="febrero" anyo="2011"/>
+		<cantidad moneda="?">1800</cantidad>
+		<concepto>Salario</concepto>
+	</apunte>
+	
+	<apunte tipo="gasto">
+		<fecha mes="febrero" anyo="2011"/>
+		<cantidad moneda="$">74,25</cantidad>
+		<concepto>Recibo luz</concepto>
+	</apunte>
+	
+
+
+</contabilidad>

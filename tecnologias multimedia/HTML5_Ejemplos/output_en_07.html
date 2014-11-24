@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>output element</title>
+ <!-- $Id: output_en.html 1196 2011-01-10 10:49:28Z klaus $ -->
+ 
+ <style>
+  body { font-family: sans-serif; }
+  table { border-collapse: collapse;  }
+  table, td, th { border: 1px solid; padding: 10px;}
+  output { background: lightgray; 
+  padding-left: 0.5em; padding-right: 0.5em; }
+  .num { text-align: right; }
+ </style>
+
+
+ <script>
+ /* La funcion updateSum actualiza los valores de los objetos sumProd (que será el número
+    total de productos pedidos) y sum (su precio total), asi como el valor de la propiedad innerHTML de sum */
+ function updateSum() 
+ {
+  var ips = document.getElementsByTagName("input");
+  var sum = 0;
+  var prods = 0;
+  for (var i=0; i<ips.length; i++) 
+  {
+    if (ips[i].value > 0) 
+    {
+     /* Se obtiene el valor del atributo cuyo nombre es el identificador, seguido de Price 
+           Al ser javascript un lenguaje interpretado, se pueden construir nombres de variables
+           y evaluarlas en ejecución. El pseudo-atributo innerHTML contiene lo que hay dentro de la etiqueta (o sea, el contenido) */
+      sum += ips[i].value * Number(document.getElementById(ips[i].name+"Price").innerHTML);
+      prods += Number(ips[i].value);
+    }
+  }
+  document.getElementById("sumProd").value = prods;
+  document.getElementById("sum").value = sum;
+ }
+ /* Esta función se llama cada vez que la página acaba de cargarse,
+        y cada vez que se pulsa algo en cualquiera de los inputs.  */
+ window.onload = function() 
+ { 
+  updateSum();
+ }
+ </script>
+
+</head>
+<body>
+<form oninput="updateSum();" method=get>
+ <table>
+  <tr><th>Product </th><th>Price (US$)                </th><th>Quantity                                              </th></tr>
+  <tr><td>Keyboard</td><td class=num id=i1Price> 39.50</td><td><input name=i1 id=i1 type=number min=0 value=0 max=99></td></tr>
+  <tr><td>Mouse   </td><td class=num id=i2Price> 26.30</td><td><input name=i2 id=i2 type=number min=0 value=0 max=99></td></tr>
+  <tr><td>Monitor </td><td class=num id=i3Price>264.50</td><td><input name=i3 id=i3 type=number min=0 value=0 max=99></td></tr>
+ </table>
+ <p/>Your shopping cart contains <output name=sumProd id=sumProd></output> items.
+ Total price: <output name=sum id=sum></output> US$.
+ <input type=submit value="Submit" />
+</form>
+</body>
+</html>
+

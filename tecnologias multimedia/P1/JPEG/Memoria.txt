@@ -1,0 +1,56 @@
+3)----------------------------------------------------------------
+
+El tamaño de la imagen original es de 65536 bytes;
+
+Bloque de 16
+============
+
+A simple vista no se pueden percibir cambios respecto al tamaño de bloque de 8. Aun así se puede ver que la relación señal/ruido es menor que en con bloques de 8.
+
+La compresión en este caso es muy baja.
+
+Diferencia máxima= 30
+SNR= 13.19 dB
+Tamaño nuevo= 61230 
+
+Bloque de 8
+===========
+
+Diferencia máxima= 19
+SNR= 20.23 dB
+Tamaño nuevo= 38904
+
+La relación señal ruido es bastante alta y la compresión también.
+
+Bloque de 4
+===========
+
+Las zonas mas oscuras pierden definición. Hay una interferencia que se puede observar como lineas horizontales mas oscuras.
+
+La relación señal/ruido ha bajado mucho y la compresión no ha aumentado demasiado.
+
+Diferencia máxima= 64
+SNR= 3.568 dB
+Tamaño nuevo= 34326
+
+4) ------------------------------------------------------------------
+
+Una solución es poner valores muy altos en las matrices de cuantización. Una solución más rápida es editar este bucle:
+
+ for auxind=1:(blocksize^2)
+   DTV(auxind)=DTM(H(auxind,1),H(auxind,2))/2;
+  end;
+
+Dividiendo DTM entre cualquier valor. Si se divide entre 2 la imagen se puede ver pero tiene bastantes perdidas, el resultado ocupa 27370 bytes. A partir de 5 las perdidas son excesivas pero el resultado ocupa menos de 20KB. En todos los casos la relación señal/ruido es muy baja.
+
+La mejor opción es añadir este bucle una vez se ha calculado DTV:
+
+  for auxind=(nCompresión+1):(blocksize^2)
+    DTV(auxind)=0;
+  end;
+
+En DTV está la información guardada en un vector siguiendo un zigzag de forma que los valores de alta frecuencia se quedan al final de este y el primer valor es el valor medio o componente continua. Este bucle llenará de ceros las partes que corresponden a las frecuencias altas perdiendose detalles y ganando compresión.
+
+5)--------------------------------------------------------------------------------
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<xsd:complexType name="TSocio">
+
+    <xsd:sequence>
+
+       <xsd:element name="nombre" type="xsd:string"/>
+
+       <xsd:element name="apellidos" type="xsd:string"/>
+
+       <xsd:element name="telefono" type="xsd:string"/>
+
+       <xsd:element name="direccion" type="TDireccion"/>
+
+    </xsd:sequence>
+
+</xsd:complexType>
+
+</xsd:schema>

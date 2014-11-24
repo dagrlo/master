@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE partidos [
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido (local, visitante, goles)>
+<!ELEMENT local (#PCDATA)>
+<!ELEMENT visitante (#PCDATA)>
+<!ELEMENT goles EMPTY>
+<!ATTLIST goles goleslocal CDATA #REQUIRED>
+<!ATTLIST goles golesvisitante CDATA #REQUIRED>
+]>
+
+<partidos>
+	<partido>
+		<local>Nottingham</local>
+		<visitante>Inter</visitante>
+		<goles goleslocal="1" golesvisitante="1"/>
+	</partido>
+	<partido>
+		<local>Vodka</local>
+		<visitante>Sparta</visitante>
+		<goles goleslocal="1" golesvisitante="1"/>
+	</partido>
+	<partido>
+		<local>Water</local>
+		<visitante>Grifo</visitante>
+		<goles goleslocal="1" golesvisitante="1"/>
+	</partido>
+</partidos>
+
+
+
+

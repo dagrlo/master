@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<empleado tipo="jefe" xmlns="mio" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation= "mio Ejemplo_cabecera_con_espacio_de_nombres.xsd">
+	<name>Jonh</name>
+	<lastname>34</lastname>
+</empleado>

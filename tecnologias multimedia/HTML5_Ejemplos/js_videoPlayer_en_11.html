@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+
+ <!-- Estilos en CSS para el cuerpo del documento y para otras etiquetas. -->
+ <style>
+ body
+ {
+  font: 130% sans-serif;
+  width: 90%;
+  margin: auto;
+ }
+ video 
+ {
+  margin-top: 10px;
+ }
+ section 
+ {
+  display: block;
+  float: left;
+  padding: 10px;
+ }
+ footer
+ {
+  display: block;
+  font-size: 80%;
+ }
+ footer span
+ {
+  font-style: italic;
+ }
+ input[type="button"]
+ {
+  font-size: 150%;
+  width: 1.8em;
+ }
+ </style>
+ 
+ <title>HTMLMediaElement Interface example - Video Player</title>
+ 
+ <script>
+ // Las variables de javascript no es obligatorio declararlas, pero es una buena práctica.
+ // Al ir fuera de cualquier función son globales.
+ var video, pButton, curTime, curPos, mm, ss, arr, curVol;
+
+ /* prepare player oncanplay */
+ var initControls = function() {
+  // Guardamos referencias a todo lo que se usa luego, por comodidad.
+  video = document.querySelector("VIDEO");
+
+  // store reference to play button
+  pButton = document.getElementById("playButton");
+
+  // store reference to time display and set initial value
+  curTime = document.getElementById("timePlayed");
+  curTime.innerHTML = '0:00';
+
+  // store reference to time-display and set max value
+  curPos = document.getElementById("currentPosition");
+  curPos.max = video.duration;
+
+  // store reference to volume button and set volume to 100%
+  curVol = document.getElementById("currentVolume");
+  curVol.innerHTML = "100%";
+  video.volume = 1;
+
+  // set current video name in credits
+  arr = video.currentSrc.split("/");
+  document.getElementById("currentSrc").innerHTML = arr[arr.length-1];
+ };
+
+ // Función para comenzar (o seguir) la reproducción. Basta llamar a video.play(). 
+ // La otra línea es para poner en el botón de play los dos triangulitos (cada uno es un carácter)
+ var _play = function() 
+ {
+  video.play();
+  pButton.value = String.fromCharCode('0x25AE','0x25AE');
+ };
+ 
+ // Función para pausar la reproducción. Basta llamar a video.pause().
+ // La otra línea es para poner en botón de play las dos barras verticales (son un sólo carácter)
+ var _pause = function() 
+ {
+  video.pause();
+  pButton.value = String.fromCharCode('0x25B6');
+ };
+ 
+ // Cuando se pulsa el botón de play/pause se conmuta de un estado a otro. Se puede saber
+ // en qué estado estamos mirando la variable video.paused que, como todas las internas
+ // de video, se actualiza por sí misma.
+ var playPause = function() 
+ {
+  if (video.paused) 
+  {
+    _play();
+  }
+  else 
+  {
+    _pause();
+  }
+ };
+
+ // A esta función se le pasará el instante desde el que queremos seguir reproduciendo.
+ // Basta fijar el campo currentTime del objeto video.
+ var updateProgress = function(ctrl) 
+ {
+  if (ctrl) 
+  {
+    // set new video position from slider
+    video.currentTime = ctrl.value;
+  }
+  else 
+  {
+    // set slider from current playback position
+    curPos.value = video.currentTime;
+  }
+
+  // Aquí se actualiza la barra de progreso. Construimos la cadena min:seg y la ponemos como contenido dentro del objeto curTime
+  mm = Math.floor(video.currentTime / 60.0);
+  ss = parseInt(video.currentTime) % 60;
+  ss = (ss < 10) ? '0'+ss : ss;
+  curTime.innerHTML = mm+':'+ss;
+
+ };
+
+ // Se llama cuando se pulsa el botón de avance o retroceso rápido. La variable direct que se pasa será 1, -1 ó 0.
+ // Basta poner el valor de playbackRate a lo que se quiera (múltiplo, incluso no entero, de la velocidad normal). 
+ var fastFwdBwd = function(direct) 
+ {
+  _pause();
+  _play();
+  if (direct) 
+  {
+    video.playbackRate = 5.0 * direct;
+  }
+ };
+
+ // Para ir a una escena se fija el tiempo en el atributo currentTime. Debe ir en segundos, o sea que
+ // convertimos la variable que se pasa, que estará en la forma mm:ss a segundos.
+ var selectScene = function(ctrl) 
+ {
+  arr = ctrl.value.split(":");
+  video.currentTime = parseFloat((arr[0]*60)+(arr[1]*1));
+  // Se actualiza la barra de progreso...
+  updateProgress();
+  _play();
+ };
+
+ // Llamada cuando se toca el control de volumen. Se cambia con el atributo volume del objeto video. 
+ var adjustVolume = function(ctrl) 
+ {
+  video.volume = ctrl.value;
+  // Esto pone el número del volumen en porcentaje en el contenido de nuestro elemento currentVolume
+  curVol.innerHTML = (Math.round(ctrl.value*100))+'%';
+ };
+ 
+ // Para anular o reactivar el sonido. Se puede saber el estado actual con el atributo muted del objeto video
+ var mute = function(ctrl)
+ {
+  if (video.muted) 
+  {
+    video.muted = false;
+    ctrl.style.color = 'black';
+  }
+  else 
+  {
+    video.muted = true;
+    ctrl.style.color = 'silver';
+  }
+ };
+ </script>
+</head>
+
+<body>
+<h1>A basic JavaScript video player using the HTMLMediaElement interface. Now playing: "Big Buck Bunny"</h1>
+<section>
+ <video preload=auto
+        poster=videos/bbb_poster.jpg
+        width=854 height=480
+        oncanplay="initControls()"
+        ontimeupdate="updateProgress()">
+  <source src='videos/bbb_240p_stereo.ogv' type='video/ogg;codecs="theora, vorbis"'>
+  Sorry, your browser is unable to play this video.
+ </video>
+ <footer>
+ Video <span id="currentSrc"> </span> (c) copyright 2008, <a href="http://www.blender.org/">Blender Foundation</a> / <a href="http://www.bigbuckbunny.org">www.bigbuckbunny.org</a>
+ </footer>
+</section>
+
+<section>
+ <fieldset>
+  <legend>Scenes</legend>
+  <!-- Cuando el select sufre algún cambio se llama a la función selectScene con argumento el valor de la opción seleccionada -->
+  <select name="scenes" onchange="selectScene(this)" size=19>
+    <option value="0:00" selected>0:00 Opening scene</option>
+    <option value="0:23">0:23 Title sequence</option>
+    <option value="0:40">0:40 Big Buck Bunny wakes up</option>
+    <option value="0:56">0:56 Idyllic morning</option>
+    <option value="1:20">1:20 The first butterfly bites the dust</option>
+    <option value="1:56">1:56 Frank, Rinky and Gimera turn up; trouble is brewing</option>
+    <option value="3:06">3:06 The second butterfly bites the dust</option>
+    <option value="3:54">3:54 This calls for revenge</option>
+    <option value="4:11">4:11 Setting traps</option>
+    <option value="5:00">5:00 Time for revenge</option>
+    <option value="5:25">5:25 Squirrel Rinky is hit by a tree</option>
+    <option value="5:42">5:42 Chinchilla Gamera is next</option>
+    <option value="6:21">6:21 Innocent bird gets knocked out</option>
+    <option value="6:34">6:34 Flying squirrel Frank attacks</option>
+    <option value="7:00">7:00 The trap is sprung</option>
+    <option value="7:20">7:20 Last-second rescue</option>
+    <option value="7:43">7:43 Peace and quiet. Time to fly a kite</option>
+    <option value="8:10">8:10 Closing credits</option>
+    <option value="9:40">9:40 The innocent bird's revenge</option>
+  </select>
+ </fieldset>
+
+ <fieldset>
+  <legend>Player</legend>
+  <input type=button value="&#x25B6;" onclick="playPause(this);" id="playButton">
+  <input type="range" min=0 max=1 value=0 step=1 onchange="updateProgress(this)" id="currentPosition">
+  <span id="timePlayed"> </span>
+  <input type="button" value="&#x00AB;" onmousedown="fastFwdBwd(-1)" onmouseup="fastFwdBwd()">
+  <input type="button" value="&#x00BB;" onmousedown="fastFwdBwd(1)" onmouseup="fastFwdBwd()">
+ </fieldset>
+
+ <fieldset>
+  <legend>Volume</legend>
+  <input type="button" value="&#x266B;" onclick="mute(this)">
+  <input type="range" min=0.0 max=1.0 step=0.1 value=1.0 onchange="adjustVolume(this)"/>
+  Volume: <span id="currentVolume"> </span>
+ </fieldset>
+
+</section>
+
+</body>
+</html>

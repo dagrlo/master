@@ -1,0 +1,24 @@
+<!ELEMENT billetes (billete+)>
+<!ELEMENT billete (pasajero, origen, destino, ida, vuelta)>
+<!ELEMENT pasajero EMPTY>
+<!ELEMENT origen (ciudad, pais?)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT destino (ciudad, pais?)>
+<!ELEMENT ida (fecha, hora?)>
+<!ELEMENT vuelta (fecha, hora?)>
+<!ELEMENT fecha EMPTY>
+<!ELEMENT hora EMPTY>
+<!ATTLIST billete
+id ID #REQUIRED>
+<!ATTLIST pasajero
+nombre CDATA #REQUIRED
+apellido CDATA #REQUIRED
+sexo (v | m) #IMPLIED >
+<!ATTLIST fecha
+dia CDATA #REQUIRED
+mes CDATA #REQUIRED
+anyo CDATA #REQUIRED>
+<!ATTLIST hora
+h CDATA #REQUIRED
+m CDATA #REQUIRED >

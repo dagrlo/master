@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>forms support</title>
+ <!-- $Id: features_en.html 1181 2011-01-07 15:05:24Z klaus $ -->
+ <!-- Esta vez el estilo se indica explícitamente aquí en lugar de llamar a una hoja de estilo .css --> 
+ <style>
+  label { width: 150px; float: left; }
+  input { width: 200px; }
+ </style>
+ <script>
+  window.onload = function() {
+    prefillFields();
+    inputs = document.getElementsByTagName("input");
+    for (var i=0; i<inputs.length; i++) {
+      if (inputs[i].type == "text") {
+        inputs[i].value = "not available";
+      }
+    }
+  }
+ </script>
+</head>
+
+<body>
+ <!-- fieldset es nuevo en HTML5. Sirve para agrupar varias entradas de un form relacionadas entre sí.
+      Dibuja un rectángulo encerrándolas -->
+ <fieldset>
+  <!-- legend sirve para poner un texto descriptivo, en este caso al fieldset -->
+  <legend>New input types</legend>
+  
+  <!-- En action iría normalmente una llamada a una macro en .php o a una función javascript para hacer
+       validación u otras acciones usando los valores de las variables enviadas en el formulario -->
+  <form action="send" method="get">
+  
+  <!-- Determinados valores para el type del input son chequedados, si el navegador 
+       lleva implementados esos chequeos. -->
+  <p/><label for=tel>tel</label>
+  <!-- Un tipo tel válido es simplemente una cadena de texto, pero usando el atributo pattern y las expresiones
+       regulares podemos ser más específicos. P. ej.: una cadena de la forma +nn(nn) nnnnnnn -->
+  <input type=tel id=tel name=tel pattern="\+\d{2}\(\d{2}\)\ *\d{7}" required/>
+    
+  <p/><label for=search>search</label>
+  <!-- El atributo autofocus (nuevo en HTML5) posiciona el cursor en este campo al cargar la página.
+       Es un atributo booleano. ATENCION: los atributos booleanos toman valor true SOLO POR USARLOS,
+       aun cuando se escribiese algo como autofocus="false" -->
+  <input type=search id=search name=search autofocus/>
+ 
+  <p/><label for=url>url</label>
+  <input type=url id=url name=url/>
+    
+  <p/><label for=email>email</label>
+  <!-- El atributo placeholder (nuevo en HTML5) muestra el campo inactivo con el valor especificado en él.
+       Tan pronto como el usuario activa el campo, el valor desaparece (pero ya ha dado una idea al usuario
+       sobre qué se espera que ponga en ese campo) -->
+  <input type=email id=email name=email placeholder="user@nowhere.com"/>
+    
+  <p/><label for=datetime>datetime</label>
+  <input type=datetime id=datetime name=datetime/>
+ 
+  <p/><label for=date>date</label>
+  <input type=date id=date name=date/>
+ 
+  <p/><label for=month>month</label>
+  <input type=month id=month name=month/>
+    
+  <p/><label for=week>week</label>
+  <input type=week id=week name=week/>
+    
+  <p/><label for=time>time</label>
+  <input type=time id=time name=time/>
+ 
+  <p/><label for=datetime>datetime-local</label>
+  <input type=datetime id=datetime-local name=datetime-local/>
+    
+  <p/><label for=number>number</label>
+  <!-- El atributo required indica que no se enviará el formulario a menos que ese campo esté relleno
+       con un valor permitido -->
+  <!-- Los atributos min y max, válidos para números y fechas, indican los valores mínimo y máximo permitidos. -->
+  <input type=number id=number name=number min=4 max=10 required/>
+ 
+  <p/><label for=range>range</label>
+  <input type=range id=range name=range/>
+ 
+  <p/><label for=color>color</label>
+  <input type=color id=color name=color/>
+  
+  <p/><input type="submit" value="Enviar"/>
+  </form>
+ </fieldset>
+</body>
+</html>

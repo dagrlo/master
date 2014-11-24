@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE futbol [
+<!ELEMENT futbol ((jugador|equipo)*)>
+<!ELEMENT jugador EMPTY>
+<!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+<!ATTLIST jugador codigo ID #REQUIRED>
+<!ELEMENT equipo EMPTY>
+<!ATTLIST equipo nombre CDATA #REQUIRED>
+<!ATTLIST equipo jugadores IDREFS #IMPLIED>
+]>
+<futbol>
+<jugador nombre="AlfredoDiStéfano" codigo="ads"/>
+<jugador nombre="EdisonArantesdoNascimento" codigo="ean" />
+<jugador nombre="DiegoArmandoMaradona" codigo="dam" />
+<jugador nombre="JohanCruyff" codigo="jc" />
+<equipo nombre="SocietàSportivaCalcioNapoli" jugadores="ean" />
+<equipo nombre="FutbolClubBarcelona" jugadores="ads" />
+</futbol>
+<!-- en los equipos, jugadores es el codigo. en jugador el nombre es nmtoken, quitar espacios -->
+
+

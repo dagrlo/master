@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>checkValidity() method</title>
+ <!-- $Id: checkValidity_en.html 1168 2011-01-05 12:56:41Z klaus $ -->
+ <script>
+ window.onload = function() 
+ {
+  // Se buscan todos los elementos de tipo input y si deben validarse se asocia una función al cambio en el contenido
+  var inputs = document.getElementsByTagName("input");
+  for (var i=0; i<inputs.length; i++)
+  {
+    if (!inputs[i].willValidate) 
+    {
+      continue;
+    }
+    /* Lo interesante de este ejemplo es el uso de checkValidity con un input.
+       Si no es válido, de acuerdo al tipo de input que se requiere, se puede
+       hacer lo que se desee, en este caso, poner un borde rojo */
+    inputs[i].onchange = function()
+    {
+      if (!this.checkValidity()) 
+      {
+        this.style.border = 'solid 2px red';
+        this.style.background = '';
+      } else 
+      {
+        this.style.border = '';  // Por si se hubiera puesto borde rojo antes, se quita.
+        this.style.background = 'lightgreen';
+      }
+    }
+  }
+ }
+ </script>
+ <style>
+  body { font-family: sans-serif; }
+  label { width: 300px; float: left; }
+ </style>
+</head>
+
+<body>
+ <p/>
+ <form method=get action=checkValidity.html>
+  <p/>
+  <label for=email>Your e-mail address:</label>
+  <input type=email name=email id=email />
+
+  <p/>
+  <!-- Otra cosa diferente respecto a los otros ejemplos es el uso de step,
+       que permite números decimales y con un incremento fijo. Si no se pone
+       se entienden enteros e incremento de una unidad -->
+  <label for=minMax>Decimal number between 0 and 1:</label>
+  <input type=number name=minMax id=minMax min=0 max=1 step=0.1 />
+
+  <p/>
+  <!-- En el caso de fechas step va en días, y si no se pone es un día -->
+  <label for=minMaxDate>Date in week steps:</label>
+  <input type=date name=minMaxDate id=minMaxDate min=2010-08-01 max=2010-11-11 step=7 />
+
+  <p/>
+  <label for=minMaxTime>Time in hour steps:</label>
+  <!-- En el caso de tiempos step va en segundos, y si no se pone es un segundo -->
+  <input type=time name=minMaxTime id=minMaxTime min=14:30 max=19:30 step=3600 />
+
+  <p/><label for=pattern>Your nickname:</label>
+  <input type=text pattern="[a-z]{3,32}" placeholder="johnsmith" name=pattern id=pattern title="Only lower case, please; min. 3, max. 32!" />
+
+  <p/><input type=submit />
+ </form>
+</body>
+</html>

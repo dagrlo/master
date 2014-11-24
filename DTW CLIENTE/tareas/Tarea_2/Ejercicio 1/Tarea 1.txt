@@ -1,0 +1,12 @@
+TAREA 1
+=======
+
+Se desea implementar mediante HTML5, CSS y Javascript una herramienta de ayuda para resolver sudokus.
+
+Para ello, se debe diseñar una tabla de 9x9 cuadros de fondo blanco, donde se puedan situar números del 1 al 9. Al iniciar la aplicación, la casilla activa, marcada con fondo gris, se situa en la esquina superior derecha.
+
+El cuadro activo se puede mover con los cursores o haciendo click con el ratón en la casilla correspondiente. Cuando se teclea un número, el cuadro activo cambiará para contener el número pulsado. Si se presiona la tecla suprimir o borrar, se vaciará la casilla activa. Si se presiona la tecla c, se vacia toda la tabla.
+
+Si se introduce un número en una casilla que no cumple las normas de los sudokus (no se pueden repetir numeros en ninguna fila, en ninguna columna, ni en ninguno de los cuadrados de 3x3 delimitados con una linea más gruesa), las casillas que incumplan las condiciones se deberán resaltar, marcando el número que contienen en rojo y el fondo de la casilla en un color rojo muy claro.
+
+Se adjunta video explicativo para clarificar lo que se desea.

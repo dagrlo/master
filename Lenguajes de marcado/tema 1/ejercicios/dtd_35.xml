@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE futbol [
+<!ELEMENT futbol (jugador*)>
+<!ELEMENT jugador EMPTY>
+<!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+<!ATTLIST jugador codigo ID #REQUIRED>
+]>
+<futbol>
+<jugador nombre="Alfredo_Di_Stéfano" codigo="a1"/>
+<jugador nombre="Edson_Arantes_do_Nascimento_Pelé" codigo="a2" />
+<jugador nombre="Diego_Armando_Maradona" codigo="a3" />
+<jugador nombre="Johan_Cruyff" codigo="a4" />
+</futbol>
+<!-- los codigos empiezan por letra. lo nmtoken no permiten espacio ni coma -->
+
+

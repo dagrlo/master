@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tabla  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tablaPeriodica.xsd" >
+      <atomos estado="Solido">
+           <nombre>Prueba</nombre>
+           <simbolo>Ass</simbolo>
+           <numAtomico>1</numAtomico>
+           <ptoEbullicion unidades="Centigrados">1</ptoEbullicion>
+           <densidad dUnidades="kk">19 </densidad>
+      </atomos>    
+</tabla>
+
+

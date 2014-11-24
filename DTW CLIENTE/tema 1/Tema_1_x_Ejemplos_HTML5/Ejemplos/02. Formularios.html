@@ -1,0 +1,218 @@
+<!doctype html> 
+<html lang=en> 
+	<head> 
+		<meta charset=utf-8> 
+		<title>Formularios en HTML5</title> 
+		<link href="02. estilo.css" rel="stylesheet" type="text/css" />
+		
+		<script language="javascript">
+			var avance = 0;
+			function progress(){
+				if (avance == 100){
+					avance = 0;
+					return;
+				}
+				avance = avance + 1;
+				document.getElementById("mi_progress").value = avance;
+				window.setTimeout(progress,100);
+			}
+		</script>
+		
+	</head> 
+	<body> 
+		<header> 
+			<hgroup>
+				<h1>Ejemplo 2 - HTML5 Forms</h1>
+				<h2>Utilización de formularios en HTML5</h2>
+			</hgroup>
+		
+		</header>
+		<aside class="menu">
+			<nav>
+				<h4>Ejemplos de tipo INPUT</h4>
+				<ul>
+					<li><a href="#colores" title="#">Colores</a></li>
+					<li><a href="#fechas" title="#">Fechas</a></li>
+					<li><a href="#email" title="#">Email</a></li>
+					<li><a href="#mes" title="#">Mes</a></li>
+					<li><a href="#numero" title="#">Número</a></li>
+					<li><a href="#rango" title="#">Rango</a></li>
+					<li><a href="#busqueda" title="#">Búsqueda</a></li>
+					<li><a href="#telefono" title="#">Teléfono</a></li>
+					<li><a href="#hora" title="#">Hora</a></li>
+					<li><a href="#url" title="#">URL</a></li>
+					<li><a href="#semana" title="#">Semana</a></li>
+				</ul>
+				<h4>Otros ejemplos</h4>
+				<ul>
+					<li><a href="#datalist" title="#">DATALIST</a></li>
+					<li><a href="#output" title="#">OUTPUT</a></li>
+					<li><a href="#agrupar" title="#">SELECT-OPTGROUP</a></li>
+					<li><a href="#fieldset" title="#">FIELDSET-LEGEND</a></li>
+					<li><a href="#progress" title="#">PROGRESS</a></li>
+					<li><a href="#meter" title="#">METER</a></li>
+				</ul>
+			</nav>
+		</aside>
+		<section class="principal">
+		<header>
+			<h3>Ejemplos de diversos tipos de elementos de formularios</h3>
+		</header>
+
+		<article>	
+			<h3>Colores</h3>
+			<a name="colores">
+			<p>Selecciona un color: <input type="color" name="favcolor"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Fechas</h3>
+			<a name="fechas">
+			<p>Cumpleaños: <input type="date" name="bday"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Email</h3>
+			<a name="email">
+			<p>E-mail: <input type="email" name="email"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Mes</h3>
+			<a name="mes">
+			<p>Cumpleaños (mes y año): <input type="month" name="bdaymonth"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Número</h3>
+			<a name="numero">
+			<p>Cantidad (entre 1 and 5): <input type="number" name="quantity" min="1" max="5"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Rango</h3>
+			<a name="rango">
+			<p>Rango (entre 1 and 10): <input type="range" name="points" min="1" max="10" oninput="document.getElementById('mi_rango').innerHTML = this.value;">
+			&nbsp;Valor seleccionado: &nbsp;<span id="mi_rango"></span>
+			</p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Búsqueda</h3>
+			<a name="busqueda">
+			<p>Buscar en Google: <input type="search" name="googlesearch"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Teléfono</h3>
+			<a name="telefono">
+			<p>Teléfono: <input type="tel" name="usrtel"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Hora</h3>
+			<a name="hora">
+			<p>Selecciona una hora: <input type="time" name="usr_time"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>URL</h3>
+			<a name="url">
+			<p>Introduce tu homepage: <input type="url" name="homepage"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>Semana</h3>
+			<a name="semana">
+			<p>Selecciona una semana: <input type="week" name="week_year"></p>
+			</a>
+		</article>
+
+		<article>	
+			<h3>DATALIST</h3>
+			<p>Escribe uno de estos: Internet Explorer, Firefox, Chrome, Opera, Safari</p>
+			<a name="datalist">
+			<input list="browsers">
+			<datalist id="browsers">
+				<option value="Internet Explorer">
+				<option value="Firefox">
+				<option value="Chrome">
+				<option value="Opera">
+				<option value="Safari">
+			</datalist>
+			</a>
+		</article>
+
+		<article>	
+			<h3>OUTPUT</h3>
+			<a name="output">
+			<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+			<input type="range" id="a" value="50">100 +
+			<input type="number" id="b" value="50">=
+			<output name="x" for="a b"></output>
+			</form>
+			</a>
+		</article>
+
+		
+		<article>	
+			<h3>SELECT - OPTGROUP</h3>
+			<a name="agrupar">
+			<select>
+			  <optgroup label="Coches suecos">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+			  </optgroup>
+			  <optgroup label="Coches alemanes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;">
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			  </optgroup>
+			</select>		
+			</a>
+		</article>
+		
+		<article>	
+			<h3>FIELDSET - LEGEND</h3>
+			<a name="fieldset">
+			<form>
+			  <fieldset>
+				<legend>Datos personales:</legend>
+				Nombre: <input type="text"><br>
+				Email: <input type="email"><br>
+				Fecha de nacimiento: <input type="date">
+			  </fieldset>
+			</form>
+			</a>
+		</article>
+		
+		<article>	
+			<h3>PROGRESS</h3>
+			<a name="progress">
+				<progress id="mi_progress" value="0" max="100"></progress>
+				<button type="button" onclick="progress();">Comenzar</button>
+			</a>
+		</article>
+		
+		<article>	
+			<h3>METER</h3>
+			<a name="meter">
+				<meter value="2" min="0" max="10">2 de 10</meter>&nbsp;&nbsp;<span>2 de 10</span><br>
+				<meter value="0.6">60%</meter>&nbsp;&nbsp;&nbsp;<span>60%</span>
+			</a>
+		</article>
+		
+		</section>
+		
+		<footer>MUISAW - DTWTC - Ramón Cirilo</footer>
+	</body> 
+</html>

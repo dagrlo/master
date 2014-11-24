@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE flores [
+<!ELEMENT flores (flor+)>
+<!ELEMENT flor (#PCDATA)>
+]>
+<flores>
+	<flor>Una</flor>
+	<flor>Dos</flor>
+</flores>
+
+<!-- flor+ obliga a tener 1 o mas elementos -->
+
+

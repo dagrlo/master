@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Support Form</title>
+ <script>
+ /* Esta primera función sólo mira si la form ya ha sido completada (el servidor deberá saber esto)
+    y si no, llena los campos con valores con defecto. Se ejecutará cuando se cargue la página. */
+ var prefillFields = function() 
+ {
+  // screenshot for figure 3.16
+  if (document.URL.search('completed') != -1)
+  {
+    document.forms[0].name.value = 'John Smith';
+    document.forms[0].email.value = 'johnsmith@gmail.com';
+    document.forms[0].errdate.value = '2011-01-07';
+    document.forms[0].errmsg.value = 'Lens error. Camera restart.';
+    document.forms[0].errdesc.value = 'After switching on the camera, the lens cover fails to open and the above error message ("Lens error. Camera restart") appears on the back of the camera. The camera then switches itself off automatically.';
+    document.forms[0].comment.value = 'The camera is only three weeks old and has always been treated with care.';
+    document.forms[0].type.value = 'Digital camera';
+    document.forms[0].sernr.focus();
+
+    // Al final se llama a updateProgress() para poner la barra de completado a su valor inicial, 0
+    updateProgress();
+  }
+ }
+ 
+ /* Esta función se pasea por todos los campos donde el usuario pueda haber puesto algo (todos los de tipo input)
+    y, si el campo es de los que debe ser validado, lo valida. Se ejecutará cada vez que se cargue la página */
+ function initEventListener()
+ {
+  var inputs = document.getElementsByTagName("input");
+  for (var i=0; i<inputs.length; i++) 
+  {
+    if (!inputs[i].willValidate) 
+    {
+      continue;
+    }
+    inputs[i].onchange = function()
+    {
+      this.checkValidity();
+    }
+  }
+ }
+
+ /* Esta función sirve para actualizar la barra de control de número de caracteres introducidos en cada área de texto.
+    Se le pasan el id de esa área en concreto y la longitud actual. */
+ function UpdateMeter(metid,len)
+ {
+  var themeter = document.getElementById(metid);
+  themeter.value=len;
+ }
+ 
+ /* Esta función actualiza la barra de progreso global. Esta barra refleja cuántos de los campos obligatorios se han rellenado ya.
+    Mira todos los campos que tienen el atributo required, y si su valor no es la string vacía, asume que se han rellenado (eso
+    no quiere decir que se haya hecho con un valor válido, eso ya lo comprobará la función initEventListener() ) */
+ function updateProgress() {
+  var req = document.querySelectorAll(":required");
+  count = 0;
+  for(var i=0; i<req.length; i++) {
+    if (req[i].value != '') {
+      count++;
+    }
+  }
+  var pb = document.getElementById("formProgress");
+  pb.max = req.length;
+  pb.value = count;
+ }
+ 
+ window.onload = function() {
+  initEventListener();
+  prefillFields();
+ }
+ </script>
+ 
+ <style>
+  body { font-family: sans-serif; }
+  label { width: 250px; float: left; }
+  p {  clear:both; margin-top: 0.5em; margin-bottom: 0.5em; }
+  :required { border-color: orange; border-style: solid; }
+ </style>
+ 
+</head>
+  
+<body>
+ <h2>Support Request</h2>
+ <form method=get action=support_en.html oninput="updateProgress();">
+  <fieldset>
+   <legend>Personal information</legend>
+   <div style="float:left">
+    <p/><label>Your name             <input tabindex=1 type=text required autofocus placeholder="John Smith" name=name /></label>
+    <p/><label>Your e-mail address   <input tabindex=3 type=email name=email required /></label>
+   </div>
+   <div style="float:left;margin-left:10px;">
+    <p/><label>Telephone number      <input tabindex=2 type=tel name=tel required /></label>
+    <p/><label>Fax number            <input tabindex=4 type=tel name=fax /></label>
+   </div>
+  </fieldset>
+  <fieldset>
+   <legend>Technical information</legend>
+   <p/><label>Date of defect         <input type=date name=errdate /></label>
+   <p/><label>Error message          <textarea placeholder="Lens error. Camera restart." name=errmsg required rows=5 cols=50 title="up to 200 characters" oninput="UpdateMeter('metererror',this.textLength)" ></textarea></label>
+   <meter id=metererror value=0 max=200 tabindex=-1></meter>
+   <p/><label>Description of problem <textarea placeholder="Camera lens not opening." name=errdesc required rows=5 cols=50 title="up to 200 characters" oninput="UpdateMeter('meterdescription',this.textLength)" /></textarea></label>
+   <meter id=meterdescription value=0 max=200 tabindex=-1></meter>
+   <p/><label>Comment                <textarea name=comment rows=3 cols=50 title="up to 100 characters" oninput="UpdateMeter('metercomment',this.textLength)" /></textarea></label>
+   <meter id=metercomment value=0 max=100 tabindex=-1></meter>
+   <p/><label>Product</label>        <input type=text name=type list=typelist required />
+     <datalist id=typelist>
+       <option value="Digital camera">
+       <option value="Analogue camera">
+       <option value="Printer">
+       <option value="Scanner">
+     </datalist>
+   <p/><label>Serial number</label>  <input type=number name=sernr min=10000 max=35000 required /><output onforminput="innerHTML = type.value+'-'+sernr.value"></output>
+   </fieldset>
+   <fieldset>
+    <label>Progress:<progress id=formProgress value=0 tabindex=-1></progress></label>
+   </fieldset>
+   <p/>
+   <!-- Si el usuario envía la form con la variable acceskey a S indica que quiere grabar sus resultados para otra sesión.
+        En ese caso, no se validan (ya se hará cuando el envío sea el definitivo).
+        El servidor será el encargado de guardar los datos y de buscar, de entre los datos guardados, aquellos que correspondan
+        a este usuario cuando él/ella inicie una nueva sesión -->
+   <input accesskey=S type=submit formnovalidate value="Save [S]" name=save id=save />
+   <input accesskey=T type=submit name=submit id=submit value="Submit [T]" />
+ </form>
+</body>
+</html>

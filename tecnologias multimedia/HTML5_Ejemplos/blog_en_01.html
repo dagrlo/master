@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Primera diferencia: el DOCTYPE es simplemente html -->
+<html>
+<head>
+ <!-- El par clave/valor http-equiv/content para indicar el tipo MIME es el mismo que hasta ahora -->
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <!-- La clave charset es la forma estándard de indicar la codificación. 
+      Se aconseja usar utf-8 ó utf-16 -->
+ <meta charset="utf-8">
+ <!-- Esto indica qué hoja de estilo debe cargarse. -->
+ <link rel="stylesheet" media="all" href="http://html5.komplett.cc/code/chap_structure/blog.css">
+ <!-- El título no se ve en la página, sino en la ventana o pestaña del navegador (dependiendo de éste -->
+ <title>A fictitious HTML blog.</title>
+</head>
+  
+<body>
+
+<!-- header es una etiqueta nueva. Es un ejemplo de etiqueta intencional (semántica)
+     Sirve obviamente para contener una cabecera
+     El atributo class puede ahora aplicarse a cualquier etiqueta. La clase en cuestión
+     es arbitraria, y debe estar definida en la hoja de estilo -->
+     
+<header class="shadow">
+  <!-- La etiqueta img no ha cambiado -->
+  <img src="./blog_en_files/blog_logo.jpg" alt="HTML5" class="logo">
+  <!-- hgroup es una nueva etiqueta. Agrupa otras etiquetas tipo h1...n 
+         Las etiquetas hx que aparezcan en la cabecera deben agruparse
+         obligatoriamente dentro de un hgroup -->
+  <hgroup>
+    <h1>The HTML5 blog!</h1>
+    <!-- El uso de caracteres especiales con &nombrecaracter; sigue igual -->
+    <h2>Tips, tricks &amp; tidbits for today's web developers</h2>
+  </hgroup>
+</header>
+
+<!-- aside es también una etiqueta nueva. Debería usarse para contenido marginalmente 
+     relacionado con el contenido principal, que se mostrará a un lado -->
+<aside class="rounded-bottom-right shadow">
+  <!-- La expresión Link Block no aparece al mostrar la página, aunque se encuentra dentro de una etiqueta h2, como otras 
+         que sí aparecen. La razón está en la hoja de estilo: ver allí las instrucciones para mostrar aside h2, que son display:none;
+         Si no queremos mostrarlo ¿para qué lo ponemos?
+         Para que los buscadores o robots muestren bien la estructura de la página. Lo mismo ocurre con footer nav h2 más abajo -->
+  <h2>Link Block</h2>
+  <!-- section también es una etiqueta nueva en HTML5. Como su nombre indica,
+       define secciones del documento tales como capítulos, secciones, subseccciones, etc. -->
+  <section>
+    <h3>Questionnaire</h3>
+    <p>Will HTML5 be ready on time?</p>
+    <!-- Los formularios con input siguen como antes. -->
+    <input type="radio" name="vote" value="1" checked> yes, definitely<br>
+
+    <input type="radio" name="vote" value="2"> probably later<br>
+    <input type="radio" name="vote" value="3"> never<br>
+    <input type="radio" name="vote" value="4"> don't care<br>
+  </section>
+  <section>
+    <h3>Login</h3>
+    <label>Username <input name="user" type="text" size="10"></label><br>
+    <label>Password <input name="pass" type="text" size="10"></label>
+  </section>
+  <nav>
+    <h3>Quick Links</h3>
+    <!-- Las listas no ordenadas (y también las ordendas, con ol) funcionan como en HTML4 -->
+    <ul>
+     <li><a href="about:blank">Recent articles</a></li>
+     <li><a href="about:blank">Archive</a></li>
+     <li><a href="about:blank">Sponsors</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- div sigue como antes: marca una parte del documento que será formateada de un modo
+     particular, el definido por la class que remite a la .css.
+     La diferencia entre div y section es que div debería usarse para aplicar un
+     aspecto visual deseado a cierta parte, mientras que section indica una división
+     de tipo semántico, es decir, relacionada con el significado de su contenido -->
+<div id="content" class="shadow">
+  <article>
+    <!-- article también es nueva en HTML5. Sirve para incluir un documento completo,
+         tal como una entrada de blog, o un contenido tomado de otro autor -->
+    <img src="./blog_en_files/blog_tug_of_war.jpg" alt="Two groups in a tug of war. The W3C on the left, the WHATWG on the right. The outcome is open, neither can gain the upper hand.">
+
+    <h2>Tug of war between W3C and WHATWG enters decisive phase</h2>
+    <!-- address es para dar datos de contacto del autor, no necesariamente su dirección postal
+         En HTML4 sólo podía usarse para el documento, mientras que aquí puede ponerse en cada article -->
+    <address>Klaus Förster, openWeb.cc</address>
+    <!-- time es nueva en HTML5. Sirve para asignar marcas de tiempo al documento, o a partes de él 
+         El atributo datetime, si se da, tiene un formato particular. Si acab en Z indica tiempo
+         referido al UTC (tiempo coordinado universal) que es básicamente el de Greenwich.
+         Este formato permite a robots conver el instante de publicación de la página para mejorar
+         las búsquedas -->
+    <time pubdate="" datetime="2022-04-01T08:15:00Z">Friday, April 1st 2022 @08:15:00</time>
+    <!-- La etiqueta de párrafo funciona como en HTML4. La etiqueta de cita (quotation, <q>) también,
+         y añade las comillas -->
+    <p>
+    The tug of war between W3C and WHATWG enters the next and hopefully final round. This time, the bone of contention is the preface to the approximately
+    1000-page print edition which is to be published at the same time as the official release of the HTML5 standard on July 4th. 
+    <q>Give credit where credit is due</q> is Ian Hickson's commit message in <cite>Revision 11464</cite> of the specification, and he includes an
+    acknowledgement of his tomcat Hedral in the preface.
+    </p>
+
+    <p><q>Utterly unacceptable!</q> counters Sam Ruby and demands that the relevant passage be removed or at least revised. <q>If credit is due, then it is
+    certainly to Sir Tim Berners Lee – you should thank him and only him!</q> claims Sam Ruby and threatens to subject the story to a crucial vote by the W3C.
+    </p>
+    <p>This brings back memories of the highly emotional debate of two years ago, when Ian Hickson suddenly replaced the criteria <code>PASS</code> and 
+    <code>FAIL</code> with <code>CAT</code> and <code>DOG</code> overnight in several thousand tests of the test series. Back then, the W3C managed to prevail ...
+    </p>
+
+  </article>
+</div>
+
+<!-- footer es también nueva en HTML5. Está pensada para contener información
+     sobre el autor del documento, el copyright, enlaces a los términos de uso,
+     información de contacto, etc. -->
+<footer>
+  <p class="copyright">
+    ©2022 openWeb.cc
+  </p>
+  <!-- nav es también nueva en HTML5. Sirve para definir enlaces para la navegación
+       por partes importantes del documento, u otros documentos relacionados. 
+       En este ejemplo no hay partes, y por tanto los enlaces no llevan a ninguna parte. -->
+  <nav>
+    <!-- La palabra navigation no aparece al visualizar por la misma razón que arriba: en la hoja de estilo, footer nav h2 está definido como display: none -->
+    <h2>Navigation</h2>
+    <div>
+      <a href="about:blank" class="shadow">Home</a>
+      <a href="about:blank" class="shadow">Tutorials</a>
+      <a href="about:blank" class="shadow">Downloads</a>
+      <a href="about:blank" class="shadow">Contact</a>
+    </div>
+  </nav>
+</footer>
+
+</body>
+</html>

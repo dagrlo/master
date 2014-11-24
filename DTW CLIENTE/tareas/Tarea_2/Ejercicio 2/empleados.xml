@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plantilla>
+
+<empleado id="1" departamento="3" >
+<nombre>ANACLETO</nombre>
+<apellidos>AGENTE SECRETO</apellidos>
+<fechacontrato>38889</fechacontrato>
+<puesto>SLS</puesto>
+<niveleducacion>6</niveleducacion>
+<sueldo base="27731" complemento="6729" />
+</empleado>
+
+
+<empleado id="2" departamento="5" >
+<nombre>BAT</nombre>
+<apellidos>MAN</apellidos>
+<fechacontrato>39177</fechacontrato>
+<puesto>SLS</puesto>
+<niveleducacion>11</niveleducacion>
+<sueldo base="43391" complemento="1691" />
+</empleado>
+
+
+<empleado id="3" departamento="4" >
+<nombre>BOTONES</nombre>
+<apellidos>SACARINO</apellidos>
+<fechacontrato>38904</fechacontrato>
+<puesto>MGR</puesto>
+<niveleducacion>7</niveleducacion>
+<sueldo base="20396" complemento="11109" />
+</empleado>
+
+
+<empleado id="4" departamento="4" >
+<nombre>CAPITAN</nombre>
+<apellidos>AMERICA</apellidos>
+<fechacontrato>38482</fechacontrato>
+<puesto>FLD</puesto>
+<niveleducacion>6</niveleducacion>
+<sueldo base="27983" complemento="11298" />
+</empleado>
+
+
+<empleado id="5" departamento="2" >
+<nombre>CAPITAN</nombre>
+<apellidos>TRUENO</apellidos>
+<fechacontrato>38317</fechacontrato>
+<puesto>DES</puesto>
+<niveleducacion>8</niveleducacion>
+<sueldo base="29416" complemento="11504" />
+</empleado>
+
+
+<empleado id="6" departamento="3" >
+<nombre>CARPANTA</nombre>
+<apellidos>COMELOTODO</apellidos>
+<fechacontrato>38829</fechacontrato>
+<puesto>ANL</puesto>
+<niveleducacion>12</niveleducacion>
+<sueldo base="26499" complemento="7235" />
+</empleado>
+
+
+<empleado id="7" departamento="1" >
+<nombre>INSPECTOR</nombre>
+<apellidos>CLOUSEAU</apellidos>
+<fechacontrato>38913</fechacontrato>
+<puesto>FLD</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="30756" complemento="11145" />
+</empleado>
+
+
+<empleado id="8" departamento="5" >
+<nombre>EL</nombre>
+<apellidos>ZORRO</apellidos>
+<fechacontrato>39411</fechacontrato>
+<puesto>FLD</puesto>
+<niveleducacion>5</niveleducacion>
+<sueldo base="30534" complemento="4010" />
+</empleado>
+
+
+<empleado id="9" departamento="1" >
+<nombre>AGENTE</nombre>
+<apellidos>FILEMON</apellidos>
+<fechacontrato>38744</fechacontrato>
+<puesto>MGR</puesto>
+<niveleducacion>11</niveleducacion>
+<sueldo base="15908" complemento="8538" />
+</empleado>
+
+
+<empleado id="10" departamento="4" >
+<nombre>FLASH</nombre>
+<apellidos>GORDON</apellidos>
+<fechacontrato>38309</fechacontrato>
+<puesto>FLD</puesto>
+<niveleducacion>5</niveleducacion>
+<sueldo base="34426" complemento="2495" />
+</empleado>
+
+
+<empleado id="11" departamento="4" >
+<nombre>SON</nombre>
+<apellidos>GOKU</apellidos>
+<fechacontrato>38224</fechacontrato>
+<puesto>ANL</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="28702" complemento="10875" />
+</empleado>
+
+
+<empleado id="12" departamento="2" >
+<nombre>GREEN</nombre>
+<apellidos>ARROW</apellidos>
+<fechacontrato>38264</fechacontrato>
+<puesto>MGR</puesto>
+<niveleducacion>6</niveleducacion>
+<sueldo base="17144" complemento="3368" />
+</empleado>
+
+
+<empleado id="13" departamento="3" >
+<nombre>INCREIBLE</nombre>
+<apellidos>HULK</apellidos>
+<fechacontrato>38522</fechacontrato>
+<puesto>DES</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="20139" complemento="8543" />
+</empleado>
+
+
+<empleado id="14" departamento="3" >
+<nombre>IRON</nombre>
+<apellidos>MAN</apellidos>
+<fechacontrato>38234</fechacontrato>
+<puesto>FLD</puesto>
+<niveleducacion>8</niveleducacion>
+<sueldo base="35894" complemento="11499" />
+</empleado>
+
+
+<empleado id="15" departamento="4" >
+<nombre>LINTERNA</nombre>
+<apellidos>VERDE</apellidos>
+<fechacontrato>39304</fechacontrato>
+<puesto>DES</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="17702" complemento="3227" />
+</empleado>
+
+
+<empleado id="16" departamento="1" >
+<nombre>AGENTE</nombre>
+<apellidos>MORTADELO</apellidos>
+<fechacontrato>38169</fechacontrato>
+<puesto>ANL</puesto>
+<niveleducacion>5</niveleducacion>
+<sueldo base="23648" complemento="7090" />
+</empleado>
+
+
+<empleado id="17" departamento="3" >
+<nombre>SEÑORITA</nombre>
+<apellidos>OFELIA</apellidos>
+<fechacontrato>39392</fechacontrato>
+<puesto>SLS</puesto>
+<niveleducacion>6</niveleducacion>
+<sueldo base="42841" complemento="10628" />
+</empleado>
+
+
+<empleado id="18" departamento="5" >
+<nombre>ROBIN</nombre>
+<apellidos>DE BATMAN</apellidos>
+<fechacontrato>38084</fechacontrato>
+<puesto>FLD</puesto>
+<niveleducacion>10</niveleducacion>
+<sueldo base="23972" complemento="8970" />
+</empleado>
+
+
+<empleado id="19" departamento="1" >
+<nombre>ROMPE</nombre>
+<apellidos>TECHOS</apellidos>
+<fechacontrato>39424</fechacontrato>
+<puesto>DES</puesto>
+<niveleducacion>7</niveleducacion>
+<sueldo base="35880" complemento="5398" />
+</empleado>
+
+
+<empleado id="20" departamento="4" >
+<nombre>SPIDER</nombre>
+<apellidos>MAN</apellidos>
+<fechacontrato>38674</fechacontrato>
+<puesto>SLS</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="27269" complemento="6990" />
+</empleado>
+
+
+<empleado id="21" departamento="4" >
+<nombre>SUPER</nombre>
+<apellidos>LOPEZ</apellidos>
+<fechacontrato>38648</fechacontrato>
+<puesto>ANL</puesto>
+<niveleducacion>7</niveleducacion>
+<sueldo base="36880" complemento="4458" />
+</empleado>
+
+
+<empleado id="22" departamento="2" >
+<nombre>SUPER</nombre>
+<apellidos>MAN</apellidos>
+<fechacontrato>38721</fechacontrato>
+<puesto>PRES</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="45532" complemento="1087" />
+</empleado>
+
+
+<empleado id="23" departamento="5" >
+<nombre>THOR</nombre>
+<apellidos>DIOS</apellidos>
+<fechacontrato>39268</fechacontrato>
+<puesto>MGR</puesto>
+<niveleducacion>5</niveleducacion>
+<sueldo base="32148" complemento="7682" />
+</empleado>
+
+
+<empleado id="24" departamento="2" >
+<nombre>TIN</nombre>
+<apellidos>TIN</apellidos>
+<fechacontrato>39349</fechacontrato>
+<puesto>SLS</puesto>
+<niveleducacion>9</niveleducacion>
+<sueldo base="31503" complemento="8706" />
+</empleado>
+
+</plantilla>
+

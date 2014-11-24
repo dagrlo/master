@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE numeros [
+<!ELEMENT numeros (numero)>
+<!ELEMENT numero (#PCDATA)>
+]>
+
+<numeros>
+<numero>25</numero>
+</numeros>
+
+
+<!-- Hay que declarar el elemento numeros como contenedor de elementos numero -->
+
+

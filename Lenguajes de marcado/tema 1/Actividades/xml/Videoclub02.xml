@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE videoclub [
+  <!ELEMENT videoclub (peliculas*,videojuegos*, socios*,prestamos*)>
+  <!ELEMENT peliculas ( titulo, fecha, director, actores*)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT director (#PCDATA)>
+  <!ELEMENT actores (#PCDATA)>
+  <!ATTLIST peliculas codigo ID #REQUIRED>
+  <!ATTLIST peliculas portada ENTITY #REQUIRED>
+  <!ELEMENT videojuegos ( nombre)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT tipo EMPTY>  
+  <!ATTLIST videojuegos codigo ID #REQUIRED>
+  <!ATTLIST videojuegos tipo (play|wii) #REQUIRED>
+  <!ATTLIST videojuegos portada ENTITY #REQUIRED>
+  <!ELEMENT socios ( nombre, edad)>
+  <!ELEMENT edad (#PCDATA)>
+  <!ATTLIST socios codigo ID #REQUIRED>
+  <!ATTLIST socios foto ENTITY #REQUIRED>
+  <!ELEMENT prestamos (fecha_alquiler, fecha_devolucion?)>
+  <!ELEMENT fecha_alquiler (#PCDATA)>
+  <!ELEMENT fecha_devolucion (#PCDATA)>
+  <!ATTLIST prestamos ref IDREF #REQUIRED>
+  <!ATTLIST prestamos ref_socio IDREF #REQUIRED>
+  
+  <!NOTATION jpg SYSTEM "image/jpeg">
+  <!ENTITY foto_peli1 SYSTEM "foto01.jpg" NDATA jpg>
+  <!ENTITY foto_peli2 SYSTEM "foto02.jpg" NDATA jpg>
+  <!ENTITY foto_juego1 SYSTEM "foto03.jpg" NDATA jpg>
+  <!ENTITY foto_socio1 SYSTEM "foto04.jpg" NDATA jpg>
+
+]>
+
+
+<videoclub>
+   <peliculas codigo="aa" portada="foto_peli1">
+   	<titulo>kk   	</titulo>
+   	<fecha>asa   	</fecha>
+   	<director>asdasd   	</director>
+   	<actores>avfjk   	</actores>
+   	<actores>utirutr   	</actores>
+   </peliculas>
+   <videojuegos codigo="jgu" tipo="play" portada="foto_juego1">
+        <nombre>hghfj        </nombre>
+   </videojuegos>
+   <socios codigo="dsjkcj"  foto="foto_socio1">
+   				<nombre>jfkdkf   				</nombre>
+   				<edad>dajssio   				</edad>
+   </socios>
+   <prestamos ref="jgu" ref_socio="aa">
+   				<fecha_alquiler>dasda   				</fecha_alquiler>
+   				
+   </prestamos>
+
+</videoclub>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Captura de video</title>
+    <script>
+        var context=[];
+        var video=null;       
+        var todosCanvas=null;
+        var todosTiempos=null;
+        var pos=0;
+        var MAX=15;
+        
+        window.onload=function(){          
+            todosCanvas=document.getElementsByName('canvas');
+            todosTiempos=document.getElementsByName('tiempo');
+            video=document.querySelector('#video');
+            for (var i=0;i<todosCanvas.length;i++){
+                context[i]=todosCanvas[i].getContext('2d');    
+            }                        
+        }
+        
+        function captura(){                    
+            context[pos].drawImage(video,0,0,142,80);
+            todosTiempos[pos].innerHTML="T: "+dameTiempo(video.currentTime);
+            incrementa();            
+        }
+        
+        function incrementa(){
+            if (pos<MAX) {
+                pos++;
+            } else {
+                pos=0;
+            }
+        }
+        
+        function dameTiempo(segundos){
+            mm = Math.floor(segundos / 60.0);
+            ss = parseInt(segundos) % 60;
+            ss = (ss < 10) ? '0'+ss : ss;
+            return mm+':'+ss;
+        }
+    </script>
+</head>
+<body>
+<fieldset>
+<legend>Video para capturar</legend>
+ <video controls autoplay id="video">
+  <source src='videos/mvi_2170.webm' type='video/webm'>
+  <source src='videos/mvi_2170.ogv' type='video/ogg'>
+  Sorry, your browser is unable to play this video.
+ </video>
+    <br>
+     <input type="submit" value="Capturar" onclick="captura()"/>   
+</fieldset>
+<fieldset>
+    <legend>Imagenes capturadas</legend>
+    <table id="tablaCapturas">
+        <tr>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>            
+        </tr>
+        <tr>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>            
+        </tr>
+        <tr>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>            
+        </tr>
+        <tr>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>
+            <td>
+                <canvas width="142" height="80" name="canvas"></canvas>
+                <p name="tiempo">t: </p>
+            </td>            
+        </tr>
+       
+    </table>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE partidos [
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido EMPTY>
+<!ATTLIST partido local CDATA #REQUIRED>
+<!ATTLIST partido visitante CDATA #REQUIRED>
+<!ATTLIST partido goleslocal CDATA #REQUIRED>
+<!ATTLIST partido golesvisitante CDATA #REQUIRED>
+]>
+
+<partidos>
+	<partido local="equipo1" visitante="equipo2" goleslocal="2" golesvisitante="2"/>
+	<partido local="equipo3" visitante="equipo5" goleslocal="2" golesvisitante="2"/>
+	<partido local="equipo4" visitante="equipo6" goleslocal="2" golesvisitante="2"/>
+</partidos>
+
+
+
+

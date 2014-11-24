@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<tabla  xmlns="densidad" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation= "tablaPeriodica.xsd"
+    xmlns:d="densidad tablaPeriodica.xsd">
+
+
+<atomos  estado="solido">
+
+    <nombre>cosa</nombre>
+
+    <simbolo>Ass</simbolo>
+
+    <numAtomico>1</numAtomico>
+
+    <pEbullicion unidades="kelvin">10</pEbullicion>
+
+    <densidad unidades="kk">10</densidad>
+
+    
+
+     
+
+</atomos>
+</tabla>
+
+

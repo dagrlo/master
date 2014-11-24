@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+     <xsd:element name="tabla">
+
+      
+
+ <xsd:sequence>
+               <xsd:element name="atomos" type="tipoAtomo" minOccurs="1" maxOccurs="unbounded"/>
+
+        </xsd:sequence>
+         
+          
+
+     </xsd:element>
+
+
+    <xsd:complexType name="tipoAtomo" use="required">
+
+         <xsd:attribute name="estado">
+
+             <xsd:simpleType>
+
+                  <xsd:restriction base="xsd:string">
+
+                       <xsd:enumeration value="solido"/>
+
+                       <xsd:enumeration value="liquido"/>
+
+                       <xsd:enumeration value="gaseoso"/>
+
+                  </xsd:restriction>
+
+             </xsd:simpleType>      
+
+         </xsd:attribute>
+
+        <xsd:sequence>
+
+             <xsd:element name="nombre" type="xsd:string"/>
+             <xsd:element name="simbolo">
+                 <xsd:simpleType>
+                     <xsd:restriction base="xsd:string">
+                         <xsd:pattern value="[A-Z][a-z][a-z]"/>
+                     </xsd:restriction>
+                 </xsd:simpleType>
+             </xsd:element>
+             <xsd:element name="numAtomico" type="xsd:integer"/>
+             <xsd:element name="pesoAtomico" type="xsd:integer"/>
+             <xsd:element name="puntoEbullicion">
+                 <xsd:complexType>
+                     <xsd:attribute name="unidades" use="required" default="centigrados">
+                          <xsd:restriction base ="xsd:string">
+                               <xsd:enumeration value="centigrados"/>
+                               <xsd:enumeration value="kelvin"/>
+                          </xsd:restriction>
+                     </xsd:attribute>                     
+                 </xsd:complexType>                 
+             </xsd:element>
+             <xsd:element name="densidad">
+                  <xsd:complexType>
+                       <xsd:attribute name="unidades"/>                
+                  </xsd:complexType>
+             </xsd:element>
+
+        </xsd:sequence> 
+
+    </xsd:complexType>  
+</xsd:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE libro [
+<!ELEMENT libro EMPTY>
+<!ATTLIST libro autor CDATA  #REQUIRED>
+]>
+<libro autor="Mario Vargas LLosa" />
+<!-- para que el attr este bien se debe cambiar nmtokens por cdata porque lleva espacios -->
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>meter element</title>
+ <!-- $Id: meter_en.html 1309 2011-03-14 06:19:37Z root $ -->
+ <style>
+ .tt { font-family: monospace; }
+ </style>
+ <!-- El siguiente script tiene como función llenar los valores de los atributos de algunos
+      objetos del mismo, con valores relacionados con la fecha de hoy.
+      Los objetos son:
+       m, que es de tipo meter, y llenaremos sus atributos max y min.
+       innerDIV que es para poner atributos a una etiqueta div
+       google que es un objeto que se puede cargar desde una biblioteca de objetos (de Google, en este caso)
+ --> 
+ <script>
+ window.onload = function() 
+ {
+ 
+  var today = new Date();
+  var m = document.getElementById("m");
+  m.min = new Date(today.getFullYear(), 0, 1);
+  m.max = new Date(today.getFullYear(), 12, 31);
+  m.value = today;
+
+  var op = document.getElementById("op");
+  op.value = 
+    Math.round(100/(m.max-m.min)*(m.value-m.min));
+
+  var innerDIV = document.getElementById("innerDIV");
+  innerDIV.style.width=op.value+"%";
+  innerDIV.style.background = "green";
+
+  var google = document.getElementById("google");
+  google.src = "http://chart.apis.google.com/chart?chs=200x125&cht=gom&chd=t:"+op.value;
+
+  var gSrc = document.getElementById("googleSrc");
+  gSrc.innerHTML = google.src;
+ }
+ </script>
+</head>
+
+<body>
+<h1>What percentage of the year has already passed?</h1>
+
+<h2>Text</h2>
+<!-- output es una nueva etiqueta de HTML5. Representa el resultado de un cálculo,
+     y emite el valor del atributo value de su identificador (es decir: no hace falta
+     escribir op.value) -->
+<p><output id=op></output>  % of the year has passed.</p>
+
+<!-- meter también es nueva en HTML5. 
+     El atributo value del objeto con identificador m se llena en la función anónima
+     que se activa al cargar (window.onload)
+-->
+<h2>The new <span class=tt>meter</span> element</h2>
+<meter value=0 id=m></meter>
+
+<!-- En HTML4 y anteriores esto se hacía con elementos div anidados, de este modo: -->
+<h2>Nested <span class=tt>div</span> elements</h2>
+<div id=outer style="background:lightgray;width:150px;">
+ <!-- El &nbsp; (espacio) es sólo porque, para mostrarse, un elemento div debe contener algo. -->
+ <div id=innerDIV>&nbsp;</div>
+</div>
+
+
+<!-- Esto es la forma de hacerlo usando uno de los elementos HTML5 creados por alguien, en este
+     caso por Google. Hay una extensa colección en https://developers.google.com/chart/interactive/docs/gallery?hl=es -->
+<h2>Google Chart API</h2>
+<img id=google src=""/>
+<p id=googleSrc class=tt></p>
+</body>
+</html>
+

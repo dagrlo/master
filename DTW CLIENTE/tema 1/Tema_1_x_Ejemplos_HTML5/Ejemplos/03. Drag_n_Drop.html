@@ -1,0 +1,111 @@
+<!doctype html> 
+<html lang=en> 
+	<head> 
+		<meta charset=utf-8> 
+		<title>Formularios en HTML5</title> 
+		<link href="03. estilo.css" rel="stylesheet" type="text/css" />
+		
+		<script language="javascript">
+		function drag(ev)
+		{
+			ev.dataTransfer.setData("Texto",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			if (ev.target.innerHTML == "") {
+				ev.preventDefault();
+				var data=ev.dataTransfer.getData("Texto");
+				var nuevo = ev.target.appendChild(document.getElementById(data).cloneNode(true));
+				nuevo.id="img"+ev.target.id; nuevo.draggable=false;
+			}
+		}
+
+		function extfich(ev)
+		{
+			ev.preventDefault();
+			var archivos=ev.dataTransfer.files;
+			var lista='';
+			for(var f=0;f<archivos.length;f++){
+			lista+='Archivo: '+archivos[f].name+' '+archivos[f].size+'<br>';
+			}
+			document.getElementById('entrantes').innerHTML+=lista;
+		}
+		</script>
+		
+	</head> 
+	<body> 
+		<header> 
+			<hgroup>
+				<h1>Ejemplo 3 - HTML5 Drag and Drop</h1>
+				<h2>Utilización de DnD nativo en HTML5</h2>
+			</hgroup>
+		
+		</header>
+
+		<aside class="menu">
+			<nav>
+				<h4>3 en Raya. Arrastra las fichas al tablero de la derecha:</h5>
+				<p>
+				<img id="o" src="03. o.jpg" draggable="true" ondragstart="drag(event)"></img>
+				</p>
+				<p>
+				<img id="x" src="03. x.jpg" draggable="true" ondragstart="drag(event)"></img>
+				</p>
+				<p>
+				<button type="button" onclick="location.reload();">Reset</button>
+				</p>
+			<hr/>
+				<h4>Copiar un objeto fuera del navegador</h3>
+				<a href="#copiar_fuera">Ejemplo</a>
+			<hr/>
+				<h4>Recoger archivos externos</h3>
+				<a href="#traer_dentro">Ejemplo</a>
+			</nav>
+		</aside>
+
+		<section class="principal">
+
+		<header>
+			<h3>Ejemplos de Drag and Drop</h3>
+		</header>
+
+		<article>	
+			<h3>3 en Raya</h3>
+			<table id="tabla" ondragover="event.preventDefault();" ondrop="drop(event);">
+				<tr>
+					<td id="0"></td><td id="1"></td><td id="2"></td>
+				</tr>
+				<tr>
+					<td id="3"></td><td id="4"></td><td id="5"></td>
+				</tr>
+				<tr>
+					<td id="6"></td><td id="7"></td><td id="8"></td>
+				</tr>
+			</table>
+		</article>
+
+		<article>
+			<a name="copiar_fuera"></a>
+			<h3>Copiar un objeto fuera del navegador</h3>
+			<p>Esta imagen se copia arrastrándola fuera del navegador</p>
+			<p><img id="x" src="http://www.uv.es/recursos/fatwirepub/css/logo-uv.jpg" draggable="true"></img></p>
+			<p>Arrastrando esta misma imagen se descarga un contenido diferente al objeto arrastrado</p>
+			<p><img id="x" src="http://www.uv.es/recursos/fatwirepub/css/logo-uv.jpg" draggable="true" ondragstart="event.dataTransfer.setData('DownloadURL', 'image/jpeg:logo-uv2.jpg:http://www.uv.es/recursos/fatwirepub/css/etse/logo-uv2.jpg');"></img></p>
+			<p>Nota: sólo funciona con chrome</p>
+		</article>
+
+		<article>
+			<a name="traer_dentro"></a>
+			<h3>Recoger archivos externos</h3>
+			<p>Arrastra un archivo a esta caja</p>
+			<div id="entrantes" style="border: 1px solid black; width:100%; padding:10px;" ondragover="event.preventDefault();" ondrop="extfich(event);">
+			<p>Ficheros incorporados:</p>
+			</div>
+		</article>
+
+		</section>
+		
+		<footer>MUISAW - DTWTC - Ramón Cirilo</footer>
+	</body> 
+</html>

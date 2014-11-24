@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE videoclub SYSTEM "dtd_03.dtd">
+
+
+<videoclub>
+  &peliculas;
+  &videojuegos;
+  &socios;
+   
+  
+   <prestamos ref="Peli001" ref_socio="Soc001">
+          <fecha_alquiler>3-6-1492</fecha_alquiler>
+				
+   </prestamos>
+   
+   <prestamos ref="Game001" ref_socio="Soc001">
+          <fecha_alquiler>573-6-2033</fecha_alquiler>				
+   </prestamos>
+
+</videoclub>

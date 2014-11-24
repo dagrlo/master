@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:complexType name="TDensidad">
+    <xsd:simpleContent>
+        <xsd:extension base="xsd:decimal">
+           <xsd:attribute name="unidades" type="xsd:string"/>
+        </xsd:extension>
+    </xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:complexType name="TPtoEbullicion">
+     <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+             <xsd:attribute name="unidades" default="Centigrados">
+                 <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                          <xsd:enumeration value="Centigrados"/>
+	           <xsd:enumeration value="Kelvin"/>
+                      </xsd:restriction>
+                 </xsd:simpleType>
+             </xsd:attribute>
+         </xsd:extension>
+     </xsd:simpleContent>
+</xsd:complexType>
+
+
+ <xsd:complexType name="TAtomos">             
+        <xsd:sequence>
+              <xsd:element name="nombre" type="xsd:string"/>
+              <xsd:element name="simbolo">
+                 <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                           <xsd:pattern value="[A-Z][a-z]?[a-z]?"/>
+                      </xsd:restriction>
+                 </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="numAtomico" type="xsd:integer"/>
+              <xsd:element name="pesoAtomico" type="xsd:decimal"/>
+              <xsd:element name="ptoEbullicion" type="TPtoEbullicion"/>
+              <xsd:element name="densidad" type="TDensidad"/>                                     
+        </xsd:sequence>
+        <xsd:attribute name="estado">
+              <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                      <xsd:enumeration value="Solido"/>
+                      <xsd:enumeration value="Liquido"/>
+                      <xsd:enumeration value="Gaseoso"/>
+                  </xsd:restriction>
+              </xsd:simpleType>
+        </xsd:attribute>
+ </xsd:complexType>      
+
+
+
+<xsd:element name="tabla">
+
+        <xsd:complexType>
+
+        <xsd:sequence>
+
+                <xsd:element name="atomos" type="TAtomos" minOccurs="1" maxOccurs="unbounded" />
+         </xsd:sequence>
+
+        </xsd:complexType>
+
+</xsd:element>
+
+
+
+</xsd:schema>

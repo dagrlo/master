@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE videoclub [
+  <!ELEMENT videoclub (peliculas*,videojuegos*, socios*,prestamos*)>
+  <!ELEMENT peliculas ( titulo, fecha, director, actores*)>
+  <!ELEMENT titulo (#PCDATA)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT director (#PCDATA)>
+  <!ELEMENT actores (#PCDATA)>
+  <!ATTLIST peliculas codigo ID #REQUIRED>
+  <!ELEMENT videojuegos ( nombre)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT tipo EMPTY>
+  <!ATTLIST videojuegos codigo ID #REQUIRED>
+  <!ATTLIST videojuegos tipo (play|wii) #REQUIRED>
+  <!ELEMENT socios ( nombre, edad)>
+  <!ELEMENT edad (#PCDATA)>
+  <!ATTLIST socios codigo ID #REQUIRED>
+  <!ELEMENT prestamos (fecha_alquiler, fecha_devolucion?)>
+  <!ELEMENT fecha_alquiler (#PCDATA)>
+  <!ELEMENT fecha_devolucion (#PCDATA)>
+  <!ATTLIST prestamos ref IDREF #REQUIRED>
+  <!ATTLIST prestamos ref_socio IDREF #REQUIRED>
+]>
+
+
+<videoclub>
+   <peliculas codigo="aa">
+   	<titulo>kk   	</titulo>
+   	<fecha>asa   	</fecha>
+   	<director>asdasd   	</director>
+   	<actores>avfjk   	</actores>
+   	<actores>utirutr   	</actores>
+   </peliculas>
+   <videojuegos codigo="jgu" tipo="play">
+        <nombre>hghfj        </nombre>
+   </videojuegos>
+   <socios codigo="dsjkcj">
+   				<nombre>jfkdkf   				</nombre>
+   				<edad>dajssio   				</edad>
+   </socios>
+   <prestamos ref="jgu" ref_socio="aa">
+   				<fecha_alquiler>dasda   				</fecha_alquiler>
+   				
+   </prestamos>
+
+</videoclub>

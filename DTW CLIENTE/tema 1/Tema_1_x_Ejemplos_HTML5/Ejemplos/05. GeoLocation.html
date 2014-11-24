@@ -1,0 +1,98 @@
+<!doctype html> 
+<html lang=en> 
+	<head> 
+		<meta charset=utf-8> 
+		<title>GeoLocation en HTML5</title> 
+		<link href="05. estilo.css" rel="stylesheet" type="text/css" />
+		
+		<script language="javascript">
+
+		function iniciar(){
+			// para obtener simplemente las coordenadas
+			var boton=document.getElementById('obtener');
+			boton.addEventListener('click', obtener, false);
+			// para pintar las coordenadas en un mapa
+			var boton_mapa=document.getElementById('obtener_mapa');
+			boton_mapa.addEventListener('click', obtener_mapa, false);
+		} 
+		
+		function obtener(){
+			navigator.geolocation.getCurrentPosition(mostrar, errores);
+		} 
+		
+		function obtener_mapa(){
+			navigator.geolocation.getCurrentPosition(mostrar_mapa, errores);
+		} 
+
+		function mostrar(posicion){
+			var ubicacion=document.getElementById('ubicacion');
+			var datos='';
+			datos+='Latitud: '+posicion.coords.latitude+'<br>';
+			datos+='Longitud: '+posicion.coords.longitude+'<br>';
+			datos+='Exactitud: '+posicion.coords.accuracy+'mts.<br>';
+			ubicacion.innerHTML=datos;
+		} 
+		
+		function mostrar_mapa(posicion){
+			var ubicacion=document.getElementById('ubicacion_mapa');
+			var mapurl='http://maps.google.com/maps/api/staticmap?center='+posicion.coords.latitude+','+posicion.coords.longitude+'&zoom=12&size=400x400&sensor=false&markers='+posicion.coords.latitude+','+posicion.coords.longitude;
+			ubicacion_mapa.innerHTML='<img src="'+mapurl+'">';
+		}
+		
+		function errores(error){
+			alert('Error: '+error.code+' '+error.message);
+		} 
+		
+		window.addEventListener('load', iniciar, false);
+		</script>
+		
+	</head> 
+	<body> 
+		<header> 
+			<hgroup>
+				<h1>Ejemplo 5 - Geo-localización</h1>
+				<h2>Utilización de GeoLocation en HTML5</h2>
+			</hgroup>
+		
+		</header>
+
+		<aside class="menu">
+			<nav>
+				<h4>Ejemplo de geoLocation</h3>
+				<a href="#geolocation">Ejemplo</a>
+			<hr/>
+				<h4>Ejemplo con Google Maps</h3>
+				<a href="#geo_maps">Ejemplo</a>
+			</nav>
+		</aside>
+
+		<section class="principal">
+
+		<header>
+			<h3>Ejemplos de Geo-localización</h3>
+		</header>
+
+
+		<article>
+			<a name="geolocation"></a>
+			<h3>geoLocation</h3>
+			<section id="ubicacion">
+				<button id="obtener">Obtener mi ubicación</button>
+				<p>Nota: en Chrome la página debe estar ubicada en un servidor</p>
+			</section>
+		</article>
+
+		<article>
+			<a name="geo_maps"></a>
+			<h3>Geolocalización con Google maps</h3>
+			<section id="ubicacion_mapa">
+				<button id="obtener_mapa">Obtener mi ubicación en un mapa</button>
+				<p>Nota: en Chrome la página debe estar ubicada en un servidor</p>
+			</section>
+		</article>
+
+		</section>
+		
+		<footer>MUISAW - DTWTC - Ramón Cirilo</footer>
+	</body> 
+</html>

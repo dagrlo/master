@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE inventores [
+<!ELEMENT inventores (inventor*)>
+<!ELEMENT inventor EMPTY>
+<!ATTLIST inventor invento CDATA #REQUIRED>
+<!ATTLIST inventor nombre CDATA #IMPLIED>
+]>
+<inventores>
+<inventor nombre="Robert Adler" invento="Mando a distancia" />
+<inventor nombre="Laszlo Josef Biro" invento="Bolígrafo" />
+<inventor nombre="Josephine Garis Cochran" invento="Lavaplatos" />
+<inventor invento="Fuego" />
+</inventores>
+<!-- inventores lleva varios inventor dentro -->
+<!-- el nombredebe ser CDATA ya que id no permite espacios, nombre debe ser opcional -->
+
+

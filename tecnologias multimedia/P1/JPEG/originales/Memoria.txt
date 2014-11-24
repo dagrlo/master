@@ -1,0 +1,10 @@
+3)
+La original es con bloques de 8. Tenemos:
+
+Diferencia maxima= 19
+SNR= 20.23 dB
+
+Con un tamaño de bloque de 4:
+
+Las zonas mas oscuras pierden definición.
+

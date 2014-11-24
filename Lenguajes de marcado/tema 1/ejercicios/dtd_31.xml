@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE persona [
+<!ELEMENT persona EMPTY>
+<!ATTLIST persona nombre CDATA #IMPLIED>
+<!ATTLIST persona dni CDATA #IMPLIED>
+]>
+<persona dni="03141592E" />
+
+<!-- definir el atributo dni, el otro es opcional -->
+
+

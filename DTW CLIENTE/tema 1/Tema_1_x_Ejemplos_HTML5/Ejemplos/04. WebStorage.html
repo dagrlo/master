@@ -1,0 +1,125 @@
+<!doctype html> 
+<html lang=en> 
+	<head> 
+		<meta charset=utf-8> 
+		<title>Web Storage en HTML5</title> 
+		<link href="04. estilo.css" rel="stylesheet" type="text/css" />
+		
+		<script language="javascript">
+
+		function iniciar(){
+			// inicialización del sessionStorage
+			var boton=document.getElementById('grabar');
+			boton.addEventListener('click', nuevoitem, false);
+			sessionStorage.clear();
+			// inicialización del localStorage
+			var boton=document.getElementById('grabarlocal');
+			boton.addEventListener('click', nuevoitemlocal, false);
+			if(localStorage.length != 0) {
+				mostrarlocal();
+			}
+			window.addEventListener("storage", mostrarlocal, false); //En Chrome no funciona y hay que instalar la extension chrome.storage
+		}
+		
+		function nuevoitem(){
+			var clave=document.getElementById('clave').value;
+			var valor=document.getElementById('texto').value;
+			sessionStorage.setItem(clave,valor);
+			mostrar();
+		} 
+		
+		function mostrar(){
+			var cajadatos=document.getElementById('cajadatos');
+			cajadatos.innerHTML='Variables de sesion:<br/><hr/>' ;
+			for(var f=0;f<sessionStorage.length;f++){
+				var clave=sessionStorage.key(f);
+				var valor=sessionStorage.getItem(clave);
+				cajadatos.innerHTML+='<div>'+clave+' - '+valor+'</div>';
+			}
+		} 
+
+		function nuevoitemlocal(){
+			var clavelocal=document.getElementById('clavelocal').value;
+			var valorlocal=document.getElementById('textolocal').value;
+			localStorage.setItem(clavelocal,valorlocal);
+			mostrarlocal();
+		} 
+		
+		function mostrarlocal(){
+			var cajadatos=document.getElementById('cajadatoslocal');
+			cajadatos.innerHTML='Variables de aplicación:<br/><hr/>' ;
+			for(var f=0;f<localStorage.length;f++){
+				var clavelocal=localStorage.key(f);
+				var valorlocal=localStorage.getItem(clavelocal);
+				cajadatos.innerHTML+='<div>'+clavelocal+' - '+valorlocal+'</div>';
+			}
+		} 
+
+		window.addEventListener('load', iniciar, false);
+		</script>
+		
+	</head> 
+	<body> 
+		<header> 
+			<hgroup>
+				<h1>Ejemplo 4 - Almacenamiento offline</h1>
+				<h2>Utilización de almacenamiento offline en HTML5</h2>
+			</hgroup>
+		
+		</header>
+
+		<aside class="menu">
+			<nav>
+				<h4>Ejemplo de sessionStorage</h3>
+				<a href="#session_storage">Ejemplo</a>
+			<hr/>
+				<h4>Ejemplo de localStorage</h3>
+				<a href="#local_storage">Ejemplo</a>
+			</nav>
+		</aside>
+
+		<section class="principal">
+
+		<header>
+			<h3>Ejemplos de almacenamiento offline</h3>
+			<h5>Para ver como funciona este ejemplo hay que abrir 2 pestañas en el navegador cargando la misma página en cada una de ellas</h5>
+		</header>
+
+
+		<article>
+			<a name="session_storage"></a>
+			<h3>sessionStorage</h3>
+			<section id="cajaformulario" class="cajaformulario">
+				<form name="formulario">
+					<p>Clave:<br><input type="text" name="clave" id="clave" class="clave"></p>
+					<p>Valor:<br><textarea name="text" id="texto" class="texto"></textarea></p>
+					<p><input type="button" name="grabar" id="grabar" value="Grabar"></p>
+				</form>
+			</section>
+			<section id="cajadatos" class="cajadatos">
+				No hay información disponible
+			</section>			
+		</article>
+
+		<article>
+			<a name="local_storage"></a>
+			<h3>localStorage</h3>
+			<section id="cajaformulariolocal" class="cajaformulario">
+				<form name="formulariolocal">
+					<p>Clave:<br><input type="text" name="clavelocal" id="clavelocal" class="clave"></p>
+					<p>Valor:<br><textarea name="text" id="textolocal" class="clave"></textarea></p>
+					<p><input type="button" name="grabar" id="grabarlocal" value="Grabar">
+					<input type="button" name="actualizar" id="actualizarlocal" value="Actualizar" onclick="mostrarlocal();">
+					<input type="button" name="borrar" id="borrarlocal" value="Borrar" onclick="localStorage.clear(); mostrarlocal();"></p>
+				</form>
+			</section>
+			<section id="cajadatoslocal" class="cajadatos">
+				No hay información disponible
+			</section>			
+		</article>
+
+		</section>
+		
+		<footer>MUISAW - DTWTC - Ramón Cirilo</footer>
+	</body> 
+</html>

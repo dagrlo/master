@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE videoclub SYSTEM "dtd_02.dtd">
+
+
+<videoclub>
+
+
+ <peliculas codigo="Peli001" portada="foto_peli1">
+   	<titulo>Leolo</titulo>
+   	<fecha>1992</fecha>
+   	<director>Jean-Claude Lauzon</director>
+   	<actores>
+   		Maxime Collin, Gilbert Sicotte, Ginette Reno, Julien Guiomar, 
+   		Giuditta Del Vecchio, Denys Arcand, Pierre Bourgault, Andrée Lachapelle, 
+   		Yves Montmarquette, Lorne Brass, Roland Blouin, Geneviève Samson, 
+   		Marie-Hélène Montpetit, Francis St-Onge
+   	</actores>
+   </peliculas>
+   
+    <peliculas codigo="Peli002" portada="foto_peli2">
+   	<titulo>Akira</titulo>
+   	<fecha>1988</fecha>
+   	<director>Katsuhiro Ôtomo</director>
+   	<actores>Anime</actores>
+   </peliculas>
+
+   <videojuegos codigo="Game001" tipo="play" portada="foto_juego1">
+        <nombre>GTAIV </nombre>
+   </videojuegos>
+   
+   <socios codigo="Soc001" foto="foto_socio1">
+        <nombre>Paco Menéndez</nombre>
+        <edad>49</edad>
+   </socios>
+   
+   <prestamos ref="Peli001" ref_socio="Soc001">
+          <fecha_alquiler>3-6-1492</fecha_alquiler>
+				
+   </prestamos>
+   
+   <prestamos ref="Game001" ref_socio="Soc001">
+          <fecha_alquiler>573-6-2033</fecha_alquiler>				
+   </prestamos>
+
+</videoclub>

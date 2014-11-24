@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="micasa">
+         <xsd:complexType>
+                <xsd:sequence>
+                       <xsd:element name="habitacion" minOccurs="2" maxOccurs="6">
+                            <xsd:complexType>
+                                 <xsd:sequence>
+                                     <xsd:element name="mueble" type="tipoMueble" minOccurs="0" maxOccurs="unbounded"/>
+                                     <xsd:element name="puerta" type="tipoPuerta" maxOccurs="unbounded"/>
+                                 </xsd:sequence>
+                                 <xsd:attribute name="num" type="xsd:ID" use="required"/>
+                            </xsd:complexType>
+                       </xsd:element>
+                </xsd:sequence>    
+         </xsd:complexType>
+     </xsd:element>
+     
+     <xsd:simpleType name="tipoMueble">
+          <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="30"/> 
+          </xsd:restriction>
+     </xsd:simpleType>
+     
+     <xsd:complexType name="tipoPuerta">
+           <xsd:attribute name="tipo" use="required">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                         <xsd:enumeration value="cristal"/>
+                         <xsd:enumeration value="madera"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+           </xsd:attribute>
+     </xsd:complexType>
+       
+</xsd:schema>

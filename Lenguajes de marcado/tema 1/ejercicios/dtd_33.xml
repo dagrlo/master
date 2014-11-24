@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE cuadros [
+<!ELEMENT cuadros (cuadro*)>
+<!ELEMENT cuadro EMPTY>
+<!ATTLIST cuadro titulo ID #REQUIRED>
+<!ATTLIST cuadro autor CDATA #REQUIRED>
+]>
+<cuadros>
+<cuadro titulo="AdányEva" autor="Alberto Durero" />
+<cuadro  autor="Lucas Cranach, el viejo" titulo="lolo"/>
+</cuadros>
+
+<!-- los tipos id no se pueden repetir ni tener espacios. el orden de los attr no importa -->
+
+

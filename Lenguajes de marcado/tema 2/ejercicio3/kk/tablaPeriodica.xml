@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<tabla  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:noNamespaceSchemaLocation="tablaPeriodica.xsd" 
+>
+				<atomos estado="solido">
+								<nombre>cosa</nombre>
+								<simbolo>As</simbolo>
+								<numAtomico>1</numAtomico>
+								<pEbullicion unidades="kelvin">10</pEbullicion>
+								
+				</atomos>
+</tabla>

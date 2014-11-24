@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>placeholder attribute</title>
+  <!-- $Id: placeholder_en.html 1203 2011-01-11 15:41:41Z bernd $ -->
+ <style>
+  body { font-family: sans-serif; }
+  label { width: 180px; float: left; }
+ </style>
+</head>
+<body>
+ <p/><label for=email>Your e-mail address:</label>
+ <!-- Aqui la parte interesante es el uso de placeholder, que pone un valor por defecto para
+      dar pistas al usuario sobre el tipo de entrada que se espera en cada punto -->
+ <input type=email name=email id=email placeholder="user@host.com">
+
+ <p/><label for=birthday>Your date of birth:</label>
+ <input type=text name=birthday id=birthday placeholder="1978-11-24">
+
+ <p/><input type=submit value=Subscribe>
+</body>
+</html>

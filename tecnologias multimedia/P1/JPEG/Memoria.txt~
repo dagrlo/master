@@ -1,0 +1,40 @@
+3)----------------------------------------------------------------
+
+El tamaño de la imagen original es de 65536 bytes;
+
+Bloque de 16
+============
+
+A simple vista no se pueden percibir cambios respecto al tamaño de bloque de 8. Aun así se puede ver que la relación señal/ruido es menor que en con bloques de 8.
+
+La compresión en este caso es muy baja.
+
+Diferencia máxima= 30
+SNR= 13.19 dB
+Tamaño nuevo= 61230 
+
+Bloque de 8
+===========
+
+Diferencia máxima= 19
+SNR= 20.23 dB
+Tamaño nuevo= 38904
+
+La relación señal ruido es bastante alta y la compresión también.
+
+Bloque de 4
+===========
+
+Las zonas mas oscuras pierden definición. Hay una interferencia que se puede observar como lineas horizontales mas oscuras.
+
+La relación señal/ruido ha bajado mucho y la compresión no ha aumentado demasiado.
+
+Diferencia máxima= 64
+SNR= 3.568 dB
+Tamaño nuevo= 34326
+
+4) ------------------------------------------------------------------
+
+Una solución es poner valores muy altos en las matrices de cuantización. Otra es actuar sobre el vector DTV haciendo que el final de este sean ceros.
+
+

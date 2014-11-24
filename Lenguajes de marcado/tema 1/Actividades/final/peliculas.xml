@@ -1,0 +1,20 @@
+ <peliculas codigo="Peli001" portada="foto_peli1">
+   	<titulo>Leolo</titulo>
+   	<fecha>1992</fecha>
+   	<director>Jean-Claude Lauzon</director>
+   	<actores>
+   	               Maxime Collin, Gilbert Sicotte, Ginette Reno, Julien Guiomar, 
+   		Giuditta Del Vecchio, Denys Arcand, Pierre Bourgault, Andrée Lachapelle
+   	</actores>
+   	<actores>
+   	              Yves Montmarquette, Lorne Brass, Roland Blouin, Geneviève Samson, 
+   		Marie-Hélène Montpetit, Francis St-Onge
+   	</actores>
+   </peliculas>
+   
+   <peliculas codigo="Peli002" portada="foto_peli2">
+   	<titulo>Akira</titulo>
+   	<fecha>1988</fecha>
+   	<director>Katsuhiro Ôtomo</director>
+   	<actores>Anime</actores>
+   </peliculas>
