@@ -1,0 +1,59 @@
+Cuando ves a gente intentando utilizar lo que estas contruyendo  tienes que decirles que hacer.
+Hay 2 pasos:
+-Elegir unas tareas para hacer
+-Expandirlas a un escenario. Meterlas en un guion.
+
+LISTA DE TAREAS
+
+Lo primero es hacer una lista de tareas con 5 o 10 cosas importantes que se pueden hacer en tu web.
+
+Cuando un equipo web tiene que hacer estas lista por lo general las tareas se solapan, eligen las mismas.
+
+La lista tiene que reflejar los objetivos de los usuarios no tu idea de lo que ellos tienen que hacer.
+
+DECIDIR QUIEN HACE EL TEST
+
+Una sesion dura de 50 a 60 minutos. Durante 35 minutos suelen estar haciendo las tareas. Deben hacer una tarea larga o como mucho 10.
+
+La gente trabaja a diferente velocidad por lo que hay que tener tareas extra para quien termina antes. Una buena tarea de relleno es que haga algo en una web de un competidor.
+
+La eleciion de las tareas se basa en ciertos factores:
+
+- Cuales son las tareas criticas? Son cosas que la gente debe hacer. Si no pueden tu sitio esta mal. Pej: si vendes libros online, la gente debe encontrar los que le interesan y debe poder pagar por ellos.
+- Que te mantiene despierto por la noche? Hay cosas que sabes que daran problemas a la gente y les confundiran.
+- Que han dicho tus otras pruebas que no es facil de usar? Que cosas has visto en los analisis que puedan dar problemas a la gente?
+
+PON LAS TAREAS EN ESCENARIOS
+
+Hay que convertir la tarea en un guion que el usuario pueda entender y seguir. DAr un personaje, motivacion que tienen que hacer y algunos detalles.
+
+El escenario debe llevar algo de contexto (tu eres, tu necesitas) y da informacion que el usuario necesita conocer pero solo lo necesario.
+
+No hay que dar pistas en el escenario. 
+
+Hay que explicarlo claro si utilizar palabas raras o que esten en la pantalla si no, simplemente van a buscar las palabras en la web.
+
+¿no me encierres?
+
+Hay 2 restricciones que tienen que recordar.
+
+-no usar la busqueda (a menos que estes probando eso). Si lo hacen asi estas probando el buscador no el sitio.
+-Mantente en la web. Hay gente que utiliza el tiempo que sobra en otros sitios. Lo hacen sin darse cuenta.
+
+PRUEBAS PILOTO
+
+cuando se hace un escenario hay que hacer pruebas piloto. No es un test completo. Solo es para ver que los escenario estan claros, completos y sin ambigüedades.
+
+Lo puede hacer un familiar o amigo. Si algo no esta claro saldra rapido. SE hace un dia o dos antes del test.
+
+IMPRIMELO
+
+Imprimir las tareas por separado y sin numerar por si se cambia el orden.
+
+Una lista con todas para mi.
+
+
+
+
+
+
