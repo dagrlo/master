@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ies>
+				
+   <nombre>IES Abastos</nombre>
+				
+   <web>http://www.iesabastos.org</web>
+				
+								
+   <ASIR>
+      <nombre>Administración de Sistemas Informáticos en Red</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2009"/>
+      <impartido num="3">
+         <cod>0372</cod>
+         <cod>0373</cod>
+         <cod>0376</cod>
+      </impartido>
+   </ASIR>
+								
+   <DAW>
+      <nombre>Desarrollo de Aplicaciones Web</nombre>
+      <grado>Superior</grado>
+      <decretoTitulo año="2010"/>
+      <impartido num="1">
+         <cod>0373</cod>
+      </impartido>
+   </DAW>
+								
+   <SMR>
+      <nombre>Sistemas Microinformáticos y Redes</nombre>
+      <grado>Medio</grado>
+      <decretoTitulo año="2008"/>
+      <impartido num="1">
+         <cod>0228</cod>
+      </impartido>
+   </SMR>
+				
+				
+   <modulos>
+      <modulo id="0228">
+         <nombre>Aplicaciones web</nombre>
+         <curso>2</curso>
+         <horasSemanales>4</horasSemanales>
+      </modulo>
+      <modulo id="0372">
+         <nombre>Gestión de bases de datos</nombre>
+         <curso>1</curso>
+         <horasSemanales>5</horasSemanales>
+      </modulo>
+      <modulo id="0373">
+         <nombre>Lenguajes de marcas y sistemas de gestión de
+información</nombre>
+         <curso>1</curso>
+         <horasSemanales>3</horasSemanales>
+      </modulo>
+      <modulo id="0376">
+         <nombre>Implantación de aplicaciones web</nombre>
+         <curso>2</curso>
+         <horasSemanales>5</horasSemanales>
+      </modulo>
+   </modulos>
+
+</ies>
