@@ -8,36 +8,28 @@
 	
 	<xsl:template match="/">
 	<html>
-		<body>
-		
+		<body>		
    			<xsl:apply-templates select="ies/modulos"/>
 		</body>
 	</html>
 	</xsl:template>
 	
 	
-<xsl:template match="modulos">
-	
+<xsl:template match="modulos">	
 		<h1><u>Informacion de los modulos:	</u></h1>
-	
 		<br/>
-	
 		<xsl:apply-templates select="modulo">
 			<xsl:sort select="nombre" order="ascending"/>
 		</xsl:apply-templates>
-	
 </xsl:template>
 	
 
-<xsl:template match="modulo">
-	
-		
+<xsl:template match="modulo">			
 		<u><b>Nombre: </b><xsl:value-of select="nombre"/></u><br/>
 			<b>Curso: </b><xsl:value-of select="curso"/><br/>
 			<b>Horas: </b><xsl:value-of select="horasSemanales"/><br/>
 			<xsl:apply-templates select="ciclo"/>
 			<br/>
-	
 </xsl:template>
 
 <xsl:template match="ciclo">

@@ -15,29 +15,21 @@
 	</html>
 	</xsl:template>
 
-
-
 	<xsl:template match="dia">
-
-	     <b> <xsl:value-of select="numdia"/></b> <br/>
-
-	     <b>
-
-	     <xsl:value-of select="tarea/nombre"/>-</b>Prioridad: <xsl:value-of select="tarea/@prioridad"/><br/>
-
-	     De <xsl:value-of select="tarea/hora-ini"/> a <xsl:value-of select="tarea/hora-fin"/>
-
-	     <br/>
-
+	      <xsl:variable name="numero" select="numdia"/>
+	      <b> <xsl:value-of select="document('literales.xml')/literales/*[number($numero)]/text()"/></b> <br/><br/>
+	      <ul><li>
+          <b><xsl:value-of select="tarea/nombre"/>-</b>Prioridad: <xsl:value-of select="tarea/@prioridad"/><br/>
+					   De <xsl:value-of select="tarea/hora-ini"/> a <xsl:value-of select="tarea/hora-fin"/><br/>
+	      </li></ul>
 	</xsl:template>
 
-	
+
 
 	<xsl:template match="nombre">
-
 	    <xsl:value-of select="."/>
-
 	</xsl:template>
+  
 </xsl:stylesheet>
 
 

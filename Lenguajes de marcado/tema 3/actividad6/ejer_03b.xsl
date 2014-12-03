@@ -7,30 +7,25 @@
 	<xsl:output method="html"/>
 	
 	<xsl:template match="/">
-	<html>
-		<body>
-		
+	 <html>
+		<body>	
 		     <ol>
-			<xsl:apply-templates select="ies/modulos"/>
+			     <xsl:apply-templates select="ies/modulos"/>
 		    </ol>
 		</body>
-	</html>
+	 </html>
 	</xsl:template>
 	
-	<xsl:template match="
-modulos">
+	<xsl:template match="modulos">
 			<xsl:apply-templates select="modulo"/>
 	</xsl:template>
 	
-	<xsl:template match="modulo">
-			
-				<xsl:if test="curso=1">
-					<li>
-						<xsl:value-of select="nombre"/>
-					</li>
-				</xsl:if>				
-				
-			
+	<xsl:template match="modulo">			
+		<xsl:if test="curso=1">
+			<li>
+				<xsl:value-of select="nombre"/>
+			</li>
+		</xsl:if>											
 	</xsl:template>
 
 </xsl:stylesheet>

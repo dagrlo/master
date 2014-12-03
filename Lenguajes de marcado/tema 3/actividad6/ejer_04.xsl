@@ -10,27 +10,20 @@
 	<html>
 		<body>
 			<b><u>Nombre de modulos:</u></b>
-			<br/>
-		
-	<ol>
-		
-		<xsl:apply-templates select="ies/modulos/modulo"/>
-		
-	</ol>
-		
-	<b><u>Nombre de ciclos:</u></b>
-		
-	<br/>
-		
-	<ol>
-		
-		<xsl:apply-templates select="ies/ciclos/ciclo"/>
-		
-	</ol>
+			<br/>		
+    	<ol>
+		    <xsl:apply-templates select="ies/modulos/modulo"/>		
+	    </ol>		
+	   <b><u>Nombre de ciclos:</u></b>	
+	   <br/>
+     		
+	   <ol>		
+		  <xsl:apply-templates select="ies/ciclos/ciclo"/>		
+	   </ol>
 			
 		</body>
 	</html>
-	</xsl:template>
+</xsl:template>
 		
 	
 <xsl:template match="modulo">
@@ -38,15 +31,11 @@
 	<li><xsl:value-of select="nombre"/></li>
 	
 </xsl:template>
-	
-
-	
-
-	<xsl:template match="ciclo">
-
+		
+<xsl:template match="ciclo">
 		<li><xsl:value-of select="nombre"/></li>
+</xsl:template>
 
-	</xsl:template>
 </xsl:stylesheet>
 
 

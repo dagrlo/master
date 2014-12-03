@@ -1,0 +1,22 @@
+1. Hemos llegado a un convenio para la nomenclatura de variables y clases. Esta lista puede ampliarse según se nececsite.
+
+CONSTANTES	Siempre en mayúscula
+variables	Siempre en minúscula
+Clases		Siempre la primera en mayúscula (uppercase).
+dos_palabras	Siempre separadas por barrabaja
+paquete		Siempre minúscula
+
+
+2. El paquete para el módulo 2 será :  es.uv.isw.sparrow.registereduser
+
+Para los subpaquetes de éste se han determinado los siguientes nombres, uno para cada caso de uso:
+
+es.uv.isw.sparrow.registereduser.management
+es.uv.isw.sparrow.registereduser.usersearch
+es.uv.isw.sparrow.registereduser.showtopics
+es.uv.isw.sparrow.registereduser.showbytag
+es.uv.isw.sparrow.registereduser.newtopic
+es.uv.isw.sparrow.registereduser.reply
+
+
+

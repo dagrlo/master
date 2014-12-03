@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="960px" height="1052px" viewBox="0 0 960 1052" enable-background="new 0 0 960 1052" xml:space="preserve">
+<g>
+	<rect id="rect3913" x="0.465" y="2" fill="#FFFFFF" stroke="#030104" stroke-width="2.9294" width="958.469" height="169.682"/>
+	
+		<rect id="rect2993" x="8.403" y="10.058" fill="#FFFFFF" stroke="#030104" stroke-width="1.138" width="156.337" height="156.337"/>
+	<path id="path3765" inkscape:connector-curvature="0" fill="none" stroke="#030104" stroke-width="1.138" d="M8.403,166.395
+		L164.74,11.591"/>
+	<path id="path3767" inkscape:connector-curvature="0" fill="none" stroke="#030104" stroke-width="1.138" d="M7.253,6.993
+		L165.89,166.395"/>
+	<text transform="matrix(1 0 0 1 63.8784 33.9844)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="15.1732">LOGO</text>
+	<text transform="matrix(1 0 0 1 46.4292 52.9502)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="15.1732">PEQUEÑO</text>
+	<text transform="matrix(1 0 0 1 324.269 124.2559)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="144">Sparrow</text>
+</g>
+<rect id="rect3976" x="44.406" y="256.037" fill="#FFFFFF" stroke="#030104" stroke-width="3" width="870.751" height="269.963"/>
+<rect id="rect3978" x="51.808" y="239.622" fill="#FFFFFF" stroke="#030104" stroke-width="3.6622" stroke-opacity="0" width="353.763" height="39.744"/>
+<text transform="matrix(1 0 0 1 63.4976 268.1582)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="48">Recuperar clave:</text>
+<text transform="matrix(1 0 0 1 82.5713 345.2192)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="40">Usuario:</text>
+<text transform="matrix(1 0 0 1 84 398.3618)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="40">E-mail:</text>
+<rect id="rect3789" x="316.225" y="311.014" fill="#FFFFFF" stroke="#030104" stroke-width="1.7273" stroke-linejoin="round" width="566.222" height="34.165"/>
+<rect id="rect3789-0" x="317.175" y="364.708" fill="#FFFFFF" stroke="#030104" stroke-width="1.7273" stroke-linejoin="round" width="566.221" height="34.165"/>
+<g>
+	<rect x="84.083" y="449.682" fill="none" stroke="#030104" stroke-width="4" stroke-miterlimit="10" width="148.417" height="42"/>
+	<text transform="matrix(1 0 0 1 108.5 478.6812)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="23">Continuar</text>
+</g>
+<g>
+	
+		<rect x="735.064" y="449.682" fill="none" stroke="#030104" stroke-width="4" stroke-miterlimit="10" width="148.416" height="42"/>
+	<text transform="matrix(1 0 0 1 781.5 478.6812)" fill="#030104" font-family="'MyriadPro-Regular'" font-size="23">Volver</text>
+</g>
+</svg>

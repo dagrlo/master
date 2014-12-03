@@ -1,0 +1,55 @@
+0- Objetivo. explicar que el proyecto en parte sirve para explicar programacion
+
+INTRO AL TRATAMIENTO DIGITAL DE IMAGEN
+
+1- Imagen digital y los 3 pasos de tratamiento de img.
+2- Modelado del ojo humano
+3- Adquisicion de imagen
+4- Color
+5- Almacenando el color en una imagen digital
+6- Segmentacion de imagenes
+
+
+FUNDAMENTOS TEORICOS
+
+2- Realzado de imagenes
+  2.1- Realzado por prwocesado por punto
+    2.1.1- Negativo
+    2.1.2- Brillo
+    2.1.3- Contraste
+    2.1.4- Compresion de rango dinamico
+    2.1.5- Umbralización
+    2.1.6- Procesado del histograma
+    2.1.7- Operaciones con imagenes
+  2.2- Filtrado espacial
+    2.2.1- Filtro paso bajo o media
+    2.2.2- Filtro paso alto
+    2.2.3- Filtro mediana
+  2.3- Filtros para segmentacion
+    2.3.1- Filtros de desteccion de lineas
+    2.3.2- Filtros de deteccion de bordes
+      2.3.2.1- Gradiente
+      2.3.2.2- Laplaciano
+    2.3.3- Filtros morfologicos
+      - Operaciones logicas
+      - Vecindad
+      - Conectividad
+      2.3.3.1- Erosion
+      2.3.3.2- Dilatacion
+      2.3.3.3- Open
+      2.3.3.4- Close
+      -Observaciones
+    2.3.4- Diferenciacion de objetos
+      -Operaciones
+        -area
+        -perimetro
+      -Deteccion
+      
+DESCRIPCION DEL SOFTWARE
+
+3- Intro
+3.1- Clases
+3.2- ventana de dialogo
+3.4- Putpixel
+3.6- Redimensionar imagen
+3.8- transformada de Fourier
