@@ -1,0 +1,5 @@
+<!ELEMENT comentarios (entrada*)>
+<!ELEMENT entrada (titulo, precio, comentario)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
