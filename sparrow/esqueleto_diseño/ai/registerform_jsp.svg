@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg3903" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="registerform_jsp.svg" inkscape:version="0.48.4 r9939" inkscape:export-ydpi="90" inkscape:export-xdpi="90" inkscape:export-filename="/home/davidgl/Documentos/master/sparrow/diseÃ±ocutre/registerform_jsp.png"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="960px"
+	 height="1052.361px" viewBox="0 0 960 1052.361" enable-background="new 0 0 960 1052.361" xml:space="preserve">
+<sodipodi:namedview  showgrid="false" inkscape:cy="642.78069" inkscape:cx="498.18125" inkscape:zoom="0.49497475" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" inkscape:current-layer="layer1" inkscape:pageshadow="2" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:window-maximized="1" inkscape:window-y="25" inkscape:window-x="0" inkscape:window-height="709" inkscape:window-width="1354" showguides="true" inkscape:guide-bbox="true">
+	<sodipodi:guide  id="guide4492" position="80,620" orientation="1,0"></sodipodi:guide>
+	<sodipodi:guide  id="guide4536" position="249.50768,746.50273" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4538" position="259.10413,693.46972" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4540" position="266.1752,638.92149" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4542" position="271.73103,587.90878" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4544" position="288.90363,536.391" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4546" position="292.94424,481.84276" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4548" position="303.55084,430.32498" orientation="0,1"></sodipodi:guide>
+	<sodipodi:guide  id="guide4568" position="311.42857,587.90878" orientation="1,0"></sodipodi:guide>
+</sodipodi:namedview>
+<g id="layer1" inkscape:label="Capa 1" inkscape:groupmode="layer">
+	
+		<rect id="rect3913" x="1.465" y="-0.245" fill="#FFFFFF" stroke="#000000" stroke-width="2.9294" width="958.468" height="169.683"/>
+	<rect id="rect2993" x="9.403" y="7.814" fill="#FFFFFF" stroke="#000000" stroke-width="1.138" width="156.338" height="156.337"/>
+	<path id="path3765" inkscape:connector-curvature="0" fill="none" stroke="#000000" stroke-width="1.138" d="M9.403,164.151
+		L165.74,9.346"/>
+	<path id="path3767" inkscape:connector-curvature="0" fill="none" stroke="#000000" stroke-width="1.138" d="M8.253,4.748
+		L166.89,164.151"/>
+	<text transform="matrix(1 0 0 1 64.8782 31.7395)" font-family="'MyriadPro-Regular'" font-size="15.1732">LOGO</text>
+	<text transform="matrix(1 0 0 1 47.429 50.7063)" font-family="'MyriadPro-Regular'" font-size="15.1732">PEQUEÑO</text>
+	<text transform="matrix(1 0 0 1 325.2688 122.011)" font-family="'MyriadPro-Regular'" font-size="144">Sparrow</text>
+	<rect id="rect3976" x="40.406" y="216.037" fill="#FFFFFF" stroke="#000000" stroke-width="3" width="870.751" height="547.502"/>
+	
+		<rect id="rect3978" x="47.808" y="199.622" fill="#FFFFFF" stroke="#000000" stroke-width="3.6622" stroke-opacity="0" width="506.556" height="39.743"/>
+	<text transform="matrix(1 0 0 1 59.4973 228.1584)" font-family="'MyriadPro-Regular'" font-size="48">Registro de usuario:</text>
+	<text transform="matrix(1 0 0 1 78.571 305.219)" font-family="'MyriadPro-Regular'" font-size="40">Usuario:</text>
+	<text transform="matrix(1 0 0 1 79.9998 358.3616)" font-family="'MyriadPro-Regular'" font-size="40">Clave:</text>
+	<text transform="matrix(1 0 0 1 79.9998 412.9329)" font-family="'MyriadPro-Regular'" font-size="40">E-mail:</text>
+	<text transform="matrix(1 0 0 1 79.9998 463.7903)" font-family="'MyriadPro-Regular'" font-size="40">Nombre:</text>
+	<text transform="matrix(1 0 0 1 79.9998 515.7903)" font-family="'MyriadPro-Regular'" font-size="40">Apellidos:</text>
+	<text transform="matrix(1 0 0 1 79.9998 569.5051)" font-family="'MyriadPro-Regular'" font-size="40">Sexo:</text>
+	<text transform="matrix(1 0 0 1 79.9998 621.5051)" font-family="'MyriadPro-Regular'" font-size="40">Idioma:</text>
+	
+		<rect id="rect3789" x="312.225" y="271.014" fill="#FFFFFF" stroke="#000000" stroke-width="1.7273" stroke-linejoin="round" width="566.221" height="34.165"/>
+	
+		<rect id="rect3789-0" x="313.175" y="324.708" fill="#FFFFFF" stroke="#000000" stroke-width="1.7273" stroke-linejoin="round" width="566.221" height="34.165"/>
+	
+		<rect id="rect3789-1" x="312.699" y="379.575" fill="#FFFFFF" stroke="#000000" stroke-width="1.7273" stroke-linejoin="round" width="566.222" height="34.165"/>
+	
+		<rect id="rect3789-0-9" x="311.65" y="431.27" fill="#FFFFFF" stroke="#000000" stroke-width="1.7273" stroke-linejoin="round" width="566.222" height="34.165"/>
+	
+		<rect id="rect3789-6" x="311.557" y="482.718" fill="#FFFFFF" stroke="#000000" stroke-width="1.7273" stroke-linejoin="round" width="566.221" height="34.165"/>
+	
+		<rect id="rect3789-8" x="312.604" y="588.708" fill="#FFFFFF" stroke="#000000" stroke-width="1.7273" stroke-linejoin="round" width="566.221" height="34.165"/>
+	
+		<path id="path4623" sodipodi:rx="68.571426" sodipodi:cy="938.07648" sodipodi:cx="11.428572" sodipodi:type="arc" sodipodi:ry="67.14286" stroke="#000000" stroke-width="3" stroke-opacity="0" d="
+		M351.642,551.366c0.001,10.614-8.786,19.219-19.626,19.22c-10.84,0-19.628-8.604-19.629-19.218c0,0,0-0.001,0-0.002
+		c0-10.613,8.787-19.219,19.627-19.219c10.84-0.001,19.627,8.604,19.628,19.217C351.642,551.365,351.642,551.366,351.642,551.366z"
+		/>
+	
+		<path id="path4623-0" sodipodi:rx="68.571426" sodipodi:cy="938.07648" sodipodi:cx="11.428572" sodipodi:type="arc" sodipodi:ry="67.14286" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-opacity="0" d="
+		M346.945,551.639c0,8.063-6.675,14.599-14.908,14.599c-8.234,0.001-14.909-6.535-14.91-14.598v-0.001
+		c0-8.063,6.675-14.599,14.908-14.6C340.269,537.039,346.944,543.575,346.945,551.639
+		C346.945,551.638,346.945,551.638,346.945,551.639z"/>
+	
+		<path id="path4623-1" sodipodi:rx="68.571426" sodipodi:cy="938.07648" sodipodi:cx="11.428572" sodipodi:type="arc" sodipodi:ry="67.14286" stroke="#000000" stroke-width="3" stroke-opacity="0" d="
+		M489.198,551.219c0,10.614-8.786,19.219-19.626,19.22c-10.84,0-19.628-8.604-19.629-19.218c0-0.001,0-0.001,0-0.002
+		c0-10.614,8.787-19.219,19.627-19.219c10.84-0.001,19.627,8.604,19.628,19.217C489.198,551.218,489.198,551.218,489.198,551.219z"
+		/>
+	
+		<path id="path4623-0-9" sodipodi:rx="68.571426" sodipodi:cy="938.07648" sodipodi:cx="11.428572" sodipodi:type="arc" sodipodi:ry="67.14286" fill="#FFFFFF" stroke="#000000" stroke-width="3" stroke-opacity="0" d="
+		M484.501,551.491c0,8.063-6.675,14.599-14.908,14.599c-8.234,0.001-14.909-6.535-14.91-14.598v-0.001
+		c0-8.063,6.675-14.599,14.908-14.6c8.234,0,14.909,6.535,14.91,14.598C484.501,551.49,484.501,551.49,484.501,551.491z"/>
+	<text transform="matrix(1 0 0 1 367.6956 570.5188)" font-family="'MyriadPro-Regular'" font-size="48">V</text>
+	<text transform="matrix(1 0 0 1 510.8928 570.5188)" font-family="'MyriadPro-Regular'" font-size="48">M</text>
+</g>
+<g>
+	<rect x="81.084" y="675.682" fill="none" stroke="#010002" stroke-width="4" stroke-miterlimit="10" width="148.417" height="42"/>
+	<text transform="matrix(1 0 0 1 105.5002 704.6809)" fill="#010003" font-family="'MyriadPro-Regular'" font-size="23">Continuar</text>
+</g>
+<g>
+	
+		<rect x="732.065" y="675.682" fill="none" stroke="#010002" stroke-width="4" stroke-miterlimit="10" width="148.416" height="42"/>
+	<text transform="matrix(1 0 0 1 778.5002 704.6809)" fill="#010003" font-family="'MyriadPro-Regular'" font-size="23">Volver</text>
+</g>
+</svg>
