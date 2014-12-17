@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<discos xmlns:xlink="http://www.w3.org/1999/xlink">
+	<nombre xlink:type="resource" xlink:label="discoteca">
+		Lista de discos
+	</nombre>
+	
+	<disco id="d01">
+		<nombre>Disco 1</nombre>
+		<direccion xlink:type="locator"
+		                  xlink:href="#"
+		                  xlink:title="Web del disco"
+		                  xlink:label="web_01"/>
+		<mirror xlink:type="locator"
+			       xlink:href="#"
+			       xlink:title="Web secundaria"
+			       xlink:label="web_02"/>	
+		<canciones xlink:type="resource"
+		                   xlink:title="canciones disco 1"
+		                   xlink:label="c_d01"
+		                   xlink:role="canciones_d01.xml"/>
+		<canciones_anterior xlink:type="arc"
+				xlink:from="c_d01"
+				xlink:to="c_d04"/>
+		<canciones_siguiente xlink:type="arc"
+				xlink:from="c_d01"
+				xlink:to="c_d02"/>
+	</disco>
+	
+	<disco id="d02">
+		<nombre>Disco 2</nombre>
+		<direccion xlink:type="locator"
+		                  xlink:href="#"
+		                  xlink:title="Web del disco"
+		                  xlink:label="web_01"/>
+		<mirror xlink:type="locator"
+			       xlink:href="#"
+			       xlink:title="Web secundaria"
+			       xlink:label="web_02"/>	
+		<canciones xlink:type="resource"
+		                   xlink:title="canciones disco 2"
+		                   xlink:label="c_d01"
+		                   xlink:role="canciones_d02.xml"/>
+		<canciones_anterior xlink:type="arc"
+				xlink:from="c_d02"
+				xlink:to="c_d01"/>
+		<canciones_siguiente xlink:type="arc"
+				xlink:from="c_d02"
+				xlink:to="c_d03"/>
+	</disco>
+	
+	<disco id="d03">
+		<nombre>Disco 3</nombre>
+		<direccion xlink:type="locator"
+		                  xlink:href="#"
+		                  xlink:title="Web del disco"
+		                  xlink:label="web_01"/>
+		<mirror xlink:type="locator"
+			       xlink:href="#"
+			       xlink:title="Web secundaria"
+			       xlink:label="web_02"/>	
+		<canciones xlink:type="resource"
+		                   xlink:title="canciones disco 3"
+		                   xlink:label="c_d03"
+		                   xlink:role="canciones_d03.xml"/>
+		<canciones_anterior xlink:type="arc"
+				xlink:from="c_d03"
+				xlink:to="c_d02"/>
+		<canciones_siguiente xlink:type="arc"
+				xlink:from="c_d03"
+				xlink:to="c_d04"/>
+	</disco>
+	
+	<disco id="d04">
+		<nombre>Disco 4</nombre>
+		<direccion xlink:type="locator"
+		                  xlink:href="#"
+		                  xlink:title="Web del disco"
+		                  xlink:label="web_01"/>
+		<mirror xlink:type="locator"
+			       xlink:href="#"
+			       xlink:title="Web secundaria"
+			       xlink:label="web_02"/>	
+		<canciones xlink:type="resource"
+		                   xlink:title="canciones disco 4"
+		                   xlink:label="c_d04"
+		                   xlink:role="canciones_d04.xml"/>
+		<canciones_anterior xlink:type="arc"
+				xlink:from="c_d04"
+				xlink:to="c_d03"/>
+		<canciones_siguiente xlink:type="arc"
+				xlink:from="c_d04"
+				xlink:to="c_d01"/>
+	</disco>
+	
+	
+
+</discos>
+
+
+
