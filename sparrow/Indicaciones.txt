@@ -1,0 +1,8 @@
+Ivitados:
+
+Pagina Princal: index.jsp
+ Se decide para las variables usuario= username, con un tamaño entre 3 y 15 caracteres alfanuméricos, la contraseña=password con un tamaño entre 6 y 15 caracteres alfanuméricos, encriptada en base 64. 
+El formato de ambos se comprueba con un javascript.
+Los campos Registrase y Olvido contraseña se tratan como un enlace que llevan a los jsp Registrase y Olvido_contraseña respectivamente.
+
+

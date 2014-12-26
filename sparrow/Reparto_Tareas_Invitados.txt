@@ -1,0 +1,4 @@
+Reparto de tareas Invitados.
+	Maria Arnau -> Login
+	Alex Perez -> Formulario registro
+	Maria Jose -> Olvido Contraseña

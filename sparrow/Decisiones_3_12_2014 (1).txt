@@ -1,0 +1,13 @@
+CONFIGURAR ECLIPSE PARA NO SUBIR AL REPOSITORIO LOS METADATOS
+(documentación de svn en los recursos de aula virtual)
+
+Run	->	U4	management
+Gabi	->	U5	userearch
+Pepe	->	C6	showtopics
+Pepe	->	C7	showbytag
+Jose	->	C8	newtopic
+Ivan	->	C9	reply
+
+
+
+

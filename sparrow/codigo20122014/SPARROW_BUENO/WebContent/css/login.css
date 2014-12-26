@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+
+body{
+	background-color: lightblue;
+}
+
+#sparrowLogo{
+	padding:40px;
+}
+
+.ta-c{
+	text-align:center;
+}
+
+#entrar{
+	width:300px;
+}
+
+#loginZone{
+	border:2px solid blue;
+}
+
+#loginForm{
+	padding-bottom:20px;
+}
