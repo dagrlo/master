@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario cliente="IES Abastos">
+  <espacios>
+    <espacio id="A116">
+      <ocupante>1º ASIR (mañana)</ocupante>
+      <ocupante>1º ASIR (tarde)</ocupante>
+    </espacio>
+    <espacio id="A112">
+      <ocupante>2º ASIR (mañana)</ocupante>
+      <ocupante>2º ASIR (tarde)</ocupante>
+    </espacio>
+  </espacios>
+  <modelos>
+    <modelo id="E001">
+      <dispositivo id="PC" />
+      <marca>Inves</marca>
+      <modelo>Sierra DT6300A</modelo>
+    </modelo>
+    <modelo id="E002">
+      <dispositivo id="Monitor" />
+      <marca>Inves</marca>
+      <modelo>HW191DP</modelo>
+    </modelo>
+    <modelo id="E003">
+      <dispositivo id="Proyector" />
+      <marca>Epson</marca>
+      <modelo>EMP-62</modelo>
+    </modelo>
+  </modelos>
+  <equipos>
+    <equipo sn="20933739" equipo="E001" espacio="A116" id="A116-PC01" />
+    <equipo sn="20933750" equipo="E001" espacio="A116" id="A116-PC11" />
+    <equipo sn="20933180" equipo="E001" espacio="A112" id="A112-PC12" />
+    <equipo sn="CIEG6007053" equipo="E002" espacio="A112" id="A112-MO12" />
+    <equipo sn="GYTF630095L" equipo="E003" espacio="A116" id="A116-PR01" />
+  </equipos>
+</inventario>

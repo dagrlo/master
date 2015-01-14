@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE bodegas SYSTEM "e1.dtd">
+
+
+<bodegas>
+  <bodega>
+    <nombreBodega>B1</nombreBodega>
+    <comunidad>Comunidad 1</comunidad>
+    <provincia>Provincia 1</provincia>
+    <origen>Tiene origen</origen>
+    <vinos>
+      <nombre>V1</nombre>
+      <cosecha>1234</cosecha>
+      <clasificacion tranquiloTipo="blanco" tranquiloMaduracion="joven"/>      
+    </vinos>            
+    <vinos>
+      <nombre>V2</nombre>
+      <cosecha>999</cosecha>
+      <clasificacion especial="mistelas"/>
+      <premios>
+        <premio>P1</premio>
+        <cuando>222</cuando>
+      </premios>
+    </vinos>
+   
+  </bodega>
+</bodegas>

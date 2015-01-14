@@ -1,0 +1,126 @@
+body{
+    background-image: url("../imgs/fondo.jpg");
+    background-repeat: repeat;
+    margin: 0;  
+    padding: 0;    
+    font-family: sans-serif;
+    color:#003A27;
+}
+
+legend {
+    font-size:16px;
+    font-weight: bold;
+    background-color: #ddd;
+}
+
+fieldset {
+    background-color: #ddd;
+    width:360px;
+    margin-top:32px;
+    margin-left:  auto;  
+    margin-right:  auto;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+label{
+    width:150px;
+    float:left;
+    font-weight: bold;
+}
+
+input{
+    width:200px;
+}
+
+#sBtn{
+ margin-left: -38px;    
+}
+
+#V, #M{
+    width:80px;
+}
+
+select{
+    width:200px;
+    background-color: #fff;
+}
+
+#envia,#cancela{
+    text-align: right;
+    width:auto;
+}
+
+#botones{
+    margin-left: 220px;
+}
+
+#volver{
+    margin-left: 80px;
+}
+
+#tituloCuenta{
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+}
+
+#boton{
+    display: block;
+    width:80px;
+    margin:0px auto;       
+}
+
+input[type="text"]{    
+    font-size: 16px;
+    border: none;
+    border-bottom: solid 1px #053900;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus{
+    border-bottom: solid 2px #064800;   
+}
+
+input[type="email"]{    
+    font-size: 16px;
+    border: none;
+    border-bottom: solid 1px #053900;
+    transition: border 0.3s;
+}
+
+input[type="email"]:focus{
+    border-bottom: solid 2px #064800;   
+}
+
+input[type="password"]{    
+    font-size: 16px;
+    border: none;
+    border-bottom: solid 1px #053900;
+    transition: border 0.3s;
+}
+
+input[type="password"]:focus{
+    border-bottom: solid 2px #064800;   
+}
+
+.estiloBotones{
+	border : solid 1px #ffffff;
+	border-radius : 0px 5px 0px 0px ;
+	moz-border-radius : 0px 5px 0px 0px ;
+	-webkit-box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
+	-moz-box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
+	box-shadow : 0px 0px 5px rgba(0,0,0,1.0);
+        height:24px;
+}
+
+select {
+    border:none;
+    border-bottom: solid 1px #053900;
+    transition: border 0.3s;
+}
+
+select:focus{
+    border-bottom: solid 2px #064800;   
+}

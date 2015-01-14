@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE arbol [
+<!ELEMENT arbol (lugares, personas)>
+<!ELEMENT lugares (lugar*)>
+<!ELEMENT lugar EMPTY>
+<!ATTLIST lugar nombre CDATA #REQUIRED>
+<!ATTLIST lugar pais CDATA #REQUIRED>
+<!ELEMENT personas (persona*)>
+<!ELEMENT persona (nombre,padre?,madre?,nacimiento)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT padre (#PCDATA)>
+<!ELEMENT madre (#PCDATA)>
+<!ELEMENT nacimiento EMPTY>
+<!ATTLIST nacimiento lugar CDATA #REQUIRED>
+<!ATTLIST nacimiento fecha CDATA #IMPLIED>
+]>
+
+<arbol>
+  <lugares>
+    <lugar nombre="Valencia" pais="España" />
+    <lugar nombre="Gandia" pais="España" />
+    <lugar nombre="Marsella" pais="Francia" />
+  </lugares>
+  <personas>
+    <persona>
+      <nombre>Pedro Ramírez Dupont</nombre>
+      <padre>Juan Ramírez Amigo</padre>
+      <madre>Jeanne Dupont</madre>
+      <nacimiento lugar="Valencia" fecha="1942-07-14" />
+    </persona>
+    <persona>
+      <nombre>Juan Ramírez Amigo</nombre>
+      <nacimiento lugar="Gandia" fecha="1918-11-19" />
+    </persona>
+    <persona>
+      <nombre>Jeanne Dupont</nombre>
+      <nacimiento lugar="Marsella" />
+    </persona>
+  </personas>
+</arbol>

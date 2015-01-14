@@ -1,0 +1,13 @@
+<!ELEMENT noticias (tags,noticia*)>
+<!ELEMENT tags (tag*)>
+<!ELEMENT tag EMPTY>
+<!ATTLIST tag nombre CDATA #REQUIRED>
+<!ELEMENT noticia (tiempo,lugar,protagonistas,resumen)>
+<!ATTLIST noticia tags CDATA #REQUIRED>
+<!ELEMENT tiempo EMPTY>
+<!ATTLIST tiempo fecha CDATA #REQUIRED>
+<!ATTLIST tiempo hora CDATA #IMPLIED>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT protagonistas (nombre*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>

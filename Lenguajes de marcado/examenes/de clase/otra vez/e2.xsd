@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+
+
+  
+  <xs:element name="bodegas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="bodega" type="xBodega"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="xBodega">
+    <xs:sequence>
+      <xs:element name="nombreBodega" type="xs:string"/>
+      <xs:element name="idBodega">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][A-Z][0-9][0-9][0-9]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ubicacion" type="xUbicacion"/>
+      <xs:element name="vinos" type="xVinos" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="xUbicacion">
+    <xs:sequence>
+      <xs:element name="comunidad" type="xs:string"/>
+      <xs:element name="provincia" type="xs:string"/>
+      <xs:element name="denominacion" type="xs:string"/>      
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="xVinos">
+    <xs:sequence>
+      <xs:element name="nombreVino" type="xs:string"/>
+      <xs:element name="fechaVino" type="xs:string"/>
+      <xs:element name="clasificacion" type="xClasificacion"/>
+      <xs:element name="premios" type="xPremios" minOccurs="0" maxOccurs="3"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="xClasificacion">
+    <xs:sequence>
+      <xs:element name="tranquilo" type="xTranquilo" minOccurs="0"/>
+      <xs:element name="especiales" type="xEspeciales" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="xTranquilo">
+    <xs:sequence>
+      <xs:element name="tipo" type="xTipo"/>
+      <xs:element name="maduracion" type="xMaduracion"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+
+    <xs:simpleType name="xTipo">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="blancos"/>
+        <xs:enumeration value="rosados"/>
+        <xs:enumeration value="tintos"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+  <xs:simpleType name="xMaduracion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="joven"/>
+      <xs:enumeration value="crianza"/>
+      <xs:enumeration value="reserva"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="xEspeciales">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="mistelas"/>
+      <xs:enumeration value="espumosos"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="xPremios">
+    <xs:sequence>
+      <xs:element name="nombrePremio" type="xNombrePremio"/>
+      <xs:element name="fechaPremio" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="xNombrePremio">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

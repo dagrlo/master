@@ -1,0 +1,16 @@
+<!ELEMENT bodegas (bodega*)>
+<!ELEMENT bodega (nombreBodega,comunidad,provincia,origen?,vinos*)>
+<!ELEMENT nombreBodega (#PCDATA)>
+<!ELEMENT comunidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT vinos (nombre, cosecha, clasificacion, premios*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cosecha (#PCDATA)>
+<!ELEMENT clasificacion EMPTY>
+<!ATTLIST clasificacion tranquiloTipo (blanco|rosado|tinto) #IMPLIED>
+<!ATTLIST clasificacion tranquiloMaduracion (joven|crianza|reserva) #IMPLIED>
+<!ATTLIST clasificacion especial (mistelas|espumosos) #IMPLIED>
+<!ELEMENT premios (premio, cuando)>
+<!ELEMENT premio (#PCDATA)>
+<!ELEMENT cuando (#PCDATA)>

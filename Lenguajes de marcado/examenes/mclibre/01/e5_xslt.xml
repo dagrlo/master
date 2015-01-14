@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="e52.xsl"?>
+<diccionarios>
+  <diccionario>
+    <nombre>Diccionario de la Real Academia Española</nombre>
+    <siglas>DRAE</siglas>
+    <definicion>
+      <palabra>ordenador, ra</palabra>
+      <def>Que ordena.</def>
+      <def>Jefe de una ordenación de pagos u oficina de cuenta y razón.</def>
+      <def>Máquina electrónica ...</def>
+    </definicion>
+    <definicion>
+      <palabra>monitor, ra.</palabra>
+      <def>Persona que guía el aprendizaje deportivo, cultural, etc.</def>
+      <def>Hombre que amonesta o avisa.</def>
+      <def>Aparato receptor ...</def>
+    </definicion>
+  </diccionario>
+  <diccionario>
+    <nombre>Diccionario de María Moliner</nombre>
+    <siglas>DMM</siglas>
+    <definicion>
+      <palabra>ordenador, ra</palabra>
+      <def>Se aplica a lo que sirve para ordenar.</def>
+      <def>Aplicado a personas, aficionado a poner las cosas en orden.</def>
+      <def>Jefe de una ordenación (oficina).</def>
+      <def>Máquina electrónica ...</def>
+    </definicion>
+    <definicion>
+      <palabra>monitor, ra.</palabra>
+      <def>Persona que amonesta, corrige o avisa. Consejero.</def>
+      <def>Persona encargada de instruir a otras en determinadas actividades.</def>
+      <def>Cualquier aparato dotado de una pantalla.</def>
+    </definicion>
+  </diccionario>
+</diccionarios>

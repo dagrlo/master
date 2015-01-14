@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bodegas  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="e2.xsd" >
+   <bodega>
+      <nombreBodega>
+          B1
+      </nombreBodega>
+      <provincia>
+         P1
+      </provincia>
+      <vinos>
+        
+              <nombreVino>
+              	     Vinacho
+              </nombreVino>
+              <cosecha>
+                 2030
+              </cosecha>
+              <clasificacion>
+                  <tranquilo>
+	     <tipo>
+	      Audi
+	     </tipo>
+                      <maduracion>
+                         joven
+                      </maduracion>
+                  </tranquilo>
+              </clasificacion>
+      
+      </vinos>
+   </bodega>
+</bodegas>
+
+

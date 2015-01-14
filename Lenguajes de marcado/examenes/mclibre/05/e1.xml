@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE noticias SYSTEM "e1.dtd">
+<noticias>
+  <tags>
+    <tag nombre="astronaútica" />
+    <tag nombre="viajes" />
+    <tag nombre="medicina" />
+    <tag nombre="descubrimientos" />
+  </tags>
+  <noticia tags="astronaútica viajes">
+    <tiempo fecha="21-07-1969" hora="02:56" />
+    <lugar>Al sur del Mar de la Tranquilidad, en la Luna</lugar>
+    <protagonistas>
+      <nombre>Neil A. Armstrong</nombre>
+      <nombre>Edwin E. Aldrin Jr.</nombre>
+      <nombre>Michael Collins</nombre>
+    </protagonistas>
+    <resumen>El comandante Neil Armstrong fue el primer ser humano que pisó la superficie 
+     de la Luna</resumen>
+  </noticia>
+  <noticia tags="medicina descubrimientos">
+    <tiempo fecha="28-09-1928" />
+    <lugar>Sótano del laboratorio del Hospital St. Mary en Londres</lugar>
+    <protagonistas>
+      <nombre>Alexander Fleming</nombre>
+    </protagonistas>
+    <resumen>El médico Alexander Fleming observó que el moho Penicillium notatum producía 
+    la muerte de bacterias de Staphylococcus aureus, observación que conduciría al 
+    descubrimiento del  antibiótico penicilina.</resumen>
+  </noticia>
+</noticias>

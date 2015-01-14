@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bodegas SYSTEM "e1.dtd">
+
+<bodegas>
+  <bodega>
+    <nombre>B1</nombre>
+    <ubicacion>
+      <comAut>Com1</comAut>
+      <provincia>P1</provincia>
+      <den>D1</den>
+    </ubicacion>
+    <vinos>
+      <nombreVino>Vinacho</nombreVino>
+      <tiempo>111</tiempo>
+      <clasificacion especial="mistelas"/>
+    </vinos>
+    <vinos>
+      <nombreVino>Carton</nombreVino>
+      <tiempo>432</tiempo>
+      <clasificacion>
+        <tranquilo tipo="blancos" maduracion="joven"/>
+      </clasificacion>
+      <premios>      
+        <nombrePremio>kk</nombrePremio>
+        <fecha>999</fecha>
+      </premios>
+    </vinos>
+  </bodega>
+</bodegas>

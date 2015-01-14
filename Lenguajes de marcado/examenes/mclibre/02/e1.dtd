@@ -1,0 +1,12 @@
+<!ELEMENT cine (directores*,peliculas)>
+<!ELEMENT directores EMPTY>
+<!ATTLIST directores nombre CDATA #REQUIRED>
+<!ATTLIST directores fecha_nacimiento CDATA #REQUIRED>
+<!ATTLIST directores pais_nacimiento CDATA #REQUIRED>
+
+<!ELEMENT peliculas (pelicula*)>
+<!ELEMENT pelicula (estreno, titulo,director)>
+<!ELEMENT pelicula titulo CDATA #REQUIRED>
+<!ELEMENT estreno (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT director (#PCDATA)>

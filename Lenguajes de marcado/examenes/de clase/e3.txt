@@ -1,0 +1,15 @@
+1
+
+//alumnos/alumno/estudios/asignaturas[count(asignatura)>2]/../../nombre/text()
+
+2
+
+//alumnos/alumno[(@beca="si") and count(estudios/proyecto)=1]/nombre/text()
+
+3
+
+//asignaturas/asignatura[@id=//alumnos/alumno[last()]/estudios/asignaturas/asignatura/@codigo]/nombre/text()
+
+4
+
+count(//alumnos/alumno/estudios/asignaturas/asignatura[@codigo=//asignaturas/asignatura[nombre="Ofimática"]/@id])

@@ -1,0 +1,68 @@
+html,body{
+    height:100%;
+}
+
+fieldset{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;     
+    width:90%;
+    height:70%;    
+    background-color: #fff;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+legend{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#divlistaChips{
+    height: 95%;
+    overflow: scroll;
+    border: 2px solid #053900;
+    border-radius: 3px;
+    background-color: #003A27;
+}
+
+.listachips{
+    list-style:  none;
+    width:97%;
+    margin-left:-20px;
+  
+}
+
+.titulo{
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid #00373A;   
+}
+
+.tag {
+    font-style: italic;
+    text-align: left;
+}
+
+.usr {
+    float:right;
+    font-weight: bold;   
+    margin-right: 2%;
+}
+
+section{
+    border: 1px solid #666;
+    border-radius: 3px;    
+    padding:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+    transition: all .2s ease-in-out;
+    background-color: #eee;
+}
+
+section:hover{
+    transform: scale(1.02);
+}
+

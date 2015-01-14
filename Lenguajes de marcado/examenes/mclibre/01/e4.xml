@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arbol>
+  <lugares>
+    <lugar nombre="Valencia" pais="España" />
+    <lugar nombre="Gandia" pais="España" />
+    <lugar nombre="Marsella" pais="Francia" />
+  </lugares>
+  <personas>
+    <persona>
+      <nombre>Ramón Ramírez Villaescusa</nombre>
+      <padre>Pedro Ramírez Dupont</padre>
+      <nacimiento lugar="Gandia" año="1976" mes="10" dia="3" />
+    </persona>
+    <persona>
+      <nombre>Elena Forte Ramírez</nombre>
+      <madre>Juana Ramírez Dupont</madre>
+      <nacimiento lugar="Valencia" año="1974" mes="05" dia="31" />
+    </persona>
+    <persona>
+      <nombre>Pedro Ramírez Dupont</nombre>
+      <padre>Juan Ramírez Amigo</padre>
+      <madre>Jeanne Dupont</madre>
+      <nacimiento lugar="Gandia" año="1942" mes="07" dia="14" />
+    </persona>
+    <persona>
+      <nombre>Juana Ramírez Dupont</nombre>
+      <padre>Juan Ramírez Amigo</padre>
+      <madre>Jeanne Dupont</madre>
+      <nacimiento lugar="Valencia" año="1945" mes="02" dia="20" />
+    </persona>
+    <persona>
+      <nombre>Juan Ramírez Amigo</nombre>
+      <nacimiento lugar="Gandia" año="1918" mes="07" dia="19" />
+    </persona>
+    <persona>
+      <nombre>Jeanne Dupont</nombre>
+      <nacimiento lugar="Marsella" />
+    </persona>
+  </personas>
+</arbol>

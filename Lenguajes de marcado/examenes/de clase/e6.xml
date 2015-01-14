@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1250"?>
+
+<consorcios xlink:type="extended" ...>
+  <bodega1 xlink:type="locator" xlink:label="webBodega1" xlink:href="htttp"/>
+  <bodega2 xlink:type="locator" xlink:label="webBodega2" xlink:href="htttp"/>
+  <bodega3 xlink:type="locator" xlink:label="webBodega3" xlink:href="htttp"/>
+  <bodega4 xlink:type="locator" xlink:label="webBodega4" xlink:href="htttp"/>
+  <bodega5 xlink:type="locator" xlink:label="webBodega5" xlink:href="htttp"/>
+  
+  <consorcio1 xlink:type="locator" xlink:label="webc1" xlink:href="http"/>
+  <consorcio2 xlink:type="locator" xlink:label="webc2" xlink:href="http"/>
+  
+  <lconsorcio1 xlink:type="arc" xlink:from="webBodega1" xlink:to="webc1"/> 
+  <lconsorcio1 xlink:type="arc" xlink:from="webBodega3" xlink:to="webc1"/ >
+  <lconsorcio2 xlink:type="arc" xlink:from="webBodega4" xlink:to="webc2"/ >
+  <lconsorcio2 xlink:type="arc" xlink:from="webBodega5" xlink:to="webc2"/ >
+</consorcios>

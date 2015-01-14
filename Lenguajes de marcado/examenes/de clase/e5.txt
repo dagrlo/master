@@ -1,0 +1,8 @@
+1
+
+for $a in doc("e3.xml")/universidad/alumnos/alumno
+  where $a/beca="si"
+return
+ $a/nombre,
+ $a/apellidos
+ 

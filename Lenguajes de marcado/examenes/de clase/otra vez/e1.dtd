@@ -1,0 +1,18 @@
+<!ELEMENT bodegas (bodega*)>
+<!ELEMENT bodega (nombre,ubicacion, vinos*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ubicacion (comAut,provincia,den)>
+<!ELEMENT comAut (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT den (#PCDATA)>
+<!ELEMENT vinos (nombreVino, tiempo, clasificacion, premios*)>
+<!ELEMENT nombreVino (#PCDATA)>
+<!ELEMENT tiempo (#PCDATA)>
+<!ELEMENT clasificacion (tranquilo?)>
+<!ATTLIST clasificacion especial (mistelas|espumosos) #IMPLIED>
+<!ELEMENT tranquilo EMPTY>
+<!ATTLIST tranquilo tipo (blancos|rosados|tintos) #REQUIRED>
+<!ATTLIST tranquilo maduracion (joven|crianza|reserva) #REQUIRED>
+<!ELEMENT premios (nombrePremio, fecha)>
+<!ELEMENT nombrePremio (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+
+ <xs:simpleType name="tTipo">
+            <xs:restriction base="xs:string">
+               <xs:enumeration value="aaa"/>
+               <xs:enumeration value="tinto"/>
+               <xs:enumeration value="rosado"/>
+            </xs:restriction>
+         </xs:simpleType>
+         
+         
+         
+   <xs:complexType name="tTranquilo">
+
+     <xs:sequence>
+
+      <xs:element name="tipo" type="tTipo"/>
+        
+      <xs:element name="maduracion" type="xs:string"/>
+   </xs:sequence>
+
+   </xs:complexType>
+
+
+
+   <xs:complexType  name="tClasificacion">
+
+      <xs:sequence>
+
+         <xs:element name="tranquilo" type="tTranquilo" minOccurs="0"/>
+   
+        
+  
+      </xs:sequence>
+
+   </xs:complexType>
+
+
+
+
+
+
+   <xs:complexType name="tPremios">
+      <xs:sequence>
+         <xs:element name="nombrePremio" type="xs:string"/>
+         <xs:element name="fechaPremio" type="xs:string"/>
+      </xs:sequence>
+
+   </xs:complexType>
+
+
+
+
+
+
+   <xs:complexType name="tVinos">
+
+      <xs:sequence>
+
+         <xs:element name="nombreVino" type="xs:string"/>
+
+         <xs:element name="cosecha" type="xs:string"/>
+
+         <xs:element name="clasificacion" type="tClasificacion" />
+
+         <xs:element name="premios" type="tPremios" minOccurs="0" maxOccurs="3"/>
+
+      </xs:sequence>
+
+   </xs:complexType>
+
+
+
+
+
+   <xs:complexType name="tBodega">
+
+      <xs:sequence>
+
+         <xs:element name="nombreBodega" type="xs:string"/>
+
+         <xs:element name="provincia" type="xs:string"/>
+
+         <xs:element name="origen" type="xs:string" minOccurs="0"/>
+
+         <xs:element name="vinos" type="tVinos"/>
+
+      </xs:sequence>
+
+   </xs:complexType>
+
+
+
+
+
+<xs:element name="bodegas">
+    <xs:complexType>
+      <xs:sequence>
+         <xs:element name="bodega" type="tBodega"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

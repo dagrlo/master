@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bodegas  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="e2.xsd" >
+
+  <bodega>
+    <nombreBodega>B1</nombreBodega>
+    <idBodega>AA111</idBodega>
+    <ubicacion>
+      <comunidad>C1</comunidad>
+      <provincia>P1</provincia>
+      <denominacion>D1</denominacion>
+    </ubicacion>
+    <vinos>
+        <nombreVino>V1</nombreVino>
+        <fechaVino>1212</fechaVino>
+        <clasificacion>
+          <tranquilo>
+            <tipo>blancos</tipo>
+            <maduracion>reserva</maduracion>
+          </tranquilo>
+        </clasificacion>
+    </vinos>
+    <vinos>
+        <nombreVino>V2</nombreVino>
+        <fechaVino>F2</fechaVino>
+        <clasificacion>
+          <especiales>mistelas</especiales> 
+        </clasificacion>
+        <premios>
+          <nombrePremio>pr1</nombrePremio>
+          <fechaPremio>1212</fechaPremio>
+        </premios>
+    </vinos>
+  </bodega>
+</bodegas>

@@ -1,0 +1,92 @@
+/* XML: Lenguaje de Marcas Extensible
+   Bartolomé Sintes Marco
+   http://www.mclibre.org
+   
+   Hoja de estilo para el curso XML
+   Hoja en blanco en negro para la impresora
+
+   22 de enero de 2013
+*/
+
+html { font-family: sans-serif; background-color: white; 
+  text-align: justify; }
+
+h1 { font-size: 200%; text-align: center; margin-left: 75px; font-weight: bold;}
+h1#indice { margin-left: 150px; }
+
+h2 { font-size: 120%; }
+h3 { font-size: 105%; }
+h4 { font-size: 100%; font-weight: normal; text-decoration: underline;}
+
+p { margin:5px 0px; }
+p#ultmod { border-top: black solid 1px; padding-top: 5px; clear: both;}
+p.aviso { margin:10px; padding: 10px; 
+  border-left: 2px black solid; color:black; }
+p.centrado { text-align: center; }
+table.centrado { margin-left: auto; margin-right: auto; }
+
+pre.fuente { background-color: white; color: black; padding: 3px 5px;
+  border: black 2px solid; margin: 0px 10px; }
+.fuente-num { color: black; }
+
+hr { width: 100%; clear: both; }
+hr.corta { width: 50%; text-align: center; clear: both; }
+
+table.indice td { vertical-align: top; }
+col.centrado { padding: 0px 10px; text-align: center;  }
+ul { margin-top: 0px; }
+li { clear: both; }
+img#vpp { position: absolute; top: 5px; left: 5px; border:none; }
+img.d { float: right; margin-left: 10px; margin-bottom: 5px; }
+img.i { float: left; margin-right: 10px; margin-bottom: 5px; }
+
+.regla { border: black 2px solid; padding: 8px 3px;}
+.selector { border: black 2px solid; padding: 5px 3px; }
+.declara { border: black 2px solid; padding: 5px 3px; }
+.propied { border: black 2px solid; padding: 2px; 2px; }
+.valor { border: black 2px solid; padding: 2px; 2px; }
+.barresta { background-color: white; font-family: serif;}
+.menu { background-color: white; font-family: serif;}
+.amaya-bug { border-left: black 4px double; border-right: red 4px double; 
+  margin: 0px 10px; padding: 0px 10px;}
+
+.incompleto { color: black; background-color: white; }
+
+div.codphp  { border: black 2px solid; padding: 0px 10px; margin: 0px 20px; }
+
+div.codcss { border: 2px solid #7F7F80; background-color: white; 
+  margin: 5px 20px; padding: 10px 10px; white-space: pre}
+
+.css-prop { font-weight: 600 ; background-color: white; }
+.css-prop:hover { color: black; background-color: white; }
+.css-valor { font-weight: 600 ; background-color: white; }
+.css-valor:hover { color: black; background-color: white; }
+.css-pseudo { font-weight: 600 ; background-color: white; }
+.css-pseudo:hover { color: black; background-color: white; }
+
+.html-eti { font-weight: 600 ; background-color: white; }
+.html-eti:hover { color: black; background-color: white; }
+.html-atri { font-weight: 600 ; background-color: white; }
+.html-atri:hover { color: black; background-color: white; }
+.html-atri-valor { font-weight: 600; background-color: white; }
+.html-atri-valor:hover { color: black; background-color: white; }
+
+table.ejemplo { width: 100%; border-spacing: 20px 5px; text-align: left;}
+td.codcss { width: 50%; vertical-align: top; 
+  background-color: white; border: black 2px solid; padding: 0px 5px;
+}
+td.resul { width: 50%;  vertical-align: top; background-color: white; 
+ }
+table.ejemplo td {  border: black 2px solid; }
+table.ejemplo2 td {  border: black 2px solid; }
+table.ejemplo3 td {  border: black 2px solid; }
+table.listado { border: none; text-align: left; }
+/*table.listado td { border: none; border-bottom: black 1px solid; text-align: left;}*/
+table.listado tr.titulo td { border: none; border-top: white 20px solid; background-color: white;
+ font-weight: bolder; }
+table.listado tr.cabecera td { border: none; border-bottom: black 2px solid;}
+table.listado col.propiedad { width: 9em; }
+table.listado col.descripcion { width: 15em; }
+
+math { font-family: sans-serif; font-size: 105%;  }
+

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0070)http://www.mclibre.org/consultar/xml/examenes/11-12/examen_120614.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+  <title>Examen 14/06/12. Exámenes. XML. Bartolomé Sintes Marco</title>
+  <meta name="generator" content="amaya 9.3, see http://www.w3.org/Amaya/">
+  <link href="./Examen 14 06 12. Exámenes. XML. Bartolomé Sintes Marco_files/mclibre_xml.css" rel="stylesheet" type="text/css" title="Color">
+  <link href="./Examen 14 06 12. Exámenes. XML. Bartolomé Sintes Marco_files/mclibre_xml_bn.css" rel="alternate stylesheet" type="text/css" title="Blanco y negro">
+  <link rel="shortcut icon" href="http://www.mclibre.org/consultar/xml/varios/mclibre.ico">
+<style type="text/css"></style></head>
+
+<body>
+<h1><a href="http://www.mclibre.org/consultar/xml/index.html"><img alt="Volver al índice" src="./Examen 14 06 12. Exámenes. XML. Bartolomé Sintes Marco_files/indice.png" width="48" height="50" id="vpp" title="Volver al índice"></a> Examen 14
+de junio de 2012</h1>
+
+<p>Resuelva los siguientes ejercicios guardando las respuestas en una carpeta
+con su nombre y apellidos.</p>
+
+<h2>Ejercicio 1. DTD</h2>
+
+<p>Escriba la DTD correspondiente a este documento:</p>
+
+<div class="codxml">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;noticias&gt;
+  &lt;tags&gt;
+    &lt;tag nombre="astronaútica" /&gt;
+    &lt;tag nombre="viajes" /&gt;
+    &lt;tag nombre="medicina" /&gt;
+    &lt;tag nombre="descubrimientos" /&gt;
+  &lt;/tags&gt;
+  &lt;noticia tags="astronaútica viajes"&gt;
+    &lt;tiempo fecha="21-07-1969" hora="02:56" /&gt;
+    &lt;lugar&gt;Al sur del Mar de la Tranquilidad, en la Luna&lt;/lugar&gt;
+    &lt;protagonistas&gt;
+      &lt;nombre&gt;Neil A. Armstrong&lt;/nombre&gt;
+      &lt;nombre&gt;Edwin E. Aldrin Jr.&lt;/nombre&gt;
+      &lt;nombre&gt;Michael Collins&lt;/nombre&gt;
+    &lt;/protagonistas&gt;
+    &lt;resumen&gt;El comandante Neil Armstrong fue el primer ser humano que pisó la superficie 
+     de la Luna&lt;/resumen&gt;
+  &lt;/noticia&gt;
+  &lt;noticia tags="medicina descubrimientos"&gt;
+    &lt;tiempo fecha="28-09-1928" /&gt;
+    &lt;lugar&gt;Sótano del laboratorio del Hospital St. Mary en Londres&lt;/lugar&gt;
+    &lt;protagonistas&gt;
+      &lt;nombre&gt;Alexander Fleming&lt;/nombre&gt;
+    &lt;/protagonistas&gt;
+    &lt;resumen&gt;El médico Alexander Fleming observó que el moho Penicillium notatum producía 
+    la muerte de bacterias de Staphylococcus aureus, observación que conduciría al 
+    descubrimiento del  antibiótico penicilina.&lt;/resumen&gt;
+  &lt;/noticia&gt;
+&lt;/noticias&gt;</pre>
+</div>
+
+<p>teniendo en cuenta que:</p>
+<ul>
+  <li>los tags de cada noticia deben estar definidos en el apartado de tags</li>
+  <li>la fecha debe estar en el formato DD-MM-AAAA</li>
+  <li>una noticia puede no tener protagonista</li>
+</ul>
+
+<h2>Ejercicio 2. CSS</h2>
+
+<p>Escriba la hoja de estilo CSS para que el siguiente documento se vea en el
+navegador como muestra la imagen.</p>
+
+<div class="codxml">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pintores&gt;
+  &lt;titulo&gt;Pintores universales&lt;/titulo&gt;
+  &lt;pintor id="Goya"&gt;
+    &lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+    &lt;nacido&gt;1746&lt;/nacido&gt;
+    &lt;fallecido&gt;1828&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+  &lt;pintor id="Velazquez"&gt;
+    &lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;
+    &lt;nacido&gt;1599&lt;/nacido&gt;
+    &lt;fallecido&gt;1660&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+  &lt;pintor id="Vermeer"&gt;
+    &lt;nombre&gt;Johannes Vermeer&lt;/nombre&gt;
+    &lt;nacido&gt;1632&lt;/nacido&gt;
+    &lt;fallecido&gt;1675&lt;/fallecido&gt;
+    &lt;nacionalidad&gt;Holanda&lt;/nacionalidad&gt;
+  &lt;/pintor&gt;
+&lt;/pintores&gt;</pre>
+</div>
+
+<p>Captura del navegador (resolución 800 x 600):</p>
+
+<p class="captura"><img alt="XML y CSS" src="./Examen 14 06 12. Exámenes. XML. Bartolomé Sintes Marco_files/examen_120614_xml_css.png" width="800" height="600"></p>
+
+<h2>Ejercicio 3. XPath</h2>
+
+<p>Dado el siguiente documento XML, escriba las expresiones XPath que devuelvan
+<strong>exactamente</strong> la respuesta indicadas en los cuadros. Escriba
+todas las expresiones XPath en un único fichero XPath.txt, numerando las
+respuestas.</p>
+
+<div class="codxml">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;arte&gt;
+  &lt;museos&gt;
+    &lt;museo id="Prado"&gt;
+      &lt;nombre&gt;Museo del Prado&lt;/nombre&gt;
+      &lt;pais&gt;España&lt;/pais&gt;
+      &lt;ciudad&gt;Madrid&lt;/ciudad&gt;
+      &lt;creacion&gt;1819&lt;/creacion&gt;
+    &lt;/museo&gt;
+    &lt;museo id="Louvre"&gt;
+      &lt;nombre&gt;Musée du Louvre&lt;/nombre&gt;
+      &lt;pais&gt;Francia&lt;/pais&gt;
+      &lt;ciudad&gt;París&lt;/ciudad&gt;
+      &lt;creacion&gt;1793&lt;/creacion&gt;
+    &lt;/museo&gt;
+  &lt;/museos&gt;
+  &lt;pintores&gt;
+    &lt;pintor id="Goya"&gt;
+      &lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Francisco José de Goya y Lucientes&lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1746&lt;/nacido&gt;
+      &lt;fallecido&gt;1828&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+    &lt;pintor id="Velazquez"&gt;
+      &lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Diego Rodríguez de Silva y Velázquez&lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1599&lt;/nacido&gt;
+      &lt;fallecido&gt;1660&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;España&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+    &lt;pintor id="Vermeer"&gt;
+      &lt;nombre&gt;Johannes Vermeer&lt;/nombre&gt;
+      &lt;nombreCompleto&gt;Johannes Vermeer van Delft &lt;/nombreCompleto&gt;
+      &lt;nacido&gt;1632&lt;/nacido&gt;
+      &lt;fallecido&gt;1675&lt;/fallecido&gt;
+      &lt;nacionalidad&gt;Holanda&lt;/nacionalidad&gt;
+    &lt;/pintor&gt;
+  &lt;/pintores&gt;
+  &lt;cuadros&gt;
+    &lt;cuadro autor="Goya" museo="Louvre" fecha="1794" titulo="La condesa del Carpio, marquesa de La Solana" /&gt;
+    &lt;cuadro autor="Goya" museo="Prado" fecha="1814" titulo="Los fusilamientos del 3 de mayo" /&gt;
+    &lt;cuadro autor="Goya" museo="Prado" fecha="1798" titulo="La maja desnuda" /&gt;
+    &lt;cuadro autor="Velazquez" museo="Prado" fecha="1629" titulo="Los borrachos" /&gt;
+    &lt;cuadro autor="Vermeer" museo="Louvre" fecha="1670" titulo="La hilandera" /&gt;
+    &lt;cuadro autor="Vermeer" museo="Prado" fecha="1665" titulo="Mujer con aguamanil" /&gt;
+  &lt;/cuadros&gt;
+&lt;/arte&gt;</pre>
+</div>
+<ol>
+  <li>Nombre de los pintores: 
+
+    <div class="codxml">
+    <pre>Francisco de Goya
+Diego Velázquez
+Johannes Vermeer</pre>
+    </div>
+  </li>
+  <li>Fecha de creación de los cuadros: 
+
+    <div class="codxml">
+    <pre> fecha="1794"
+ fecha="1814"
+ fecha="1798"
+ fecha="1629"
+ fecha="1670"
+ fecha="1665"</pre>
+    </div>
+  </li>
+  <li>Título de los cuadros pintados antes de 1700: 
+
+    <div class="codxml">
+    <pre> titulo="Los borrachos"
+ titulo="La hilandera"
+ titulo="Mujer con aguamanil"</pre>
+    </div>
+  </li>
+  <li>Nombre de los pintores españoles: 
+
+    <div class="codxml">
+    <pre>&lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+&lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;</pre>
+    </div>
+  </li>
+  <li>Nombre de los pintores que vivieron más de 50 años: 
+
+    <div class="codxml">
+    <pre>&lt;nombre&gt;Francisco de Goya&lt;/nombre&gt;
+&lt;nombre&gt;Diego Velázquez&lt;/nombre&gt;</pre>
+    </div>
+  </li>
+  <li>Ciudades en los que hay cuadros de Velázquez: 
+
+    <div class="codxml">
+    <pre>Madrid</pre>
+    </div>
+  </li>
+  <li>Fecha de nacimiento del pintor de La maja desnuda: 
+
+    <div class="codxml">
+    <pre>&lt;nacido&gt;1746&lt;/nacido&gt;</pre>
+    </div>
+  </li>
+  <li>Nacionalidad de los pintores expuestos en museos de París: 
+
+    <div class="codxml">
+    <pre>España
+Holanda</pre>
+    </div>
+  </li>
+</ol>
+<address>
+  Esta página forma parte del curso "XML: Lenguaje de Marcas Extensible"
+  disponible en <a href="http://www.mclibre.org/">http://www.mclibre.org</a><br>
+  Autor: Bartolomé Sintes Marco<br>
+  Última modificación: 14 de junio de 2012 
+</address>
+
+<p class="licencia"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/es/"><img alt="Creative Commons License" style="border-width:0" src="./Examen 14 06 12. Exámenes. XML. Bartolomé Sintes Marco_files/88x31.png"></a> <br>
+Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/es/">licencia de Creative
+Commons</a>.</p>
+
+
+</body></html>

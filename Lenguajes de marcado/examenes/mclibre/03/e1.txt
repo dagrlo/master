@@ -1,0 +1,13 @@
+1
+/inventario/@cliente
+2
+/inventario/modelos/modelo/dispositivo/@id
+3
+/inventario/modelos/modelo/modelo/text()
+5
+//espacios/espacio/ocupante/text()
+7
+//espacios/espacio[@id="A112"]/ocupante/text()
+8
+//equipos/equipo[@equipo=//modelos/modelo[modelo="Sierra DT6300A"]/@id]
+7
