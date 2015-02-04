@@ -1,0 +1,29 @@
+header{
+    width:100%;
+    font-family:titulo;   
+}
+
+@font-face {
+    font-family: titulo;
+    src: url("../fonts/rough_typewriter.otf");
+}
+
+header img{   
+    float:left;
+}
+
+header p{
+   font-size: 16px;
+   float:left;
+   margin-top: 50px;
+   margin-left: 192px; 
+   color:#00373A;
+   font-family: sans-serif;
+}
+
+header h1{
+   font-size: 72px;
+   float:left;
+   margin-top: 0px;
+   margin-left: 32px;
+}

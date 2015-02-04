@@ -1,0 +1,12 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Servidor din\'amico que puede ejecutar c\'odigo de ``terceros''}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Objetivo.}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Punto de vista de quien desarrolla el framework}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Punto de vista de quien desarrolla el c\'odigo din\'amico}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Reflection}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Clases del framework que almacenan los elementos de la petici\'on y de la respuesta}{4}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Clase del framework que tendr\'a que extender quien desarrolle c\'odigo din\'amico}{5}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Clase del framework que usa a la clase anterior}{6}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}C\'odigo para a\~nadir en tiempo de ejecuci\'on los fichero jar en el classpath del servidor}{6}{subsection.1.8}
+\contentsline {section}{\numberline {2}C\'odigo cliente}{6}{section.2}
+\contentsline {section}{\numberline {3}Posibles mejoras al servidor:}{7}{section.3}

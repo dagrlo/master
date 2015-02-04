@@ -1,0 +1,40 @@
+h1 {
+	text-align:center;
+}
+
+#cuadro {
+	border: 1px solid #00f;
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:16px;
+}
+
+.cuadroTexto{
+	width:60%;
+}
+
+.tabla{
+	width:100%;
+}
+
+.textoTabla{
+	width:90%;
+}
+
+table {
+	border-collapse: collapse;
+} 
+
+table, tr, td , th {
+	border: 1px solid blue;
+}
+ 
+th {
+	font-weight: bold;
+}
+
+td {
+	padding-left: 2em; padding-right:2em;
+}
+

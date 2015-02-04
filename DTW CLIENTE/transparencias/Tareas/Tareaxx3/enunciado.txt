@@ -1,0 +1,4 @@
+TAREA 3
+=======
+
+En esta tarea se debe reconstruir el ejercicio 2 de la tarea 2 adaptándolo al uso de jQuery y JSON. Para ello, se sustituirá todo el código javascript posible a jQuery y se procesará la información del servidor en formato JSON.

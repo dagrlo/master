@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro en Sparrow</title>
+        <link rel="stylesheet" href="./css/dialogs.css" type="text/css" charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Registro de usuario:</legend>
+            <form action="send" method="get">
+                 <p/><label for="usr">Usuario:</label> <input type="text" id="usr" required/>
+                 <p/><label for="clave">Clave:</label> <input type="password" id="clave" required/>
+                 <p/><label for="email">E-mail:</label> <input type="email" id="email" required/>
+                 <p/><label for="nombre">Nombre</label> <input type="text" id="nombre" required/>
+                 <p/><label for="apellidos">Apellidos:</label> <input type="text" id="apellidos" required/>                 
+                 <p/><label for="sBtn">Sexo</label><span id="sBtn"> <input type="radio" id="V" value="v" name="sexo" />V<input type="radio" id="M" value="m" name="sexo"/>M</span>
+                 <p/><label for="idioma">Idioma:</label> 
+                    <select id="idioma">
+                        <option value="de">Deutsch</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                 <br/><br/><br/>
+                 <span id="botones">
+                    <input type="submit" value="Enviar" id="envia" class="estiloBotones"/>
+                    <input type="button" value="Cancelar" id="cancela" class="estiloBotones"/>
+                 </span>
+            </form>
+        </fieldset>
+    </body>
+</html>

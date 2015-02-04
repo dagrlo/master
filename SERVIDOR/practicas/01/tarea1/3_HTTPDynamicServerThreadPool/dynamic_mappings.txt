@@ -1,0 +1,2 @@
+url1;/opt/web/dynamic/file.jar Class
+url2;/opt/web/dynamic/file2.jar Class

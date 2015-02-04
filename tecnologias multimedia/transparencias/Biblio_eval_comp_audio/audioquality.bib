@@ -1,0 +1,41 @@
+%% ATENCION:
+%% El primer artículo (Wang & Bovik) no va exactamente de evaluación de la compresión en audio, sino también en
+%% imágenes y video. Si consideráis interesante comentar algo sobre esto (que yo creo que sí), hacedlo. Lo he
+%% puesto porque me parece muy interesante para entender hasta qué punto el error cuadrático y la SNR son o no
+%% buenas medidas de calidad.
+%%
+%% Aparte, os he bajado yo mismo los estándares de la ITU (Unión internacional de telecomunaciones) sobre las
+%% pruebas de calidad para audio en general (estándard BS.1387) y específicamente para voz (estándard P.862).
+%% Son documentos MUY largos, y no son para que los leáis enteros, sólo la explicación general que se da en
+%% su introducción.
+
+@ARTICLE{4775883, 
+author={Zhou Wang and Bovik, A.C.}, 
+journal={Signal Processing Magazine, IEEE}, 
+title={Mean squared error: Love it or leave it? A new look at Signal Fidelity Measures}, 
+year={2009}, 
+month={Jan}, 
+volume={26}, 
+number={1}, 
+pages={98-117}, 
+abstract={In this article, we have reviewed the reasons why we (collectively) want to love or leave the venerable (but perhaps hoary) MSE. We have also reviewed emerging alternative signal fidelity measures and discussed their potential application to a wide variety of problems. The message we are trying to send here is not that one should abandon use of the MSE nor to blindly switch to any other particular signal fidelity measure. Rather, we hope to make the point that there are powerful, easy-to-use, and easy-to-understand alternatives that might be deployed depending on the application environment and needs. While we expect (and indeed, hope) that the MSE will continue to be widely used as a signal fidelity measure, it is our greater desire to see more advanced signal fidelity measures being used, especially in applications where perceptual criteria might be relevant. Ideally, the performance of a new signal processing algorithm might be compared to other algorithms using several fidelity criteria. Lastly, we hope that we have given further motivation to the community to consider recent advanced signal fidelity measures as design criteria for optimizing signal processing algorithms and systems. It is in this direction that we believe that the greatest benefit eventually lies.}, 
+keywords={mean square error methods;signal processing;MSE;mean squared error;signal fidelity measure;signal processing optimisation;Algorithm design and analysis;Distortion measurement;Dynamic range;Image processing;PSNR;Pixel;Pollution measurement;Signal design;Signal processing;Signal processing algorithms}, 
+doi={10.1109/MSP.2008.930649}, 
+ISSN={1053-5888}
+}
+
+@INPROCEEDINGS{4517586, 
+author={Kandadai, S. and Hardin, J. and Creusere, C.D.}, 
+booktitle={Acoustics, Speech and Signal Processing, 2008. ICASSP 2008. IEEE International Conference on}, 
+title={Audio quality assessment using the mean structural similarity measure}, 
+year={2008}, 
+month={March}, 
+pages={221-224}, 
+abstract={Efficient transmission and storage of digital audio signals can be accomplished using a wide variety of compression algorithms. To compare and optimize the performance of such algorithms, objective metrics are often used to measure the quality of such compressed audio signals since subjective testing is extremely time consuming. In this paper, we consider the application of the structural similarity measure, originally developed for image quality assessment, to the problem of audio quality assessment. Specifically, we study two different implementations of the structural similarity index: the first applies it to short and fixed time-domain frames of an audio sequence while the second decomposes the audio signals into a non-redundant, time-frequency map and then compares the structural similarity in the resulting 2-dimensional domain. We compare the accuracies of the two structural similarity measures with those of other accepted objective audio quality metrics relative to MUSHRA-based subjective audio evaluations.}, 
+keywords={audio signal processing;audio quality assessment;digital audio signals;image quality assessment;mean structural similarity measure;objective metrics;Codecs;Frequency;Humans;Image coding;Image reconstruction;Image segmentation;Mean square error methods;Quality assessment;Testing;Transform coding;Audio quality analysis;MSSIM;PEAQ;Quality measurement;SSIM;Structural Similarity;objective metric}, 
+doi={10.1109/ICASSP.2008.4517586}, 
+ISSN={1520-6149}
+}
+
+
+

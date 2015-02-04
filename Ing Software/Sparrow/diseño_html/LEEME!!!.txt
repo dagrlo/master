@@ -1,0 +1,2 @@
+Esto solo es la version html de prueba. En breve lo pasare a jsp. Solo es para que lo mireis a 
+ver si hay que cambiar algo.

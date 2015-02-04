@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .example {
+        padding: 10px;
+        border: 1px solid #CCC;
+      }
+      #example-list-fs ul {
+        padding-left: 0;
+      }
+      #example-list-fs li {
+        list-style: none;
+      }
+      #example-list-fs img {
+        vertical-align: middle;
+      }
+      button {
+        padding: 5px 8px;
+        cursor: pointer;
+        text-shadow: 1px 1px white;
+        font-weight: 700;
+        font-size: 10pt;
+      }
+      body {
+        font: 14px Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="example-list-fs" class="example">
+      <button>Add some files</button>
+      <button>List files</button>
+      <button>Remove all files</button>
+      <button>Fill log file</button>
+      <button>See log file</button>
+      <ul id="example-list-fs-ul"></ul>
+    </div>
+    <div id="show-area"></div>
+    <script>
+      // Se busca en el sistema de archivos del cliente la función que permite solicitar un sistema de archivos para uso propio.
+      // Las dos alternativas se dan por compatibilidad entre navegadores.
+      window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+
+      // fs contendrá una referencia al sistema de archivos. De momento la inicializamos a null
+      var fs = null;
+      
+      // Ahora creamos referencias a objetos de tipo FileEntry para cada archivo que vamos a crear
+      var logfentry = null;
+      var mp3fentry = null;
+
+      // Esta función se pasará en la llamada de inicialización del sistema de archivos para tratar los posibles errores que se pudieran dar
+      function errorHandler(e) {
+        var msg = '';
+        switch (e.code) {
+          case FileError.QUOTA_EXCEEDED_ERR:
+            msg = 'QUOTA_EXCEEDED_ERR';
+            break;
+          case FileError.NOT_FOUND_ERR:
+            msg = 'NOT_FOUND_ERR';
+            break;
+          case FileError.SECURITY_ERR:
+            msg = 'SECURITY_ERR';
+            break;
+          case FileError.INVALID_MODIFICATION_ERR:
+            msg = 'INVALID_MODIFICATION_ERR';
+            break;
+          case FileError.INVALID_STATE_ERR:
+            msg = 'INVALID_STATE_ERR';
+            break;
+          default:
+            msg = 'Unknown Error';
+            break;
+        };
+        // Si ha habido error, el texto del error se muestra en la página poniéndolo como contenido de un elemento
+        document.querySelector('#example-list-fs-ul').innerHTML = 'Error: ' + msg;
+        alert("Error: "+msg);
+      }
+      
+      function initFS() 
+      {
+        // Esto solicita al sistema en que corre el cliente un sistema de archivos. Los parámetros son:
+        // El primero, window.TEMPORARY (los archivos que se escriban _pueden_ borrarse si el navegador lo decide (pero
+        // no es obligatorio que se borren; atención a las implicaciones de seguridad) o window.PERSISTENT (no se borran
+        // salvo que el usuario o la aplicación (este script) lo autorizen).
+        // El segundo parámetro es el espacio que se requiere, en bytes.
+        // El tercer parámetro es una función que se invoca si la llamada tiene éxito (se crea un sistema de archivos)
+        //  En este caso eso meramente inicializa la variable fs
+        // El cuarto parámetro es la función que se invoca si la llamada no tiene éxito (ha habido error)
+        window.requestFileSystem(window.TEMPORARY, 
+				 1024*1024,
+				 function(filesystem) { fs = filesystem; },
+				 errorHandler);
+      }
+     
+      // Función que toma un objeto FileEntry y crea un objeto para escribir en él (un FileWriter asociado al archivo controlado por el FileEntry)
+      // A createWriter se le pasa la función que debe ejecutarse si se puede crear el FileWriter, y opcionalmente, la función de error
+      // A la función que debe ejecutarse (en este caso, LogContent) se le pasará como único parámetro en su invocación el objeto FileWriter creado
+      function FillLog()
+      {
+       if (logfentry != null)
+       {
+        logfentry.createWriter(LogContent);
+        var e=document.getElementById("show-area");
+        e.innerHTML="File "+logfentry.fullPath+" written";
+       }
+       else 
+       {
+        alert("No puedo llenar el archivo log.txt, puesto que no existe");       	
+       }
+      }
+
+      // Función que toma un objeto FileWriter correctamente creado y escribe en él un blob.
+      // Un blob es un objeto que contiene datos binarios cualesquiera
+      function LogContent(file_writer)
+      {
+       // Los argumentos al constructor de Blob son los propios datos (entre corchetes) y el tipo MIME al que se supone que esos datos responden.
+       var blob = new Blob(["Lorem Ipsum"], {type: "text/plain"});
+       file_writer.write(blob);
+      }
+
+      // Función para leer el contenido de un archivo (y en este caso, también para mostrarlo en la página)
+      function ShowLogEntry(file_entry)
+      {
+       // La función file de un objeto FileEntry toma dos parámetros:
+       // Una función que se llama si el archivo se ha podido abrir y otra que se llama si ha habido error.
+       // A la primera se le pasará como argumento el blob (objeto de datos binario) que contiene el contenido del archivo.
+       // Este blob debe ser leído con un objeto de tipo FileReader cuyos campos más importantes son las funciones readAsText 
+       // y readAsBinary y la función onloadend, que dice qué hacer con los datos cuando se ha concluído su lectura. Los datos
+       // en sí están accesibles con this.result 
+       if (file_entry != null)
+       {
+        file_entry.file(function(fileblob)
+                       {
+                        var reader = new FileReader();
+                        reader.onloadend = function(e)
+                        {
+                         var e=document.getElementById("show-area");
+                         e.innerHTML=this.result; 
+                        }
+                        reader.readAsText(fileblob);
+                       },
+                       errorHandler);
+       }
+       else
+       {
+        alert("No puedo mostrar el contenido del archivo log.txt, puesto que no existe");       	
+       }    
+      }
+
+      // Función para leer y mostrar el contenido de un archivo. Obtiene su objeto FileEntry asociado y lo pasa como único parámetro a la
+      // función que es su tercer argumento.
+      function SeeLog()
+      {
+       fs.root.getFile('log.txt', {create: true}, ShowLogEntry, errorHandler);
+      }
+
+      function StoreLogEntry(file_entry)
+      {
+       logfentry=file_entry;
+      }
+
+      function StoreMp3Entry(file_entry)
+      {
+       mp3fentry=file_entry;
+      }
+
+      // Crea en el sistema de archivos que hemos solicitado tres archivos, sólo como prueba.
+      // Nótese que no son auténticos archivos en el disco duro del usuario, que no se puede cambiar.
+      // Igualmente, otra aplicación web no puede ver, leer ni escribir estos archivos.
+      function CreateFiles()
+      {
+       if (!fs)
+       {
+        return;
+       }
+       // getFile tiene cuatro argumentos:
+       // El nombre (camino completo válido) del archivo que se quiere crear o al que se quiere acceder
+       // La acción requerida (crear el archivo eliminándolo si existía, create:true,
+       // o abrir el archivo si existe, create:false)
+       // El tercer argumento es una función que genera los datos (ver arriba) a la que se llamará pasándole
+       // como argumento el objeto de tipo FileEntry asociado al archivo creado (si se ha podido crear)
+       // El cuarto argumento es la función de gestión de errores.
+       // Si los argumentos 3 y 4 no se dan, el archivo se puede crear vación (con create:true)
+       fs.root.getFile('log.txt', {create: true}, StoreLogEntry, errorHandler);
+       fs.root.getFile('song.mp3', {create: true}, StoreMp3Entry, errorHandler);
+       fs.root.getDirectory('mypictures', {create: true}, null, errorHandler);
+       filelist.innerHTML = 'Files created.'; 
+      }
+
+      // Lista los archivos creados. Para ello crea un lector de directorios a partir del objeto root del sistema de archivos.
+      function ListFiles()
+      {
+       if (!fs)
+       {
+        return;
+       }
+      
+       var dirReader = fs.root.createReader();
+       dirReader.readEntries(
+         function(entries)
+         {
+          if (!entries.length)
+          {
+           filelist.innerHTML = 'Filesystem is empty.';
+          }
+          else
+          {
+           filelist.innerHTML = '';
+          }
+      
+          var fragment = document.createDocumentFragment();
+          for (var i = 0, entry; entry = entries[i]; ++i)
+          {
+           var img = entry.isDirectory ? '<img src="icon-folder.gif">' :
+                                         '<img src="icon-file.gif">';
+           var li = document.createElement('li');
+           li.innerHTML = [img, '<span>', entry.name, '</span>'].join('');
+           fragment.appendChild(li);
+          }
+          filelist.appendChild(fragment);
+         }, errorHandler);
+      }
+
+      function DeleteFiles()
+      {
+       if (!fs)
+       {
+        return;
+       }
+      
+       var dirReader = fs.root.createReader();
+       dirReader.readEntries(
+        function(entries)
+        {
+         for (var i = 0, entry; entry = entries[i]; ++i)
+         {
+          if (entry.isDirectory)
+          {
+           entry.removeRecursively(function() {}, errorHandler);
+          }
+          else
+          {
+           entry.remove(function() {}, errorHandler);
+          }
+         }
+         filelist.innerHTML = 'Directory emptied.';
+        }, errorHandler);
+       var e=document.getElementById("show-area");
+       e.innerHTML="";
+       logfentry=null;
+       mp3fentry=null;
+      }
+
+      // Almacenamos, por comodidad, referencias a objetos que usaremos luego en arrays, uno de botones y otro de nombres de archivos
+      var buttons = document.querySelectorAll('#example-list-fs button');
+      var filelist = document.querySelector('#example-list-fs-ul');
+      
+      // Asociamos a cada botón la función que se tiene que llamar el pulsarlo
+      if (buttons.length >= 3)
+      {
+        buttons[0].addEventListener('click', CreateFiles,false);      
+        buttons[1].addEventListener('click', ListFiles,false);
+        buttons[2].addEventListener('click', DeleteFiles, false);
+        buttons[3].addEventListener('click', FillLog, false);
+        buttons[4].addEventListener('click', SeeLog, false);
+      }
+      
+      // La petición de un sistema de archivos se hace al cargar la página
+      if (window.requestFileSystem) 
+      {
+        initFS();
+      }
+    </script>
+  </body>
+</html>

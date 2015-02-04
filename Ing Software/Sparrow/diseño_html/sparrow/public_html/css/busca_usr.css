@@ -1,0 +1,16 @@
+.nombre{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.mas{
+    float:right;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.menos{
+    float:right;
+    font-size: 32px;
+    font-weight: bold;
+}

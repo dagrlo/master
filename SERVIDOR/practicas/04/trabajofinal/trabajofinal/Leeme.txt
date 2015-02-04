@@ -1,0 +1,6 @@
+En la carpeta sin_realm está la primera parte de la práctica, en la otra está configurado el jdbcRealm
+pero no he conseguido que acepte ninguna clave.
+
+Como no he podido programar la parte con jdbcRealm no se pone el usuario que entra. Se ha dejado uno por defecto
+dentro del ContextListener.
+

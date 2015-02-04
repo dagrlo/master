@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+body{
+	font-family: sans-serif;
+	background-color:#000;
+}
+
+table {
+	border:1px solid #fff;	
+}
+
+td {
+	background-color:#ddd;
+	text-align:right;
+	width:400px;
+}
+
+th {
+	color:#000;
+	background-color:#fff;
+	width:200px;
+	text-aling:center;	
+}
+
+tr.menor {
+	background-color: #ff0000;
+	color:#0f0; 
+	font-weight:bold;
+}
